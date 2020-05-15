@@ -15,7 +15,7 @@ namespace Module
                 SqlConnection con = new SqlConnection(conStr);
                 con.Open();
 
-                string query = "SELECT * FROM CANDIDATES";
+                string query = "SELECT * FROM CANDIDATES Where Status = 1";
                 SqlCommand cmdGetData = new SqlCommand(query, con);
                 cmdGetData.CommandType = CommandType.Text;
 

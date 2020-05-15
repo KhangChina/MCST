@@ -41,6 +41,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="mdAnswer.cs" />
+    <Compile Include="mdGroup.cs" />
+    <Compile Include="mdGroupTypeQuestion.cs" />
+    <Compile Include="mdPart.cs" />
+    <Compile Include="mdQuestion.cs" />
+    <Compile Include="mdType_Question.cs" />
     <Compile Include="Provider.cs" />
     <Compile Include="mdCandidate.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

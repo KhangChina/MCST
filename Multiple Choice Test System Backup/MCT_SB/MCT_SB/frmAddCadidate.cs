@@ -45,10 +45,18 @@ namespace MCT_SB
                     txtMail.Text = dt.Rows[0]["Email"].ToString();
                     cbxStatus.Checked = bool.Parse(dt.Rows[0]["Status"].ToString());
 
-                    Byte[] data = new Byte[0];
-                    data = (Byte[])(dt.Rows[0]["Image"]);
-                    MemoryStream mem = new MemoryStream(data);
-                    picImageCandidate.Image = Image.FromStream(mem);        
+                    try
+                    {
+                        Byte[] data = new Byte[0];
+                        data = (Byte[])(dt.Rows[0]["Image"]);
+                        MemoryStream mem = new MemoryStream(data);
+                        picImageCandidate.Image = Image.FromStream(mem);
+                    }
+                    catch
+                    {
+                        picImageCandidate.Image = null;
+                    }
+                       
                     
                 }
                 else

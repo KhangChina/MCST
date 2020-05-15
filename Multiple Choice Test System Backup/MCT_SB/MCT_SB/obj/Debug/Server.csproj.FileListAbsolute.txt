@@ -384,3 +384,11 @@ D:\Khang.Nguyen\MCST\Multiple Choice Test System Backup\MCT_SB\MCT_SB\obj\Debug\
 D:\Khang.Nguyen\MCST\Multiple Choice Test System Backup\MCT_SB\MCT_SB\obj\Debug\Server.csproj.CopyComplete
 D:\Khang.Nguyen\MCST\Multiple Choice Test System Backup\MCT_SB\MCT_SB\obj\Debug\MCT_SB.exe
 D:\Khang.Nguyen\MCST\Multiple Choice Test System Backup\MCT_SB\MCT_SB\obj\Debug\MCT_SB.pdb
+D:\Khang.Nguyen\MCST\Multiple Choice Test System Backup\MCT_SB\MCT_SB\obj\Debug\MCT_SB.UserControl.usQuestionImage.resources
+D:\Khang.Nguyen\MCST\Multiple Choice Test System Backup\MCT_SB\MCT_SB\bin\Debug\DevExpress.Dialogs.v19.2.Core.dll
+D:\Khang.Nguyen\MCST\Multiple Choice Test System Backup\MCT_SB\MCT_SB\bin\Debug\DevExpress.XtraDialogs.v19.2.dll
+D:\Khang.Nguyen\MCST\Multiple Choice Test System Backup\MCT_SB\MCT_SB\bin\Debug\DevExpress.XtraDialogs.v19.2.xml
+D:\Khang.Nguyen\MCST\Multiple Choice Test System Backup\MCT_SB\MCT_SB\bin\Debug\de\DevExpress.Dialogs.v19.2.Core.resources.dll
+D:\Khang.Nguyen\MCST\Multiple Choice Test System Backup\MCT_SB\MCT_SB\bin\Debug\es\DevExpress.Dialogs.v19.2.Core.resources.dll
+D:\Khang.Nguyen\MCST\Multiple Choice Test System Backup\MCT_SB\MCT_SB\bin\Debug\ja\DevExpress.Dialogs.v19.2.Core.resources.dll
+D:\Khang.Nguyen\MCST\Multiple Choice Test System Backup\MCT_SB\MCT_SB\bin\Debug\ru\DevExpress.Dialogs.v19.2.Core.resources.dll

@@ -19,7 +19,7 @@ namespace MCT_SB
             Application.SetCompatibleTextRenderingDefault(false);
 
             BonusSkins.Register();
-            Application.Run(new frmCandidates());
+            Application.Run(new frmQuestion());
         }
     }
 }
