@@ -2,13 +2,15 @@
 go
 use MCTS
 go
+
 --Group nghe hoặc viết
 create table GROUPS (
 	ID int identity(1,1) primary key,
 	Name nvarchar(50),
-	AudioName nvarchar(max),
 	Status bit,	
 )
+--FileNghe
+
 --Cấu trúc đề thi gồm 8 phần mõi phần thuộc 1 group
 create table PART (
 	ID int identity(1,1) primary key,
@@ -24,7 +26,8 @@ create table TYPE_QUESTIONS
 	ID int identity(1,1) primary key,
 	Name nvarchar(50),
 	Descriptions nvarchar(max),
-	Status bit
+	Status bit,
+	Code nvarchar (50)
 )
 -- 1 loại sẽ có nhiều nhóm câu hỏi
 create table GROUP_TYPE_QUESTIONS
@@ -32,7 +35,8 @@ create table GROUP_TYPE_QUESTIONS
 	ID int identity(1,1) primary key,
 	Name nvarchar(50),
 	Descriptions nvarchar(max),
-	Images nvarchar(max),
+	Images image,
+	AudioName nvarchar(max),
 	Status bit,
 	IdTypeQuestion int,
 	foreign key (IdTypeQuestion) references TYPE_QUESTIONS (Id) ON DELETE CASCADE
@@ -44,7 +48,7 @@ Create table QUESTIONS
 	Descriptions nvarchar(max),
 	LevelOfDificult float,
 	Distinctiveness float,
-	Images nvarchar(max),
+	Images image,
 	IdPart int,
 	IdGroupTypeQuestions int,
 	Status bit,
@@ -179,12 +183,15 @@ create TABLE USERS_Permission_Detail
     FOREIGN KEY (IdUser) REFERENCES USERS ON DELETE CASCADE,
     FOREIGN KEY(IdPermissionDetail) REFERENCES Permission_Detail(Id) ON DELETE CASCADE
 )
+go
 
 
 -----------------------------------------------------------------------------------------------Data-----------------------------------------------------------------------------------------------
 insert into GROUPS
-values ('Listen','','1'),
-	   ('Reading,','','1')
+values ('Listen','1'),
+	   ('Reading','1'),
+	   ('Writing','1'),
+	   ('Speaking','1')
 insert into PART --(TB_TYPE)
 values  ('Type 1',1,'Picture Description','1'),
 		('Type 2',1,'You will hear a question or statement and three responses spoken in English. They will not be printed in your test book and will be spoken only one time. Select the best response to the question or statement and mark the letter (A), (B), or (C) on your answer sheet. ','1'),
@@ -195,17 +202,18 @@ values  ('Type 1',1,'Picture Description','1'),
 		('Type 7',2,'Read the texts that follow. A word, phrase, or sentence is missing in parts of each text. Four answer choices for each question are given below the text. Select the best answer to complete the text. Then mark the letter (A), (B), (C), or (D) on your answer sheet. ','1'),
 		('Type 8',2,'In this part you will read a selection of texts, such as magazine and newspaper articles, e-mails, and instant messages. Each text or set of texts is followed by several questions. Select the best answer for each question and mark the letter (A), (B), (C), or (D) on your answer sheet. ','1')
 insert into TYPE_QUESTIONS
-values  ('Listen Full','7=>31','1'),
-		('Listen Group','32=>61','1'),
-		('listen Group Image','62=>67','1'),
-		('Single Question','101=>130','1'),
-		('Group Question','131 => 146','1')
+values  ('Listen Image','1=>6','1','LI'),
+		('Listen Full','7=>31','1','LF'),
+		('Listen Group','32=>61','1','LG'),
+		('Listen Group Image','62=>67','1','LGI'),
+		('Single Question','101=>130','1','SQ'),
+		('Group Question','131 => 146','1','GQ')
 insert into GROUP_TYPE_QUESTIONS
-values	('Group1_Part6','(3 September)-Five years ago, Brian Trang signed a five-year lease to open his restaurant, 
-Trang''s Bistro, at 30 Luray Place. Mr. Trang admits that the first two years of operation were quite ----- r . "We offer spicy food from Vietnam''s central region," he explains. "We didn''t do well at first---- : the cuisine is based on unfamiliar herbs and hot flavors. It took a while to catch on with customers." But Mr. Trang was confident the food would gain in popularity, and he was correct. 
------ . Mr. Trang has just signed another five-year lease, and he is planning ------- the space . ----. next year.','','1',5),
-		('NoneGroup','','','1',4),
-		('Group2_Part7','','Application_Form.jpg','1',5)
+--values	('Group1_Part6','(3 September)-Five years ago, Brian Trang signed a five-year lease to open his restaurant, 
+--Trang''s Bistro, at 30 Luray Place. Mr. Trang admits that the first two years of operation were quite ----- r . "We offer spicy food from Vietnam''s central region," he explains. "We didn''t do well at first---- : the cuisine is based on unfamiliar herbs and hot flavors. It took a while to catch on with customers." But Mr. Trang was confident the food would gain in popularity, and he was correct. 
+------- . Mr. Trang has just signed another five-year lease, and he is planning ------- the space . ----. next year.','','1',5),
+--		('NoneGroup','','','1',4),
+--		('Group2_Part7','','Application_Form.jpg','1',5)
 insert into QUESTIONS
 values	('At which event is the announcement being made? ','','','',4,2,1),
 		('Who most likely is the speaker? ','','','',4,2,1),
@@ -274,3 +282,5 @@ values	('',1,9),
 		('',2,8),
 		('',1,10)
 select * from CANDIDATES
+SELECT * FROM PART Where IDGroup = 2 and Status = 1
+select * from GROUP_TYPE_QUESTIONS
