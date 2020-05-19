@@ -8,9 +8,9 @@ namespace Module
 {
     public class Provider
     {
-        private static string ServerName = "HTG-PCB015";
+        private static string ServerName = "NXKCHINA";
         private static string UserName = "sa";
-        private static string Password = "Khang@china123";
+        private static string Password = "1";
         private static string DatabaseName = "MCTS";
         /// <summary>
         /// Chuỗi Connect kết nối Database

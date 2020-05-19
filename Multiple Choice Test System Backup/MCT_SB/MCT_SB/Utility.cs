@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace MCT_SB
 {
@@ -21,6 +22,31 @@ namespace MCT_SB
             MemoryStream ms = new MemoryStream(byteArrayIn);
             Image returnImage = Image.FromStream(ms);
             return returnImage;
+        }
+        public static bool IsFocusForm(Type type, Form frmParent)
+        {
+            int i = 0;
+            if (frmParent == null) return false;
+            foreach (Form frm in frmParent.MdiChildren)
+            {
+                if (frm.GetType() == type)
+                {
+                    if (frm.MinimizeBox)
+                    {
+                        frm.Focus();
+                        frm.WindowState = FormWindowState.Normal;
+                    }
+                    frm.Focus();
+                    return true;
+                }
+                else
+                {
+                    i++;
+                }
+            }
+            if (i != 0)
+                return false;
+            return false;
         }
     }
 }

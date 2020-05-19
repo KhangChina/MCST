@@ -18,14 +18,15 @@ namespace MCT_SB
         public frmAddCadidate()
         {
             InitializeComponent();
-            btnUpdate.Visible = false;
+            btnSave.Enabled = true;
         }
         public frmAddCadidate(int IDCandidates)
         {
             InitializeComponent();
+            btnUpdate.Enabled = true;
             dt = new DataTable();
             LoadUpdate(IDCandidates);
-            btnSave.Visible = false;
+            
         }
         DataTable dt;
         void LoadUpdate(int IDCandidates)

@@ -117,5 +117,26 @@ namespace Module
                 return Provider.ErroString("Module", "mdGroupTypeQuestion", "Insert", e.Message);
             }
         }
+        public static string GetAll(ref DataTable dtGroupTypeQuestion)
+        {
+            try
+            {
+                string conStr = Provider.ConnectString();
+                SqlConnection con = new SqlConnection(conStr);
+                con.Open();
+                string query = "SELECT * FROM GROUP_TYPE_QUESTIONS";
+                SqlCommand cmdGetData = new SqlCommand(query, con);
+                cmdGetData.CommandType = CommandType.Text;
+                SqlDataAdapter da = new SqlDataAdapter(cmdGetData);
+                int result = da.Fill(dtGroupTypeQuestion);
+                con.Close();
+                return "OK";
+            }
+            catch (Exception e)
+            {
+                return Provider.ErroString("Module", "mdPart", "GetAll", e.Message);
+            }
+        }
+     //   public static bool CheckAudioFile(string )
     }
 }

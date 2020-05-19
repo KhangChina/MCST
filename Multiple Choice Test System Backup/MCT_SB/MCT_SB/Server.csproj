@@ -60,11 +60,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmAddQuestion.cs">
+    <Compile Include="Conifg.cs" />
+    <Compile Include="frmAddGroupTypeQuestion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAddQuestion.Designer.cs">
-      <DependentUpon>frmAddQuestion.cs</DependentUpon>
+    <Compile Include="frmAddGroupTypeQuestion.Designer.cs">
+      <DependentUpon>frmAddGroupTypeQuestion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddPart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddPart.Designer.cs">
+      <DependentUpon>frmAddPart.cs</DependentUpon>
     </Compile>
     <Compile Include="frmAddCadidate.cs">
       <SubType>Form</SubType>
@@ -90,6 +97,18 @@
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmPart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPart.Designer.cs">
+      <DependentUpon>frmPart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddQuestion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddQuestion.Designer.cs">
+      <DependentUpon>frmAddQuestion.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmQuestion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,8 +124,11 @@
       <DependentUpon>usQuestionImage.cs</DependentUpon>
     </Compile>
     <Compile Include="Utility.cs" />
-    <EmbeddedResource Include="frmAddQuestion.resx">
-      <DependentUpon>frmAddQuestion.cs</DependentUpon>
+    <EmbeddedResource Include="frmAddGroupTypeQuestion.resx">
+      <DependentUpon>frmAddGroupTypeQuestion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddPart.resx">
+      <DependentUpon>frmAddPart.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAddCadidate.resx">
       <DependentUpon>frmAddCadidate.cs</DependentUpon>
@@ -119,6 +141,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPart.resx">
+      <DependentUpon>frmPart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddQuestion.resx">
+      <DependentUpon>frmAddQuestion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmQuestion.resx">
       <DependentUpon>frmQuestion.cs</DependentUpon>

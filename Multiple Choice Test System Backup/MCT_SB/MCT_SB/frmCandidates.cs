@@ -32,9 +32,7 @@ namespace MCT_SB
             LoadCandidate();
         }
         private void grcCadidate_EmbeddedNavigator_ButtonClick(object sender, NavigatorButtonClickEventArgs e)
-        {
-            if (grvCandidate.FocusedRowHandle < 0)
-                return;
+        {           
             if (e.Button.ButtonType == DevExpress.XtraEditors.NavigatorButtonType.Append)
             {
                 e.Handled = true;

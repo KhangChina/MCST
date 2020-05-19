@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "Rtf1GJ7pA2meKyBJFgNDC+ZYnwQdCGUHgQfThJL/6NwwL+1KQeuyB5Yt8FE1VhOTPx6Rapd4vZ9+6xPiZjpRLA==",
+  "dgSpecHash": "/YMuhdg3OVkNJrDBwi8yYMB6qKF008PZMGXUlYWw/ozkzPtGaMni2ro4BT4/g8AEmJn2wswcoUwgb2F2PdDPwg==",
   "success": true,
-  "projectFilePath": "D:\\Khang.Nguyen\\MCST\\Multiple Choice Test System Backup\\BUS\\BUS.csproj",
+  "projectFilePath": "D:\\Project\\C#\\MCST\\Multiple Choice Test System Backup\\BUS\\BUS.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\khang.nguyen\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Users\\khang.nguyen\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+    "C:\\Users\\NXK China\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\NXK China\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
   ],
   "logs": []
 }

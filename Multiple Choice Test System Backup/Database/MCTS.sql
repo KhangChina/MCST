@@ -284,3 +284,13 @@ values	('',1,9),
 select * from CANDIDATES
 SELECT * FROM PART Where IDGroup = 2 and Status = 1
 select * from GROUP_TYPE_QUESTIONS
+
+select GROUPS.ID+0.1 as ID,0 as PARENTID, Name,Status from GROUPS
+UNION ALL
+select PART.ID + 0.2 as ID,PART.IdGroup+0.1 as PARENTID,Name,Status from PART
+
+select * from GROUP_TYPE_QUESTIONS
+
+select GROUP_TYPE_QUESTIONS.ID+0.1 as ID, 0 as PARENTID from GROUP_TYPE_QUESTIONS
+UNION ALL
+select QUESTIONS.ID +0.2 as ID,QUESTIONS.IdGroupTypeQuestions+0.1 as PARENTID from QUESTIONS

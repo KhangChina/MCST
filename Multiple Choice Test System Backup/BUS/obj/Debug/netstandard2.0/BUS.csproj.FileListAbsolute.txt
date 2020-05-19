@@ -16,3 +16,12 @@ D:\Khang.Nguyen\Multiple-Choice-Test-System\Multiple Choice Test System Backup\B
 D:\Khang.Nguyen\Multiple-Choice-Test-System\Multiple Choice Test System Backup\BUS\obj\Debug\netstandard2.0\BUS.dll
 D:\Khang.Nguyen\Multiple-Choice-Test-System\Multiple Choice Test System Backup\BUS\obj\Debug\netstandard2.0\BUS.pdb
 D:\Khang.Nguyen\Multiple-Choice-Test-System\Multiple Choice Test System Backup\BUS\obj\Debug\netstandard2.0\BUS.csprojAssemblyReference.cache
+D:\Project\C#\MCST\Multiple Choice Test System Backup\BUS\bin\Debug\netstandard2.0\BUS.deps.json
+D:\Project\C#\MCST\Multiple Choice Test System Backup\BUS\bin\Debug\netstandard2.0\BUS.dll
+D:\Project\C#\MCST\Multiple Choice Test System Backup\BUS\bin\Debug\netstandard2.0\BUS.pdb
+D:\Project\C#\MCST\Multiple Choice Test System Backup\BUS\obj\Debug\netstandard2.0\BUS.csprojAssemblyReference.cache
+D:\Project\C#\MCST\Multiple Choice Test System Backup\BUS\obj\Debug\netstandard2.0\BUS.csproj.CoreCompileInputs.cache
+D:\Project\C#\MCST\Multiple Choice Test System Backup\BUS\obj\Debug\netstandard2.0\BUS.AssemblyInfoInputs.cache
+D:\Project\C#\MCST\Multiple Choice Test System Backup\BUS\obj\Debug\netstandard2.0\BUS.AssemblyInfo.cs
+D:\Project\C#\MCST\Multiple Choice Test System Backup\BUS\obj\Debug\netstandard2.0\BUS.dll
+D:\Project\C#\MCST\Multiple Choice Test System Backup\BUS\obj\Debug\netstandard2.0\BUS.pdb

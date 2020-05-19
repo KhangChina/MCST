@@ -104,3 +104,14 @@ D:\Khang.Nguyen\Multiple-Choice-Test-System\Multiple Choice Test System Backup\C
 D:\Khang.Nguyen\Multiple-Choice-Test-System\Multiple Choice Test System Backup\Client\obj\Debug\Client.exe
 D:\Khang.Nguyen\Multiple-Choice-Test-System\Multiple Choice Test System Backup\Client\obj\Debug\Client.pdb
 D:\Khang.Nguyen\Multiple-Choice-Test-System\Multiple Choice Test System Backup\Client\obj\Debug\Client.csprojAssemblyReference.cache
+D:\Project\C#\MCST\Multiple Choice Test System Backup\Client\bin\Debug\Client.exe.config
+D:\Project\C#\MCST\Multiple Choice Test System Backup\Client\bin\Debug\Client.exe
+D:\Project\C#\MCST\Multiple Choice Test System Backup\Client\bin\Debug\Client.pdb
+D:\Project\C#\MCST\Multiple Choice Test System Backup\Client\obj\Debug\Client.csprojAssemblyReference.cache
+D:\Project\C#\MCST\Multiple Choice Test System Backup\Client\obj\Debug\Client.Form1.resources
+D:\Project\C#\MCST\Multiple Choice Test System Backup\Client\obj\Debug\Client.Properties.Resources.resources
+D:\Project\C#\MCST\Multiple Choice Test System Backup\Client\obj\Debug\Client.csproj.GenerateResource.cache
+D:\Project\C#\MCST\Multiple Choice Test System Backup\Client\obj\Debug\Client.csproj.CoreCompileInputs.cache
+D:\Project\C#\MCST\Multiple Choice Test System Backup\Client\obj\Debug\Client.csproj.CopyComplete
+D:\Project\C#\MCST\Multiple Choice Test System Backup\Client\obj\Debug\Client.exe
+D:\Project\C#\MCST\Multiple Choice Test System Backup\Client\obj\Debug\Client.pdb
