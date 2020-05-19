@@ -832,7 +832,7 @@
       <summary>
         <para>Returns the list of <see cref="T:DevExpress.Data.Controls.ExpressionEditor.ColumnInfo"/> objects associated with columns owned by this column.</para>
       </summary>
-      <value>A <see cref="T:System.Collections.Generic.List`1"/>&lt;<see cref="T:DevExpress.Data.Controls.ExpressionEditor.ColumnInfo"/>,&gt; object that stores <see cref="T:DevExpress.Data.Controls.ExpressionEditor.ColumnInfo"/> objects associated with this column&#39;s children.</value>
+      <value>A List&lt;<see cref="T:DevExpress.Data.Controls.ExpressionEditor.ColumnInfo"/>&gt; object that stores <see cref="T:DevExpress.Data.Controls.ExpressionEditor.ColumnInfo"/> objects associated with this column&#39;s children.</value>
     </member>
     <member name="P:DevExpress.Data.Controls.ExpressionEditor.ColumnInfo.Parent">
       <summary>
@@ -5358,27 +5358,27 @@ Day After Tomorrow &lt;= date &lt; First Day of Next Week</para>
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.Data.Linq.EntityInstantFeedbackSource"/> with the specified settings.</para>
       </summary>
-      <param name="getQueryable">An <see cref="T:System.Action`1"/>&lt;<see cref="T:DevExpress.Data.Linq.GetQueryableEventArgs"/>,&gt; delegate, which is a method that will handle the <see cref="E:DevExpress.Data.Linq.EntityInstantFeedbackSource.GetQueryable"/> event. The specified delegate is attached to this event.</param>
+      <param name="getQueryable">An Action&lt;<see cref="T:DevExpress.Data.Linq.GetQueryableEventArgs"/>&gt; delegate, which is a method that will handle the <see cref="E:DevExpress.Data.Linq.EntityInstantFeedbackSource.GetQueryable"/> event. The specified delegate is attached to this event.</param>
     </member>
     <member name="M:DevExpress.Data.Linq.EntityInstantFeedbackSource.#ctor(System.Action{DevExpress.Data.Linq.GetQueryableEventArgs},System.Action{DevExpress.Data.Linq.GetQueryableEventArgs})">
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.Data.Linq.EntityInstantFeedbackSource"/> with the specified settings.</para>
       </summary>
-      <param name="getQueryable">An <see cref="T:System.Action`1"/>&lt;<see cref="T:DevExpress.Data.Linq.GetQueryableEventArgs"/>,&gt; delegate, which is a method that will handle the <see cref="E:DevExpress.Data.Linq.EntityInstantFeedbackSource.GetQueryable"/> event. The specified delegate is attached to this event.</param>
-      <param name="freeQueryable">An <see cref="T:System.Action`1"/>&lt;<see cref="T:DevExpress.Data.Linq.GetQueryableEventArgs"/>,&gt; delegate, which is a method that will handle the <see cref="E:DevExpress.Data.Linq.EntityInstantFeedbackSource.DismissQueryable"/> event. The specified delegate is attached to this event.</param>
+      <param name="getQueryable">An Action&lt;<see cref="T:DevExpress.Data.Linq.GetQueryableEventArgs"/>&gt; delegate, which is a method that will handle the <see cref="E:DevExpress.Data.Linq.EntityInstantFeedbackSource.GetQueryable"/> event. The specified delegate is attached to this event.</param>
+      <param name="freeQueryable">An Action&lt;<see cref="T:DevExpress.Data.Linq.GetQueryableEventArgs"/>&gt; delegate, which is a method that will handle the <see cref="E:DevExpress.Data.Linq.EntityInstantFeedbackSource.DismissQueryable"/> event. The specified delegate is attached to this event.</param>
     </member>
     <member name="M:DevExpress.Data.Linq.EntityInstantFeedbackSource.#ctor(System.EventHandler{DevExpress.Data.Linq.GetQueryableEventArgs})">
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.Data.Linq.EntityInstantFeedbackSource"/> with the specified settings.</para>
       </summary>
-      <param name="getQueryable">An <see cref="T:System.EventHandler`1"/>&lt;<see cref="T:DevExpress.Data.Linq.GetQueryableEventArgs"/>,&gt; delegate, which is a method that will handle the <see cref="E:DevExpress.Data.Linq.EntityInstantFeedbackSource.GetQueryable"/> event. The specified delegate is attached to this event.</param>
+      <param name="getQueryable">An EventHandler&lt;<see cref="T:DevExpress.Data.Linq.GetQueryableEventArgs"/>&gt; delegate, which is a method that will handle the <see cref="E:DevExpress.Data.Linq.EntityInstantFeedbackSource.GetQueryable"/> event. The specified delegate is attached to this event.</param>
     </member>
     <member name="M:DevExpress.Data.Linq.EntityInstantFeedbackSource.#ctor(System.EventHandler{DevExpress.Data.Linq.GetQueryableEventArgs},System.EventHandler{DevExpress.Data.Linq.GetQueryableEventArgs})">
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.Data.Linq.EntityInstantFeedbackSource"/> with the specified settings.</para>
       </summary>
-      <param name="getQueryable">An <see cref="T:System.EventHandler`1"/>&lt;<see cref="T:DevExpress.Data.Linq.GetQueryableEventArgs"/>,&gt; delegate, which is a method that will handle the <see cref="E:DevExpress.Data.Linq.EntityInstantFeedbackSource.GetQueryable"/> event. The specified delegate is attached to this event.</param>
-      <param name="freeQueryable">An <see cref="T:System.EventHandler`1"/>&lt;<see cref="T:DevExpress.Data.Linq.GetQueryableEventArgs"/>,&gt; delegate, which is a method that will handle the <see cref="E:DevExpress.Data.Linq.EntityInstantFeedbackSource.DismissQueryable"/> event. The specified delegate is attached to this event.</param>
+      <param name="getQueryable">An EventHandler&lt;<see cref="T:DevExpress.Data.Linq.GetQueryableEventArgs"/>&gt; delegate, which is a method that will handle the <see cref="E:DevExpress.Data.Linq.EntityInstantFeedbackSource.GetQueryable"/> event. The specified delegate is attached to this event.</param>
+      <param name="freeQueryable">An EventHandler&lt;<see cref="T:DevExpress.Data.Linq.GetQueryableEventArgs"/>&gt; delegate, which is a method that will handle the <see cref="E:DevExpress.Data.Linq.EntityInstantFeedbackSource.DismissQueryable"/> event. The specified delegate is attached to this event.</param>
     </member>
     <member name="P:DevExpress.Data.Linq.EntityInstantFeedbackSource.AreSourceRowsThreadSafe">
       <summary>
@@ -5516,27 +5516,27 @@ Day After Tomorrow &lt;= date &lt; First Day of Next Week</para>
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.Data.Linq.LinqInstantFeedbackSource"/> with the specified settings.</para>
       </summary>
-      <param name="getQueryable">An <see cref="T:System.Action`1"/>&lt;<see cref="T:DevExpress.Data.Linq.GetQueryableEventArgs"/>,&gt; delegate, which is a method that will handle the <see cref="E:DevExpress.Data.Linq.LinqInstantFeedbackSource.GetQueryable"/> event. The specified delegate is attached to this event.</param>
+      <param name="getQueryable">An Action&lt;<see cref="T:DevExpress.Data.Linq.GetQueryableEventArgs"/>&gt; delegate, which is a method that will handle the <see cref="E:DevExpress.Data.Linq.LinqInstantFeedbackSource.GetQueryable"/> event. The specified delegate is attached to this event.</param>
     </member>
     <member name="M:DevExpress.Data.Linq.LinqInstantFeedbackSource.#ctor(System.Action{DevExpress.Data.Linq.GetQueryableEventArgs},System.Action{DevExpress.Data.Linq.GetQueryableEventArgs})">
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.Data.Linq.LinqInstantFeedbackSource"/> with the specified settings.</para>
       </summary>
-      <param name="getQueryable">An <see cref="T:System.Action`1"/>&lt;<see cref="T:DevExpress.Data.Linq.GetQueryableEventArgs"/>,&gt; delegate, which is a method that will handle the <see cref="E:DevExpress.Data.Linq.LinqInstantFeedbackSource.GetQueryable"/> event. The specified delegate is attached to this event.</param>
-      <param name="freeQueryable">An <see cref="T:System.Action`1"/>&lt;<see cref="T:DevExpress.Data.Linq.GetQueryableEventArgs"/>,&gt; delegate, which is a method that will handle the <see cref="E:DevExpress.Data.Linq.LinqInstantFeedbackSource.DismissQueryable"/> event. The specified delegate is attached to this event.</param>
+      <param name="getQueryable">An Action&lt;<see cref="T:DevExpress.Data.Linq.GetQueryableEventArgs"/>&gt; delegate, which is a method that will handle the <see cref="E:DevExpress.Data.Linq.LinqInstantFeedbackSource.GetQueryable"/> event. The specified delegate is attached to this event.</param>
+      <param name="freeQueryable">An Action&lt;<see cref="T:DevExpress.Data.Linq.GetQueryableEventArgs"/>&gt; delegate, which is a method that will handle the <see cref="E:DevExpress.Data.Linq.LinqInstantFeedbackSource.DismissQueryable"/> event. The specified delegate is attached to this event.</param>
     </member>
     <member name="M:DevExpress.Data.Linq.LinqInstantFeedbackSource.#ctor(System.EventHandler{DevExpress.Data.Linq.GetQueryableEventArgs})">
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.Data.Linq.LinqInstantFeedbackSource"/> with the specified settings.</para>
       </summary>
-      <param name="getQueryable">An <see cref="T:System.EventHandler`1"/>&lt;<see cref="T:DevExpress.Data.Linq.GetQueryableEventArgs"/>,&gt; delegate, which is a method that will handle the <see cref="E:DevExpress.Data.Linq.LinqInstantFeedbackSource.GetQueryable"/> event. The specified delegate is attached to this event.</param>
+      <param name="getQueryable">An EventHandler&lt;<see cref="T:DevExpress.Data.Linq.GetQueryableEventArgs"/>&gt; delegate, which is a method that will handle the <see cref="E:DevExpress.Data.Linq.LinqInstantFeedbackSource.GetQueryable"/> event. The specified delegate is attached to this event.</param>
     </member>
     <member name="M:DevExpress.Data.Linq.LinqInstantFeedbackSource.#ctor(System.EventHandler{DevExpress.Data.Linq.GetQueryableEventArgs},System.EventHandler{DevExpress.Data.Linq.GetQueryableEventArgs})">
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.Data.Linq.LinqInstantFeedbackSource"/> with the specified settings.</para>
       </summary>
-      <param name="getQueryable">An <see cref="T:System.EventHandler`1"/>&lt;<see cref="T:DevExpress.Data.Linq.GetQueryableEventArgs"/>,&gt; delegate, which is a method that will handle the <see cref="E:DevExpress.Data.Linq.LinqInstantFeedbackSource.GetQueryable"/> event. The specified delegate is attached to this event.</param>
-      <param name="freeQueryable">An <see cref="T:System.EventHandler`1"/>&lt;<see cref="T:DevExpress.Data.Linq.GetQueryableEventArgs"/>,&gt; delegate, which is a method that will handle the <see cref="E:DevExpress.Data.Linq.LinqInstantFeedbackSource.DismissQueryable"/> event. The specified delegate is attached to this event.</param>
+      <param name="getQueryable">An EventHandler&lt;<see cref="T:DevExpress.Data.Linq.GetQueryableEventArgs"/>&gt; delegate, which is a method that will handle the <see cref="E:DevExpress.Data.Linq.LinqInstantFeedbackSource.GetQueryable"/> event. The specified delegate is attached to this event.</param>
+      <param name="freeQueryable">An EventHandler&lt;<see cref="T:DevExpress.Data.Linq.GetQueryableEventArgs"/>&gt; delegate, which is a method that will handle the <see cref="E:DevExpress.Data.Linq.LinqInstantFeedbackSource.DismissQueryable"/> event. The specified delegate is attached to this event.</param>
     </member>
     <member name="P:DevExpress.Data.Linq.LinqInstantFeedbackSource.AreSourceRowsThreadSafe">
       <summary>
@@ -5746,27 +5746,27 @@ Day After Tomorrow &lt;= date &lt; First Day of Next Week</para>
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.Data.ODataLinq.ODataInstantFeedbackSource"/> with the specified settings.</para>
       </summary>
-      <param name="getSource">An <see cref="T:System.Action`1"/>&lt;<see cref="T:DevExpress.Data.ODataLinq.GetSourceEventArgs"/>,&gt; delegate, which is a method that will handle the <see cref="E:DevExpress.Data.ODataLinq.ODataInstantFeedbackSource.GetSource"/> event. The specified delegate is attached to this event.</param>
+      <param name="getSource">An Action&lt;<see cref="T:DevExpress.Data.ODataLinq.GetSourceEventArgs"/>&gt; delegate, which is a method that will handle the <see cref="E:DevExpress.Data.ODataLinq.ODataInstantFeedbackSource.GetSource"/> event. The specified delegate is attached to this event.</param>
     </member>
     <member name="M:DevExpress.Data.ODataLinq.ODataInstantFeedbackSource.#ctor(System.Action{DevExpress.Data.ODataLinq.GetSourceEventArgs},System.Action{DevExpress.Data.ODataLinq.GetSourceEventArgs})">
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.Data.ODataLinq.ODataInstantFeedbackSource"/> with the specified settings.</para>
       </summary>
-      <param name="getSource">An <see cref="T:System.Action`1"/>&lt;<see cref="T:DevExpress.Data.ODataLinq.GetSourceEventArgs"/>,&gt; delegate, which is a method that will handle the <see cref="E:DevExpress.Data.ODataLinq.ODataInstantFeedbackSource.GetSource"/> event. The specified delegate is attached to this event.</param>
-      <param name="freeSource">An <see cref="T:System.Action`1"/>&lt;<see cref="T:DevExpress.Data.ODataLinq.GetSourceEventArgs"/>,&gt; delegate, which is a method that will handle the <see cref="E:DevExpress.Data.ODataLinq.ODataInstantFeedbackSource.DismissSource"/> event. The specified delegate is attached to this event.</param>
+      <param name="getSource">An Action&lt;<see cref="T:DevExpress.Data.ODataLinq.GetSourceEventArgs"/>&gt; delegate, which is a method that will handle the <see cref="E:DevExpress.Data.ODataLinq.ODataInstantFeedbackSource.GetSource"/> event. The specified delegate is attached to this event.</param>
+      <param name="freeSource">An Action&lt;<see cref="T:DevExpress.Data.ODataLinq.GetSourceEventArgs"/>&gt; delegate, which is a method that will handle the <see cref="E:DevExpress.Data.ODataLinq.ODataInstantFeedbackSource.DismissSource"/> event. The specified delegate is attached to this event.</param>
     </member>
     <member name="M:DevExpress.Data.ODataLinq.ODataInstantFeedbackSource.#ctor(System.EventHandler{DevExpress.Data.ODataLinq.GetSourceEventArgs})">
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.Data.ODataLinq.ODataInstantFeedbackSource"/> with the specified settings.</para>
       </summary>
-      <param name="getSource">An <see cref="T:System.EventHandler`1"/>&lt;<see cref="T:DevExpress.Data.ODataLinq.GetSourceEventArgs"/>,&gt; delegate, which is a method that will handle the <see cref="E:DevExpress.Data.ODataLinq.ODataInstantFeedbackSource.GetSource"/> event. The specified delegate is attached to this event.</param>
+      <param name="getSource">An EventHandler&lt;<see cref="T:DevExpress.Data.ODataLinq.GetSourceEventArgs"/>&gt; delegate, which is a method that will handle the <see cref="E:DevExpress.Data.ODataLinq.ODataInstantFeedbackSource.GetSource"/> event. The specified delegate is attached to this event.</param>
     </member>
     <member name="M:DevExpress.Data.ODataLinq.ODataInstantFeedbackSource.#ctor(System.EventHandler{DevExpress.Data.ODataLinq.GetSourceEventArgs},System.EventHandler{DevExpress.Data.ODataLinq.GetSourceEventArgs})">
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.Data.ODataLinq.ODataInstantFeedbackSource"/> with the specified settings.</para>
       </summary>
-      <param name="getSource">An <see cref="T:System.EventHandler`1"/>&lt;<see cref="T:DevExpress.Data.ODataLinq.GetSourceEventArgs"/>,&gt; delegate, which is a method that will handle the <see cref="E:DevExpress.Data.ODataLinq.ODataInstantFeedbackSource.GetSource"/> event. The specified delegate is attached to this event.</param>
-      <param name="freeSource">An <see cref="T:System.EventHandler`1"/>&lt;<see cref="T:DevExpress.Data.ODataLinq.GetSourceEventArgs"/>,&gt; delegate, which is a method that will handle the <see cref="E:DevExpress.Data.ODataLinq.ODataInstantFeedbackSource.DismissSource"/> event. The specified delegate is attached to this event.</param>
+      <param name="getSource">An EventHandler&lt;<see cref="T:DevExpress.Data.ODataLinq.GetSourceEventArgs"/>&gt; delegate, which is a method that will handle the <see cref="E:DevExpress.Data.ODataLinq.ODataInstantFeedbackSource.GetSource"/> event. The specified delegate is attached to this event.</param>
+      <param name="freeSource">An EventHandler&lt;<see cref="T:DevExpress.Data.ODataLinq.GetSourceEventArgs"/>&gt; delegate, which is a method that will handle the <see cref="E:DevExpress.Data.ODataLinq.ODataInstantFeedbackSource.DismissSource"/> event. The specified delegate is attached to this event.</param>
     </member>
     <member name="P:DevExpress.Data.ODataLinq.ODataInstantFeedbackSource.AreSourceRowsThreadSafe">
       <summary>
@@ -5963,27 +5963,27 @@ Day After Tomorrow &lt;= date &lt; First Day of Next Week</para>
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.Data.PLinq.PLinqInstantFeedbackSource"/> with the specified settings.</para>
       </summary>
-      <param name="getEnumerable">An <see cref="T:System.Action`1"/>&lt;<see cref="T:DevExpress.Data.PLinq.GetEnumerableEventArgs"/>,&gt; delegate, which is a method that will handle the <see cref="E:DevExpress.Data.PLinq.PLinqInstantFeedbackSource.GetEnumerable"/> event. The specified delegate is attached to this event.</param>
+      <param name="getEnumerable">An Action&lt;<see cref="T:DevExpress.Data.PLinq.GetEnumerableEventArgs"/>&gt; delegate, which is a method that will handle the <see cref="E:DevExpress.Data.PLinq.PLinqInstantFeedbackSource.GetEnumerable"/> event. The specified delegate is attached to this event.</param>
     </member>
     <member name="M:DevExpress.Data.PLinq.PLinqInstantFeedbackSource.#ctor(System.Action{DevExpress.Data.PLinq.GetEnumerableEventArgs},System.Action{DevExpress.Data.PLinq.GetEnumerableEventArgs})">
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.Data.PLinq.PLinqInstantFeedbackSource"/> with the specified settings.</para>
       </summary>
-      <param name="getEnumerable">An <see cref="T:System.Action`1"/>&lt;<see cref="T:DevExpress.Data.PLinq.GetEnumerableEventArgs"/>,&gt; delegate, which is a method that will handle the <see cref="E:DevExpress.Data.PLinq.PLinqInstantFeedbackSource.GetEnumerable"/> event. The specified delegate is attached to this event.</param>
-      <param name="freeEnumerable">An <see cref="T:System.Action`1"/>&lt;<see cref="T:DevExpress.Data.PLinq.GetEnumerableEventArgs"/>,&gt; delegate, which is a method that will handle the <see cref="E:DevExpress.Data.PLinq.PLinqInstantFeedbackSource.DismissEnumerable"/> event. The specified delegate is attached to this event.</param>
+      <param name="getEnumerable">An Action&lt;<see cref="T:DevExpress.Data.PLinq.GetEnumerableEventArgs"/>&gt; delegate, which is a method that will handle the <see cref="E:DevExpress.Data.PLinq.PLinqInstantFeedbackSource.GetEnumerable"/> event. The specified delegate is attached to this event.</param>
+      <param name="freeEnumerable">An Action&lt;<see cref="T:DevExpress.Data.PLinq.GetEnumerableEventArgs"/>&gt; delegate, which is a method that will handle the <see cref="E:DevExpress.Data.PLinq.PLinqInstantFeedbackSource.DismissEnumerable"/> event. The specified delegate is attached to this event.</param>
     </member>
     <member name="M:DevExpress.Data.PLinq.PLinqInstantFeedbackSource.#ctor(System.EventHandler{DevExpress.Data.PLinq.GetEnumerableEventArgs})">
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.Data.PLinq.PLinqInstantFeedbackSource"/> with the specified settings.</para>
       </summary>
-      <param name="getEnumerable">An <see cref="T:System.EventHandler`1"/>&lt;<see cref="T:DevExpress.Data.PLinq.GetEnumerableEventArgs"/>,&gt; delegate, which is a method that will handle the <see cref="E:DevExpress.Data.PLinq.PLinqInstantFeedbackSource.GetEnumerable"/> event. The specified delegate is attached to this event.</param>
+      <param name="getEnumerable">An EventHandler&lt;<see cref="T:DevExpress.Data.PLinq.GetEnumerableEventArgs"/>&gt; delegate, which is a method that will handle the <see cref="E:DevExpress.Data.PLinq.PLinqInstantFeedbackSource.GetEnumerable"/> event. The specified delegate is attached to this event.</param>
     </member>
     <member name="M:DevExpress.Data.PLinq.PLinqInstantFeedbackSource.#ctor(System.EventHandler{DevExpress.Data.PLinq.GetEnumerableEventArgs},System.EventHandler{DevExpress.Data.PLinq.GetEnumerableEventArgs})">
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.Data.PLinq.PLinqInstantFeedbackSource"/> with the specified settings.</para>
       </summary>
-      <param name="getEnumerable">An <see cref="T:System.EventHandler`1"/>&lt;<see cref="T:DevExpress.Data.PLinq.GetEnumerableEventArgs"/>,&gt; delegate, which is a method that will handle the <see cref="E:DevExpress.Data.PLinq.PLinqInstantFeedbackSource.GetEnumerable"/> event. The specified delegate is attached to this event.</param>
-      <param name="freeEnumerable">An <see cref="T:System.EventHandler`1"/>&lt;<see cref="T:DevExpress.Data.PLinq.GetEnumerableEventArgs"/>,&gt; delegate, which is a method that will handle the <see cref="E:DevExpress.Data.PLinq.PLinqInstantFeedbackSource.DismissEnumerable"/> event. The specified delegate is attached to this event.</param>
+      <param name="getEnumerable">An EventHandler&lt;<see cref="T:DevExpress.Data.PLinq.GetEnumerableEventArgs"/>&gt; delegate, which is a method that will handle the <see cref="E:DevExpress.Data.PLinq.PLinqInstantFeedbackSource.GetEnumerable"/> event. The specified delegate is attached to this event.</param>
+      <param name="freeEnumerable">An EventHandler&lt;<see cref="T:DevExpress.Data.PLinq.GetEnumerableEventArgs"/>&gt; delegate, which is a method that will handle the <see cref="E:DevExpress.Data.PLinq.PLinqInstantFeedbackSource.DismissEnumerable"/> event. The specified delegate is attached to this event.</param>
     </member>
     <member name="P:DevExpress.Data.PLinq.PLinqInstantFeedbackSource.DefaultSorting">
       <summary>
@@ -6105,7 +6105,7 @@ Day After Tomorrow &lt;= date &lt; First Day of Next Week</para>
         <para>Returns the displayable property names of an item type contained in a specified data source.</para>
       </summary>
       <param name="source">The data source object to examine for property information.</param>
-      <returns>An <see cref="T:System.Collections.Generic.IEnumerable`1"/>&lt;<see cref="T:System.String"/>,&gt; list of property names.</returns>
+      <returns>An IEnumerable&lt;<see cref="T:System.String"/>&gt; list of property names.</returns>
     </member>
     <member name="M:DevExpress.Data.RealTimeSource.GetList">
       <summary>
@@ -7031,7 +7031,7 @@ Allows you to initialize the data source and (optionally) return an initial batc
     </member>
     <member name="P:DevExpress.Data.VirtualServerModeSource.RowType">
       <summary>
-        <para>Gets or sets the type of object whose public properties identify columns for populating the bound control&#39;s column collection at design time.</para>
+        <para>Gets or sets the type of object whose public properties identify data-aware control columns.</para>
       </summary>
       <value>The row object&#39;s type.</value>
     </member>
@@ -7149,27 +7149,27 @@ Allows you to initialize the data source and (optionally) return an initial batc
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.Data.WcfLinq.WcfInstantFeedbackSource"/> with the specified settings.</para>
       </summary>
-      <param name="getSource">An <see cref="T:System.Action`1"/>&lt;<see cref="T:DevExpress.Data.WcfLinq.GetSourceEventArgs"/>,&gt; delegate, which is a method that will handle the <see cref="E:DevExpress.Data.WcfLinq.WcfInstantFeedbackSource.GetSource"/> event. The specified delegate is attached to this event.</param>
+      <param name="getSource">An Action&lt;<see cref="T:DevExpress.Data.WcfLinq.GetSourceEventArgs"/>&gt; delegate, which is a method that will handle the <see cref="E:DevExpress.Data.WcfLinq.WcfInstantFeedbackSource.GetSource"/> event. The specified delegate is attached to this event.</param>
     </member>
     <member name="M:DevExpress.Data.WcfLinq.WcfInstantFeedbackSource.#ctor(System.Action{DevExpress.Data.WcfLinq.GetSourceEventArgs},System.Action{DevExpress.Data.WcfLinq.GetSourceEventArgs})">
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.Data.WcfLinq.WcfInstantFeedbackSource"/> with the specified settings.</para>
       </summary>
-      <param name="getSource">An <see cref="T:System.Action`1"/>&lt;<see cref="T:DevExpress.Data.WcfLinq.GetSourceEventArgs"/>,&gt; delegate, which is a method that will handle the <see cref="E:DevExpress.Data.WcfLinq.WcfInstantFeedbackSource.GetSource"/> event. The specified delegate is attached to this event.</param>
-      <param name="freeSource">An <see cref="T:System.Action`1"/>&lt;<see cref="T:DevExpress.Data.WcfLinq.GetSourceEventArgs"/>,&gt; delegate, which is a method that will handle the <see cref="E:DevExpress.Data.WcfLinq.WcfInstantFeedbackSource.DismissSource"/> event. The specified delegate is attached to this event.</param>
+      <param name="getSource">An Action&lt;<see cref="T:DevExpress.Data.WcfLinq.GetSourceEventArgs"/>&gt; delegate, which is a method that will handle the <see cref="E:DevExpress.Data.WcfLinq.WcfInstantFeedbackSource.GetSource"/> event. The specified delegate is attached to this event.</param>
+      <param name="freeSource">An Action&lt;<see cref="T:DevExpress.Data.WcfLinq.GetSourceEventArgs"/>&gt; delegate, which is a method that will handle the <see cref="E:DevExpress.Data.WcfLinq.WcfInstantFeedbackSource.DismissSource"/> event. The specified delegate is attached to this event.</param>
     </member>
     <member name="M:DevExpress.Data.WcfLinq.WcfInstantFeedbackSource.#ctor(System.EventHandler{DevExpress.Data.WcfLinq.GetSourceEventArgs})">
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.Data.WcfLinq.WcfInstantFeedbackSource"/> with the specified settings.</para>
       </summary>
-      <param name="getSource">An <see cref="T:System.EventHandler`1"/>&lt;<see cref="T:DevExpress.Data.WcfLinq.GetSourceEventArgs"/>,&gt; delegate, which is a method that will handle the <see cref="E:DevExpress.Data.WcfLinq.WcfInstantFeedbackSource.GetSource"/> event. The specified delegate is attached to this event.</param>
+      <param name="getSource">An EventHandler&lt;<see cref="T:DevExpress.Data.WcfLinq.GetSourceEventArgs"/>&gt; delegate, which is a method that will handle the <see cref="E:DevExpress.Data.WcfLinq.WcfInstantFeedbackSource.GetSource"/> event. The specified delegate is attached to this event.</param>
     </member>
     <member name="M:DevExpress.Data.WcfLinq.WcfInstantFeedbackSource.#ctor(System.EventHandler{DevExpress.Data.WcfLinq.GetSourceEventArgs},System.EventHandler{DevExpress.Data.WcfLinq.GetSourceEventArgs})">
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.Data.WcfLinq.WcfInstantFeedbackSource"/> with the specified settings.</para>
       </summary>
-      <param name="getSource">An <see cref="T:System.EventHandler`1"/>&lt;<see cref="T:DevExpress.Data.WcfLinq.GetSourceEventArgs"/>,&gt; delegate, which is a method that will handle the <see cref="E:DevExpress.Data.WcfLinq.WcfInstantFeedbackSource.GetSource"/> event. The specified delegate is attached to this event.</param>
-      <param name="freeSource">An <see cref="T:System.EventHandler`1"/>&lt;<see cref="T:DevExpress.Data.WcfLinq.GetSourceEventArgs"/>,&gt; delegate, which is a method that will handle the <see cref="E:DevExpress.Data.WcfLinq.WcfInstantFeedbackSource.DismissSource"/> event. The specified delegate is attached to this event.</param>
+      <param name="getSource">An EventHandler&lt;<see cref="T:DevExpress.Data.WcfLinq.GetSourceEventArgs"/>&gt; delegate, which is a method that will handle the <see cref="E:DevExpress.Data.WcfLinq.WcfInstantFeedbackSource.GetSource"/> event. The specified delegate is attached to this event.</param>
+      <param name="freeSource">An EventHandler&lt;<see cref="T:DevExpress.Data.WcfLinq.GetSourceEventArgs"/>&gt; delegate, which is a method that will handle the <see cref="E:DevExpress.Data.WcfLinq.WcfInstantFeedbackSource.DismissSource"/> event. The specified delegate is attached to this event.</param>
     </member>
     <member name="P:DevExpress.Data.WcfLinq.WcfInstantFeedbackSource.AreSourceRowsThreadSafe">
       <summary>
@@ -11709,6 +11709,11 @@ Supported in Excel 2010 and higher.</para>
       </summary>
       <value>A DevExpress.Utils.DXCollectionUniquenessProviderType instance.</value>
     </member>
+    <member name="N:DevExpress.Utils.Filtering">
+      <summary>
+        <para>Contains types related to pop-up filter menus, filter editors, filter panels, etc.</para>
+      </summary>
+    </member>
     <member name="N:DevExpress.Utils.Filtering.Internal">
       <summary>
         <para></para>
@@ -12533,6 +12538,132 @@ Supported in Excel 2010 and higher.</para>
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.Utils.Filtering.Internal.FilterUIElementResXLocalizer"/> class with the default settings.</para>
       </summary>
+    </member>
+    <member name="T:DevExpress.Utils.Filtering.ParseFilterCriteriaEventArgs">
+      <summary>
+        <para>Provides data for the <see cref="E:DevExpress.XtraGrid.Views.Base.ColumnView.FilterPopupExcelParseFilterCriteria"/>, <see cref="E:DevExpress.XtraTreeList.TreeList.FilterPopupExcelParseFilterCriteria"/>, <see cref="E:DevExpress.XtraVerticalGrid.VGridControl.FilterPopupExcelParseFilterCriteria"/> and <see cref="E:DevExpress.XtraPivotGrid.PivotGridControl.FilterPopupExcelParseFilterCriteria"/> events.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.Utils.Filtering.ParseFilterCriteriaEventArgs.FilterCriteria">
+      <summary>
+        <para>Gets the applied filter criteria.</para>
+      </summary>
+      <value>An object that specifies the filter criteria.</value>
+    </member>
+    <member name="P:DevExpress.Utils.Filtering.ParseFilterCriteriaEventArgs.Path">
+      <summary>
+        <para>Gets the name of the processed data field or the full path to the data field through object relationships.</para>
+      </summary>
+      <value>A string value that specifies the name of the processed data field or the full path to the data field through object relationships.</value>
+    </member>
+    <member name="M:DevExpress.Utils.Filtering.ParseFilterCriteriaEventArgs.SetBlanks">
+      <summary>
+        <para>Selects the data value that corresponds to the blank value.</para>
+      </summary>
+      <returns>true, if the data value is successfully selected; otherwise, false.</returns>
+    </member>
+    <member name="M:DevExpress.Utils.Filtering.ParseFilterCriteriaEventArgs.SetEmpty">
+      <summary>
+        <para>Selects the data value that corresponds to the empty string value.</para>
+      </summary>
+      <returns>true, if the data value is successfully selected; otherwise, false.</returns>
+    </member>
+    <member name="M:DevExpress.Utils.Filtering.ParseFilterCriteriaEventArgs.SetNotBlanks">
+      <summary>
+        <para>Selects the data values that do not correspond to the blank value.</para>
+      </summary>
+      <returns>true, if the data values are successfully selected; otherwise, false.</returns>
+    </member>
+    <member name="M:DevExpress.Utils.Filtering.ParseFilterCriteriaEventArgs.SetNotEmpty">
+      <summary>
+        <para>Selects the data values that do not correspond to the empty string value.</para>
+      </summary>
+      <returns>true, if the data values are successfully selected; otherwise, false.</returns>
+    </member>
+    <member name="M:DevExpress.Utils.Filtering.ParseFilterCriteriaEventArgs.SetNotNull">
+      <summary>
+        <para>Selects the data values that do not correspond to the null value.</para>
+      </summary>
+      <returns>true, if the data values are successfully selected; otherwise, false.</returns>
+    </member>
+    <member name="M:DevExpress.Utils.Filtering.ParseFilterCriteriaEventArgs.SetNull">
+      <summary>
+        <para>Selects the data value that corresponds to the null value.</para>
+      </summary>
+      <returns>true, if the data value is successfully selected; otherwise, false.</returns>
+    </member>
+    <member name="M:DevExpress.Utils.Filtering.ParseFilterCriteriaEventArgs.SetRange(System.Object,System.Object)">
+      <summary>
+        <para>Selects the specified range of values.</para>
+      </summary>
+      <param name="from">An object that specifies the start value of the range.</param>
+      <param name="to">An object that specifies the end value of the range.</param>
+      <returns>true, if the data value range is successfully selected; otherwise, false.</returns>
+    </member>
+    <member name="M:DevExpress.Utils.Filtering.ParseFilterCriteriaEventArgs.SetRange``1(``0,``0)">
+      <summary>
+        <para>Selects the specified range of values.</para>
+      </summary>
+      <param name="from">An object that specifies the start value of the range.</param>
+      <param name="to">An object that specifies the end value of the range.</param>
+      <returns>true, if the data value range is successfully selected; otherwise, false.</returns>
+    </member>
+    <member name="M:DevExpress.Utils.Filtering.ParseFilterCriteriaEventArgs.SetResult(System.Object[],System.Boolean)">
+      <summary>
+        <para>For internal use.</para>
+      </summary>
+      <param name="values">For internal use.</param>
+      <param name="useInversion">For internal use.</param>
+      <returns>For internal use.</returns>
+    </member>
+    <member name="M:DevExpress.Utils.Filtering.ParseFilterCriteriaEventArgs.SetValue(System.Object,System.Boolean)">
+      <summary>
+        <para>Selects the specified value.</para>
+      </summary>
+      <param name="value">An object that specifies the value by which data is filtered.</param>
+      <param name="useInversion">true, to select values that are not specified; otherwise, false.</param>
+      <returns>true, if the data value is successfully selected; otherwise, false.</returns>
+    </member>
+    <member name="M:DevExpress.Utils.Filtering.ParseFilterCriteriaEventArgs.SetValue``1(``0)">
+      <summary>
+        <para>Selects the specified value.</para>
+      </summary>
+      <param name="value">An object that specifies the value by which data is filtered.</param>
+      <returns>true, if the data value is successfully selected; otherwise, false.</returns>
+    </member>
+    <member name="M:DevExpress.Utils.Filtering.ParseFilterCriteriaEventArgs.SetValues(System.Object[])">
+      <summary>
+        <para>Selects the specified values.</para>
+      </summary>
+      <param name="values">An array of values by which data is filtered.</param>
+      <returns>true, if the data values are successfully selected; otherwise, false.</returns>
+    </member>
+    <member name="M:DevExpress.Utils.Filtering.ParseFilterCriteriaEventArgs.SetValues``1(System.Collections.Generic.IReadOnlyCollection{``0})">
+      <summary>
+        <para>Selects the specified values.</para>
+      </summary>
+      <param name="values">An object that specifies the collection of values by which data is filtered.</param>
+      <returns>true, if the data values are successfully selected; otherwise, false.</returns>
+    </member>
+    <member name="M:DevExpress.Utils.Filtering.ParseFilterCriteriaEventArgs.SetValuesOrBlanks(System.Object[])">
+      <summary>
+        <para>Selects the specified values and the &quot;Blanks&quot; value.</para>
+      </summary>
+      <param name="values">An array of values by which data is filtered.</param>
+      <returns>true, if the data values are successfully selected; otherwise, false.</returns>
+    </member>
+    <member name="M:DevExpress.Utils.Filtering.ParseFilterCriteriaEventArgs.SetValuesOrBlanks``1(System.Collections.Generic.IReadOnlyCollection{``0})">
+      <summary>
+        <para>Selects the specified values and the &quot;Blanks&quot; value.</para>
+      </summary>
+      <param name="values">An object that specifies the collection of values by which data is filtered.</param>
+      <returns>true, if the data values are successfully selected; otherwise, false.</returns>
+    </member>
+    <member name="P:DevExpress.Utils.Filtering.ParseFilterCriteriaEventArgs.Value">
+      <summary>
+        <para>Gets an object that specifies the filter menu view model.</para>
+      </summary>
+      <value>An object that specifies the filter menu view model.</value>
     </member>
     <member name="T:DevExpress.Utils.FormatInfo">
       <summary>
@@ -13914,6 +14045,12 @@ Also <see cref="P:DevExpress.Utils.FormatInfo.FormatString"/> is set to &quot;d&
         <para>Gets or sets whether the legacy filter editor is used.</para>
       </summary>
       <value>true, to use the legacy filter editor; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.Xpf.Core.CompatibilitySettings.UseLegacySchedulerCellDecoration">
+      <summary>
+        <para></para>
+      </summary>
+      <value></value>
     </member>
     <member name="P:DevExpress.Xpf.Core.CompatibilitySettings.UseLightweightBarItems">
       <summary>
@@ -23034,6 +23171,48 @@ Otherwise, the closest matching image side (height or width) will be sized to th
       <summary>
         <para>The complex properties are shown at the bottom of the Field List.</para>
       </summary>
+    </member>
+    <member name="N:DevExpress.XtraReports.Parameters">
+      <summary>
+        <para>Contains classes that are used to handle parameters in XtraReports.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.XtraReports.Parameters.Range`1">
+      <summary>
+        <para>A predefined value range item.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.XtraReports.Parameters.Range`1.#ctor(`0,`0)">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.XtraReports.Parameters.Range`1"/> class with specified settings.</para>
+      </summary>
+      <param name="start">A range&#39;s start value.</param>
+      <param name="end">A range&#39;s end value.</param>
+    </member>
+    <member name="P:DevExpress.XtraReports.Parameters.Range`1.End">
+      <summary>
+        <para>The range&#39;s end value.</para>
+      </summary>
+      <value>The range&#39;s end value.</value>
+    </member>
+    <member name="M:DevExpress.XtraReports.Parameters.Range`1.Equals(System.Object)">
+      <summary>
+        <para>Determines whether the specified object is equal to the current object.</para>
+      </summary>
+      <param name="obj">An object to compare with the current object.</param>
+      <returns>true, if the specified object is equal to the current object; otherwise, false.</returns>
+    </member>
+    <member name="M:DevExpress.XtraReports.Parameters.Range`1.GetHashCode">
+      <summary>
+        <para>Returns the hash code for the current object.</para>
+      </summary>
+      <returns>The hash code for the current object.</returns>
+    </member>
+    <member name="P:DevExpress.XtraReports.Parameters.Range`1.Start">
+      <summary>
+        <para>The range&#39;s start value.</para>
+      </summary>
+      <value>The range&#39;s start value.</value>
     </member>
     <member name="N:DevExpress.XtraReports.UI">
       <summary>

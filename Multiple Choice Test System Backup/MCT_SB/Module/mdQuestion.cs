@@ -64,5 +64,45 @@ namespace Module
                 return Provider.ErroString("Module", "mdQuestion", "insert", e.Message);
             }
         }
+        public static string GetTreeQuestion(ref DataTable dtQuestion)
+        {
+            try
+            {
+                string conStr = Provider.ConnectString();
+                SqlConnection con = new SqlConnection(conStr);
+                con.Open();
+                string query = "";
+                SqlCommand cmdGetData = new SqlCommand(query, con);
+                cmdGetData.CommandType = CommandType.Text;
+                SqlDataAdapter da = new SqlDataAdapter(cmdGetData);
+                int result = da.Fill(dtQuestion);
+                con.Close();
+                return "OK";
+            }
+            catch (Exception e)
+            {
+                return Provider.ErroString("Module", "mdQuestion", "GetTreeQuestion", e.Message);
+            }
+        }
+        public static string GetByGroupType(ref DataTable dtQuestion, int GroupTypeID)
+        {
+            try
+            {
+                string conStr = Provider.ConnectString();
+                SqlConnection con = new SqlConnection(conStr);
+                con.Open();
+                string query = "select * from QUESTIONS where IdGroupTypeQuestions = " + GroupTypeID;
+                SqlCommand cmdGetData = new SqlCommand(query, con);
+                cmdGetData.CommandType = CommandType.Text;
+                SqlDataAdapter da = new SqlDataAdapter(cmdGetData);
+                int result = da.Fill(dtQuestion);
+                con.Close();
+                return "OK";
+            }
+            catch (Exception e)
+            {
+                return Provider.ErroString("Module", "mdQuestion", "GetByGroupType", e.Message);
+            }
+        }
     }
 }

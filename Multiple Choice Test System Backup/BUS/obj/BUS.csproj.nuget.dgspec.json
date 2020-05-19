@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Project\\C#\\MCST\\Multiple Choice Test System Backup\\BUS\\BUS.csproj": {}
+    "C:\\Users\\phamh\\Desktop\\Khoá Luận\\MCST\\Multiple Choice Test System Backup\\BUS\\BUS.csproj": {}
   },
   "projects": {
-    "D:\\Project\\C#\\MCST\\Multiple Choice Test System Backup\\BUS\\BUS.csproj": {
+    "C:\\Users\\phamh\\Desktop\\Khoá Luận\\MCST\\Multiple Choice Test System Backup\\BUS\\BUS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Project\\C#\\MCST\\Multiple Choice Test System Backup\\BUS\\BUS.csproj",
+        "projectUniqueName": "C:\\Users\\phamh\\Desktop\\Khoá Luận\\MCST\\Multiple Choice Test System Backup\\BUS\\BUS.csproj",
         "projectName": "BUS",
-        "projectPath": "D:\\Project\\C#\\MCST\\Multiple Choice Test System Backup\\BUS\\BUS.csproj",
-        "packagesPath": "C:\\Users\\NXK China\\.nuget\\packages\\",
-        "outputPath": "D:\\Project\\C#\\MCST\\Multiple Choice Test System Backup\\BUS\\obj\\",
+        "projectPath": "C:\\Users\\phamh\\Desktop\\Khoá Luận\\MCST\\Multiple Choice Test System Backup\\BUS\\BUS.csproj",
+        "packagesPath": "C:\\Users\\phamh\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\phamh\\Desktop\\Khoá Luận\\MCST\\Multiple Choice Test System Backup\\BUS\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\NXK China\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\phamh\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 19.2.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],

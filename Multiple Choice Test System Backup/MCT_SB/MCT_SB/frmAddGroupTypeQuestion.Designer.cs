@@ -37,8 +37,10 @@
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.grcGroupTypeQuestion = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.No = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.FileName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.layoutControl2 = new DevExpress.XtraLayout.LayoutControl();
             this.btnAdd = new DevExpress.XtraEditors.SimpleButton();
@@ -60,7 +62,7 @@
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grcGroupTypeQuestion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
@@ -96,28 +98,51 @@
             // 
             // groupControl2
             // 
-            this.groupControl2.Controls.Add(this.gridControl1);
+            this.groupControl2.Controls.Add(this.grcGroupTypeQuestion);
             this.groupControl2.Location = new System.Drawing.Point(7, 208);
             this.groupControl2.Name = "groupControl2";
             this.groupControl2.Size = new System.Drawing.Size(697, 328);
             this.groupControl2.TabIndex = 9;
-            this.groupControl2.Text = "groupControl2";
+            this.groupControl2.Text = "List file in system";
             // 
-            // gridControl1
+            // grcGroupTypeQuestion
             // 
-            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl1.Location = new System.Drawing.Point(2, 23);
-            this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(693, 303);
-            this.gridControl1.TabIndex = 0;
-            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.grcGroupTypeQuestion.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grcGroupTypeQuestion.Location = new System.Drawing.Point(2, 23);
+            this.grcGroupTypeQuestion.MainView = this.gridView1;
+            this.grcGroupTypeQuestion.Name = "grcGroupTypeQuestion";
+            this.grcGroupTypeQuestion.Size = new System.Drawing.Size(693, 303);
+            this.grcGroupTypeQuestion.TabIndex = 0;
+            this.grcGroupTypeQuestion.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
             // gridView1
             // 
-            this.gridView1.GridControl = this.gridControl1;
+            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.No,
+            this.FileName});
+            this.gridView1.GridControl = this.grcGroupTypeQuestion;
             this.gridView1.Name = "gridView1";
+            // 
+            // No
+            // 
+            this.No.Caption = "No.";
+            this.No.FieldName = "No.";
+            this.No.Name = "No";
+            this.No.OptionsColumn.ReadOnly = true;
+            this.No.Visible = true;
+            this.No.VisibleIndex = 0;
+            this.No.Width = 99;
+            // 
+            // FileName
+            // 
+            this.FileName.Caption = "File Name";
+            this.FileName.FieldName = "File Name";
+            this.FileName.Name = "FileName";
+            this.FileName.OptionsColumn.ReadOnly = true;
+            this.FileName.Visible = true;
+            this.FileName.VisibleIndex = 1;
+            this.FileName.Width = 571;
             // 
             // groupControl1
             // 
@@ -152,6 +177,7 @@
             this.btnAdd.StyleController = this.layoutControl2;
             this.btnAdd.TabIndex = 8;
             this.btnAdd.Text = "Add";
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click_1);
             // 
             // mmDescription
             // 
@@ -299,7 +325,7 @@
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grcGroupTypeQuestion)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
@@ -341,9 +367,11 @@
         private DevExpress.XtraEditors.SimpleButton btnAdd;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
         private DevExpress.XtraEditors.GroupControl groupControl2;
-        private DevExpress.XtraGrid.GridControl gridControl1;
+        private DevExpress.XtraGrid.GridControl grcGroupTypeQuestion;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
+        private DevExpress.XtraGrid.Columns.GridColumn No;
+        private DevExpress.XtraGrid.Columns.GridColumn FileName;
     }
 }

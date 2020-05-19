@@ -3046,7 +3046,7 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
     </member>
     <member name="T:DevExpress.Utils.Controls.ControlBase">
       <summary>
-        <para>Represents the base class for most controls and editors available in the DevExpress Editors Library, along with their descendants.</para>
+        <para>Represents the base class for most editors and controls available in the DevExpress Editors Library, along with their descendants.</para>
       </summary>
     </member>
     <member name="M:DevExpress.Utils.Controls.ControlBase.#ctor">
@@ -3519,9 +3519,9 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
     </member>
     <member name="M:DevExpress.Utils.DragDrop.DragDropBehaviorProperties.CreateEventsStorage">
       <summary>
-        <para></para>
+        <para>Returns a new <see cref="T:DevExpress.Utils.DragDrop.DragDropEvents"/> class instance. For internal use.</para>
       </summary>
-      <returns></returns>
+      <returns>For internal use.</returns>
     </member>
     <member name="P:DevExpress.Utils.DragDrop.DragDropBehaviorProperties.Events">
       <summary>
@@ -3531,9 +3531,9 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
     </member>
     <member name="M:DevExpress.Utils.DragDrop.DragDropBehaviorProperties.GetEventsStorage">
       <summary>
-        <para></para>
+        <para>Returns the <see cref="P:DevExpress.Utils.DragDrop.DragDropBehaviorProperties.Events"/> property value. For internal use.</para>
       </summary>
-      <returns></returns>
+      <returns>For internal use.</returns>
     </member>
     <member name="P:DevExpress.Utils.DragDrop.DragDropBehaviorProperties.InsertIndicatorVisible">
       <summary>
@@ -3549,9 +3549,9 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
     </member>
     <member name="M:DevExpress.Utils.DragDrop.DragDropBehaviorProperties.SetEventsStorage(System.ComponentModel.IComponent)">
       <summary>
-        <para></para>
+        <para>Assigns the specified <see cref="T:DevExpress.Utils.DragDrop.DragDropEvents"/> object to the <see cref="P:DevExpress.Utils.DragDrop.DragDropBehaviorProperties.Events"/> property. For internal use.</para>
       </summary>
-      <param name="eventsStorage"></param>
+      <param name="eventsStorage">For internal use.</param>
     </member>
     <member name="T:DevExpress.Utils.DragDrop.DragDropEventArgs">
       <summary>
@@ -4182,6 +4182,75 @@ Provides storage for pens, fonts and brushes.</para>
       <param name="font">A <see cref="T:System.Drawing.Font"/> object which defines the font and the associated settings of the text.</param>
       <param name="maxWidth">An integer value specifying the maximum width of the string (in pixels).</param>
       <returns>A <see cref="T:System.Drawing.SizeF"/> structure which represents the size (in pixels) of the string.</returns>
+    </member>
+    <member name="M:DevExpress.Utils.Drawing.GraphicsCache.CalcVTextSize(System.String,System.Drawing.Font)">
+      <summary>
+        <para></para>
+      </summary>
+      <param name="text"></param>
+      <param name="font"></param>
+      <returns></returns>
+    </member>
+    <member name="M:DevExpress.Utils.Drawing.GraphicsCache.CalcVTextSize(System.String,System.Drawing.Font,System.Drawing.SizeF)">
+      <summary>
+        <para></para>
+      </summary>
+      <param name="text"></param>
+      <param name="font"></param>
+      <param name="layoutArea"></param>
+      <returns></returns>
+    </member>
+    <member name="M:DevExpress.Utils.Drawing.GraphicsCache.CalcVTextSize(System.String,System.Drawing.Font,System.Drawing.StringFormat,System.Drawing.SizeF)">
+      <summary>
+        <para></para>
+      </summary>
+      <param name="text"></param>
+      <param name="font"></param>
+      <param name="format"></param>
+      <param name="layoutArea"></param>
+      <returns></returns>
+    </member>
+    <member name="M:DevExpress.Utils.Drawing.GraphicsCache.CalcVTextSize(System.String,System.Drawing.Font,System.Drawing.StringFormat,System.Int32)">
+      <summary>
+        <para></para>
+      </summary>
+      <param name="text"></param>
+      <param name="font"></param>
+      <param name="strFormat"></param>
+      <param name="maxWidth"></param>
+      <returns></returns>
+    </member>
+    <member name="M:DevExpress.Utils.Drawing.GraphicsCache.CalcVTextSize(System.String,System.Drawing.Font,System.Drawing.StringFormat,System.Int32,System.Int32)">
+      <summary>
+        <para></para>
+      </summary>
+      <param name="text"></param>
+      <param name="font"></param>
+      <param name="strFormat"></param>
+      <param name="maxWidth"></param>
+      <param name="maxHeight"></param>
+      <returns></returns>
+    </member>
+    <member name="M:DevExpress.Utils.Drawing.GraphicsCache.CalcVTextSize(System.String,System.Drawing.Font,System.Drawing.StringFormat,System.Int32,System.Int32,System.Boolean@)">
+      <summary>
+        <para></para>
+      </summary>
+      <param name="text"></param>
+      <param name="font"></param>
+      <param name="strFormat"></param>
+      <param name="maxWidth"></param>
+      <param name="maxHeight"></param>
+      <param name="isCropped"></param>
+      <returns></returns>
+    </member>
+    <member name="M:DevExpress.Utils.Drawing.GraphicsCache.CalcVTextSize(System.String,System.Drawing.Font,System.Int32)">
+      <summary>
+        <para></para>
+      </summary>
+      <param name="text"></param>
+      <param name="font"></param>
+      <param name="maxWidth"></param>
+      <returns></returns>
     </member>
     <member name="M:DevExpress.Utils.Drawing.GraphicsCache.Clear">
       <summary>
@@ -6315,32 +6384,32 @@ The ImageCollection is also used as a part of the <see cref="T:DevExpress.Utils.
     </member>
     <member name="M:DevExpress.Utils.ImageCollection.GetImageListImage(System.Object,System.Int32,DevExpress.Utils.Design.ISvgPaletteProvider,System.Nullable{System.Drawing.Size},System.Nullable{System.Single})">
       <summary>
-        <para></para>
+        <para>Returns the image at the specified position in the specified image list.</para>
       </summary>
-      <param name="images"></param>
-      <param name="index"></param>
-      <param name="palette"></param>
-      <param name="size"></param>
-      <param name="scaleFactor"></param>
-      <returns></returns>
+      <param name="images">An object that represents the source of images.</param>
+      <param name="index">A zero-based integer that specifies the index of the image in the images.</param>
+      <param name="palette">An ISvgPaletteProvider object specifying colors used to paint vector images.</param>
+      <param name="size">A vector image size.</param>
+      <param name="scaleFactor">An integer value that specifies the scale factor.</param>
+      <returns>An <see cref="T:System.Drawing.Image"/> descendant that represents the image at the specified position within the specified image list. null (Nothing in Visual Basic) if the image isn&#39;t found.</returns>
     </member>
     <member name="M:DevExpress.Utils.ImageCollection.GetImageListImage(System.Object,System.Int32,System.Nullable{System.Single})">
       <summary>
-        <para></para>
+        <para>Returns the image at the specified position in the specified image list.</para>
       </summary>
-      <param name="images"></param>
-      <param name="index"></param>
-      <param name="scaleFactor"></param>
-      <returns></returns>
+      <param name="images">An object that represents the source of images.</param>
+      <param name="index">A zero-based integer that specifies the index of the image in the images.</param>
+      <param name="scaleFactor">An integer value that specifies the scale factor.</param>
+      <returns>An <see cref="T:System.Drawing.Image"/> descendant that represents the image at the specified position within the specified image list. null (Nothing in Visual Basic) if the image isn&#39;t found.</returns>
     </member>
     <member name="M:DevExpress.Utils.ImageCollection.GetImageListImage(System.Object,System.String,System.Nullable{System.Single})">
       <summary>
-        <para></para>
+        <para>Returns the image with the specified key in the specified image list.</para>
       </summary>
-      <param name="images"></param>
-      <param name="id"></param>
-      <param name="scaleFactor"></param>
-      <returns></returns>
+      <param name="images">An object that represents the source of images.</param>
+      <param name="id">A string value that is the key of the image to be returned.</param>
+      <param name="scaleFactor">An integer value that specifies the scale factor.</param>
+      <returns>An <see cref="T:System.Drawing.Image"/> descendant that represents the image at the specified position within the specified image list. null (Nothing in Visual Basic) if the image isn&#39;t found.</returns>
     </member>
     <member name="M:DevExpress.Utils.ImageCollection.GetImageListImageCount(System.Object)">
       <summary>
@@ -6351,16 +6420,16 @@ The ImageCollection is also used as a part of the <see cref="T:DevExpress.Utils.
     </member>
     <member name="M:DevExpress.Utils.ImageCollection.GetImageListImageSize(System.Object,System.Int32,System.Nullable{System.Single})">
       <summary>
-        <para></para>
+        <para>Returns the size of the image at the specified position in the image list.</para>
       </summary>
-      <param name="images"></param>
-      <param name="index"></param>
-      <param name="scaleFactor"></param>
-      <returns></returns>
+      <param name="images">An object that represents the source of images.</param>
+      <param name="index">The index of the required image in the images list.</param>
+      <param name="scaleFactor">An integer value that specifies a custom scale factor.</param>
+      <returns>A <see cref="T:System.Drawing.Size"/> structure that specifies the size of a specific image.</returns>
     </member>
     <member name="M:DevExpress.Utils.ImageCollection.GetImageListSize(System.Drawing.Image,System.Object,System.Int32)">
       <summary>
-        <para>Gets the size of the specified image or of an image in the image list addressed by a specific index.</para>
+        <para>Returns the size of the specified image or of an image in the image list addressed by a specific index.</para>
       </summary>
       <param name="image">An image whose size is returned.</param>
       <param name="images">An object that represents the source of images. This parameter is in effect if the image parameter is set to null.</param>
@@ -6369,11 +6438,11 @@ The ImageCollection is also used as a part of the <see cref="T:DevExpress.Utils.
     </member>
     <member name="M:DevExpress.Utils.ImageCollection.GetImageListSize(System.Object,System.Nullable{System.Single})">
       <summary>
-        <para></para>
+        <para>Returns the size of the images in the specified image list.</para>
       </summary>
-      <param name="images"></param>
-      <param name="scaleFactor"></param>
-      <returns></returns>
+      <param name="images">An object that represents the source of the images.</param>
+      <param name="scaleFactor">An integer value that specifies a custom scale factor.</param>
+      <returns>A structure that specifies the height and width of the images in the specified list.</returns>
     </member>
     <member name="E:DevExpress.Utils.ImageCollection.GetImageSize">
       <summary>
@@ -10281,7 +10350,7 @@ For the <see cref="T:DevExpress.Utils.SharedImageCollection"/>, this property sp
     </member>
     <member name="T:DevExpress.Utils.ToolTipItem">
       <summary>
-        <para>A regular tooltip item in a <see cref="T:DevExpress.Utils.SuperToolTip"/> that displays text and/or an image.</para>
+        <para>Represents a region in a super tooltip.</para>
       </summary>
     </member>
     <member name="M:DevExpress.Utils.ToolTipItem.#ctor">
@@ -10393,68 +10462,68 @@ For the <see cref="T:DevExpress.Utils.SharedImageCollection"/>, this property sp
     </member>
     <member name="T:DevExpress.Utils.ToolTipItemImageOptions">
       <summary>
-        <para></para>
+        <para>Provides access to options that specify raster or vector image displayed in a super tooltip.</para>
       </summary>
     </member>
     <member name="M:DevExpress.Utils.ToolTipItemImageOptions.#ctor">
       <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.Utils.ToolTipItemImageOptions"/> class.</para>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.Utils.ToolTipItemImageOptions"/> class. For internal use.</para>
       </summary>
     </member>
     <member name="M:DevExpress.Utils.ToolTipItemImageOptions.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
       <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.Utils.ToolTipItemImageOptions"/> class with specified settings.</para>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.Utils.ToolTipItemImageOptions"/> class with specified settings. For internal use.</para>
       </summary>
-      <param name="info"></param>
-      <param name="context"></param>
+      <param name="info">For internal use.</param>
+      <param name="context">For internal use.</param>
     </member>
     <member name="P:DevExpress.Utils.ToolTipItemImageOptions.Alignment">
       <summary>
-        <para></para>
+        <para>Gets or sets whether the image is aligned at the left or right edge of the tooltip.</para>
       </summary>
-      <value></value>
+      <value>Default or Right if the image is aligned at the right; Left if the image is aligned at the left.</value>
     </member>
     <member name="P:DevExpress.Utils.ToolTipItemImageOptions.Image">
       <summary>
-        <para></para>
+        <para>Gets or sets the raster image.</para>
       </summary>
-      <value></value>
+      <value>An <see cref="T:System.Drawing.Image"/> object that specifies the raster image.</value>
     </member>
     <member name="P:DevExpress.Utils.ToolTipItemImageOptions.ImageIndex">
       <summary>
-        <para></para>
+        <para>Gets or sets the index of the image in the image collection.</para>
       </summary>
-      <value></value>
+      <value>An integer value that specifies the index of the image in the image collection.</value>
     </member>
     <member name="P:DevExpress.Utils.ToolTipItemImageOptions.Images">
       <summary>
-        <para></para>
+        <para>Provides access to the collection of images that can be displayed in the tooltip.</para>
       </summary>
-      <value></value>
+      <value>An object that specifies the collection of images that can be displayed in the tooltip.</value>
     </member>
     <member name="P:DevExpress.Utils.ToolTipItemImageOptions.ImageToTextDistance">
       <summary>
-        <para></para>
+        <para>Gets or sets the indentation of the text from the image.</para>
       </summary>
-      <value></value>
+      <value>An integer value that specifies the indentation of the text from the image.</value>
     </member>
     <member name="P:DevExpress.Utils.ToolTipItemImageOptions.ImageUri">
       <summary>
-        <para></para>
+        <para>Gets or sets the universal resource identifier of an image.</para>
       </summary>
-      <value></value>
+      <value>An object that specifies a universal resource identifier of an image.</value>
     </member>
     <member name="P:DevExpress.Utils.ToolTipItemImageOptions.SvgImage">
       <summary>
-        <para></para>
+        <para>Gets or sets the vector image.</para>
       </summary>
-      <value></value>
+      <value>An <see cref="T:DevExpress.Utils.Svg.SvgImage"/> object that specifies the vector image.</value>
     </member>
     <member name="P:DevExpress.Utils.ToolTipItemImageOptions.SvgImageSize">
       <summary>
-        <para></para>
+        <para>Gets or sets the size of the vector image.</para>
       </summary>
-      <value></value>
+      <value>A <see cref="T:System.Drawing.Size"/> structures that specifies the vector image size.</value>
     </member>
     <member name="T:DevExpress.Utils.ToolTipLocation">
       <summary>
@@ -10533,7 +10602,7 @@ For the <see cref="T:DevExpress.Utils.SharedImageCollection"/>, this property sp
     </member>
     <member name="T:DevExpress.Utils.ToolTipSeparatorItem">
       <summary>
-        <para></para>
+        <para>Represents a separator in a super tooltip.</para>
       </summary>
     </member>
     <member name="M:DevExpress.Utils.ToolTipSeparatorItem.#ctor">
@@ -10545,8 +10614,8 @@ For the <see cref="T:DevExpress.Utils.SharedImageCollection"/>, this property sp
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.Utils.ToolTipSeparatorItem"/> class with specified settings.</para>
       </summary>
-      <param name="info"></param>
-      <param name="context"></param>
+      <param name="info">For internal use.</param>
+      <param name="context">For internal use.</param>
     </member>
     <member name="T:DevExpress.Utils.ToolTipStyle">
       <summary>
@@ -10572,7 +10641,7 @@ In other cases, tooltips are painted using the <see cref="F:DevExpress.Utils.Too
     </member>
     <member name="T:DevExpress.Utils.ToolTipTitleItem">
       <summary>
-        <para></para>
+        <para>Represents a title in a super tooltip.</para>
       </summary>
     </member>
     <member name="M:DevExpress.Utils.ToolTipTitleItem.#ctor">
@@ -12993,13 +13062,12 @@ A specific version of the addressed image is automatically chosen based on the a
     </member>
     <member name="T:DevExpress.XtraEditors.FindPanelBehavior">
       <summary>
-        <para>Enumerates a Find Panel&#39;s search modes.</para>
+        <para>Enumerates values that specify whether the find panel displays the found records only or displays all records and highlights the found records.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraEditors.FindPanelBehavior.Default">
       <summary>
-        <para>When the <see cref="P:DevExpress.XtraEditors.WindowsFormsSettings.FindPanelBehavior"/> property is set to Default, the actual setting is Filter.
-When a control&#39;s OptionsFind.Behavior property is set to Default, the actual setting is specified by the <see cref="P:DevExpress.XtraEditors.WindowsFormsSettings.FindPanelBehavior"/> property.</para>
+        <para>The behavior depends on the static (Shared in VB) <see cref="P:DevExpress.XtraEditors.WindowsFormsSettings.FindPanelBehavior"/> property. If the latter property is also set to <see cref="F:DevExpress.XtraEditors.FindPanelBehavior.Default"/>, the <see cref="F:DevExpress.XtraEditors.FindPanelBehavior.Filter"/> mode is applied.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraEditors.FindPanelBehavior.Filter">
@@ -13009,7 +13077,7 @@ When a control&#39;s OptionsFind.Behavior property is set to Default, the actual
     </member>
     <member name="F:DevExpress.XtraEditors.FindPanelBehavior.Search">
       <summary>
-        <para>Highlight search results in cells and on the scrollbar</para>
+        <para>Highlight search results in cells and on the scrollbar.</para>
       </summary>
     </member>
     <member name="T:DevExpress.XtraEditors.FormBorderEffect">
@@ -13503,7 +13571,7 @@ When a control&#39;s OptionsFind.Behavior property is set to Default, the actual
     </member>
     <member name="M:DevExpress.XtraEditors.ScrollBarBase.BeginUpdate">
       <summary>
-        <para>Locks the <see cref="T:DevExpress.XtraEditors.ScrollBarBase"></see> object by disallowing visual updates until the EndUpdate or CancelUpdate method is called.  Prevents the control from being updated until the <see cref="M:DevExpress.XtraEditors.ScrollBarBase.EndUpdate"/> or <see cref="M:DevExpress.XtraEditors.ScrollBarBase.CancelUpdate"/> method is called.</para>
+        <para>Prevents the control from being updated until the <see cref="M:DevExpress.XtraEditors.ScrollBarBase.EndUpdate"/> or <see cref="M:DevExpress.XtraEditors.ScrollBarBase.CancelUpdate"/> method is called.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraEditors.ScrollBarBase.CancelUpdate">
@@ -14476,237 +14544,250 @@ When a control&#39;s OptionsFind.Behavior property is set to Default, the actual
     </member>
     <member name="T:DevExpress.XtraEditors.SvgImageBox">
       <summary>
-        <para></para>
+        <para>Allows you to customize and display an SVG image and enables end-user interaction with individual image elements.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraEditors.SvgImageBox.#ctor">
       <summary>
-        <para></para>
+        <para>Initializes a new instance of the class.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraEditors.SvgImageBox.BeginUpdate">
       <summary>
-        <para></para>
+        <para>Locks the object by preventing visual updates until the EndUpdate method is called.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraEditors.SvgImageBox.EndUpdate">
       <summary>
-        <para></para>
+        <para>Unlocks the object after a call to the BeginUpdate method and causes an immediate visual update.</para>
       </summary>
+    </member>
+    <member name="M:DevExpress.XtraEditors.SvgImageBox.ExportSvgImage">
+      <summary>
+        <para>Returns the current image as an SvgImage object.</para>
+      </summary>
+      <returns>The result of the operation.</returns>
+    </member>
+    <member name="M:DevExpress.XtraEditors.SvgImageBox.ExportSvgImage(System.String)">
+      <summary>
+        <para>Saves the current image to the specified file.</para>
+      </summary>
+      <param name="path">The path to the file to which the image is exported.</param>
     </member>
     <member name="M:DevExpress.XtraEditors.SvgImageBox.FindItem(System.Predicate{DevExpress.XtraEditors.SvgImageItem})">
       <summary>
-        <para></para>
+        <para>Returns an item that matches the specified condition.</para>
       </summary>
-      <param name="predicate"></param>
-      <returns></returns>
+      <param name="predicate">The search condition.</param>
+      <returns>The found item. Null, if no item matches the specified condition.</returns>
     </member>
     <member name="M:DevExpress.XtraEditors.SvgImageBox.FindItemById(System.String)">
       <summary>
-        <para></para>
+        <para>Returns the item with the specified Id.</para>
       </summary>
-      <param name="id"></param>
-      <returns></returns>
+      <param name="id">The Id property value of the target item.</param>
+      <returns>The found item. Null, if no item with the specified ID is found.</returns>
     </member>
     <member name="M:DevExpress.XtraEditors.SvgImageBox.FindItemByTag(System.Object)">
       <summary>
-        <para></para>
+        <para>Returns the item with the specified Tag.</para>
       </summary>
-      <param name="tag"></param>
-      <returns></returns>
+      <param name="tag">The Tag property value of the target item.</param>
+      <returns>The found item. Null, if no item with the specified Tag is found.</returns>
     </member>
     <member name="M:DevExpress.XtraEditors.SvgImageBox.FindItems(System.Predicate{DevExpress.XtraEditors.SvgImageItem})">
       <summary>
-        <para></para>
+        <para>Returns a list of items that match the specified condition.</para>
       </summary>
-      <param name="predicate"></param>
-      <returns></returns>
+      <param name="predicate">The search condition.</param>
+      <returns>The list that contains found items.</returns>
     </member>
     <member name="M:DevExpress.XtraEditors.SvgImageBox.GetItemsAt(System.Drawing.Point)">
       <summary>
-        <para></para>
+        <para>Returns hidden and visible image items displayed at the specified point.</para>
       </summary>
-      <param name="point"></param>
-      <returns></returns>
+      <param name="point">The target point, in client coordinates.</param>
+      <returns>A array of items located at the specified point. An empty array, if no item is positioned at this point.</returns>
     </member>
     <member name="M:DevExpress.XtraEditors.SvgImageBox.GetItemsInside(System.Drawing.Rectangle)">
       <summary>
-        <para></para>
+        <para>Returns hidden and visible items that are entirely or partially positioned within the specified bounds.</para>
       </summary>
-      <param name="rectangle"></param>
-      <returns></returns>
+      <param name="rectangle">The bounds, in client coordinates.</param>
+      <returns>An array of items located within the specified coordinates. An empty array, if no item is positioned at this point.</returns>
     </member>
     <member name="M:DevExpress.XtraEditors.SvgImageBox.GetVisibleItemsAt(System.Drawing.Point)">
       <summary>
-        <para></para>
+        <para>Returns visible image items displayed at the specified point.</para>
       </summary>
-      <param name="point"></param>
-      <returns></returns>
+      <param name="point">The target point, in client coordinates.</param>
+      <returns>A array of visible items located at the specified point. An empty array, if no item is positioned at this point.</returns>
     </member>
     <member name="M:DevExpress.XtraEditors.SvgImageBox.GetVisibleItemsInside(System.Drawing.Rectangle)">
       <summary>
-        <para></para>
+        <para>Returns visible items that are entirely or partially positioned within the specified bounds.</para>
       </summary>
-      <param name="rectangle"></param>
-      <returns></returns>
+      <param name="rectangle">The bounds, in client coordinates.</param>
+      <returns>An array of items located within the specified coordinates. An empty array, if no item is positioned at this point.</returns>
     </member>
     <member name="P:DevExpress.XtraEditors.SvgImageBox.HoveredItem">
       <summary>
-        <para></para>
+        <para>Gets the hovered image item.</para>
       </summary>
-      <value></value>
+      <value>The hovered item.</value>
     </member>
     <member name="P:DevExpress.XtraEditors.SvgImageBox.ItemAppearance">
       <summary>
-        <para></para>
+        <para>Provides access to the default item appearance settings.</para>
       </summary>
-      <value></value>
+      <value>The default item appearance settings.</value>
     </member>
     <member name="E:DevExpress.XtraEditors.SvgImageBox.ItemClick">
       <summary>
-        <para></para>
+        <para>Fires when an item is clicked.</para>
       </summary>
     </member>
     <member name="E:DevExpress.XtraEditors.SvgImageBox.ItemEnter">
       <summary>
-        <para></para>
+        <para>Fires when the mouse cursor enters the item&#39;s graphical path or bounding rectangle.</para>
       </summary>
     </member>
     <member name="P:DevExpress.XtraEditors.SvgImageBox.ItemHitTestType">
       <summary>
-        <para></para>
+        <para>Gets or sets the item hit-test type.</para>
       </summary>
-      <value></value>
+      <value>The item detection type.</value>
     </member>
     <member name="E:DevExpress.XtraEditors.SvgImageBox.ItemLeave">
       <summary>
-        <para></para>
+        <para>Fires when the mouse cursor leaves the item&#39;s graphical path or bounding rectangle.</para>
       </summary>
     </member>
     <member name="P:DevExpress.XtraEditors.SvgImageBox.LookAndFeel">
       <summary>
-        <para></para>
+        <para>Gets or sets the control&#39;s look-and-feel.</para>
       </summary>
-      <value></value>
+      <value>The control&#39;s look-and-feel settings.</value>
     </member>
     <member name="P:DevExpress.XtraEditors.SvgImageBox.OptionsSelection">
       <summary>
-        <para></para>
+        <para>Contains item selection options.</para>
       </summary>
-      <value></value>
+      <value>The item selection options.</value>
     </member>
     <member name="E:DevExpress.XtraEditors.SvgImageBox.PopupMenuShowing">
       <summary>
-        <para></para>
+        <para>Fires when a user right-clicks with the mouse. Allows you to display a context menu for image items.</para>
       </summary>
     </member>
     <member name="E:DevExpress.XtraEditors.SvgImageBox.QueryHoveredItem">
       <summary>
-        <para></para>
+        <para>Allows you to specify a custom item as &quot;hovered&quot; when you move the mouse cursor over items, regardless of their visibility. For instance, you can specify a group as &quot;hovered&quot; when you hover over the group&#39;s item.</para>
       </summary>
     </member>
     <member name="P:DevExpress.XtraEditors.SvgImageBox.RootItems">
       <summary>
-        <para></para>
+        <para>Provides access to a collection of root (bottommost) SVG items.</para>
       </summary>
-      <value></value>
+      <value>A root item collection.</value>
     </member>
     <member name="M:DevExpress.XtraEditors.SvgImageBox.Select(DevExpress.XtraEditors.SvgImageItem)">
       <summary>
-        <para></para>
+        <para>Selects the specified item.</para>
       </summary>
-      <param name="item"></param>
+      <param name="item">The item to select.</param>
     </member>
     <member name="P:DevExpress.XtraEditors.SvgImageBox.Selection">
       <summary>
-        <para></para>
+        <para>Provides access to the currently selected items.</para>
       </summary>
-      <value></value>
+      <value>A collection of selected items.</value>
     </member>
     <member name="E:DevExpress.XtraEditors.SvgImageBox.SelectionChanged">
       <summary>
-        <para></para>
+        <para>A notification event, which is raised after the item selection has been changed.</para>
       </summary>
     </member>
     <member name="E:DevExpress.XtraEditors.SvgImageBox.SelectionChanging">
       <summary>
-        <para></para>
+        <para>Fires when the item selection is about to be changed. Allows you to cancel the current operation.</para>
       </summary>
     </member>
     <member name="P:DevExpress.XtraEditors.SvgImageBox.SizeMode">
       <summary>
-        <para></para>
+        <para>Gets or sets whether and how the image is stretched.</para>
       </summary>
-      <value></value>
+      <value>A value that specifies whether the image is stretched, and how.</value>
     </member>
     <member name="P:DevExpress.XtraEditors.SvgImageBox.SvgImage">
       <summary>
-        <para></para>
+        <para>Gets or sets the SVG image.</para>
       </summary>
-      <value></value>
+      <value>The displayed SVG image.</value>
     </member>
     <member name="M:DevExpress.XtraEditors.SvgImageBox.Unselect(DevExpress.XtraEditors.SvgImageItem)">
       <summary>
-        <para></para>
+        <para>Deselects the specified item.</para>
       </summary>
-      <param name="item"></param>
+      <param name="item">The item to deselect.</param>
     </member>
     <member name="T:DevExpress.XtraEditors.SvgImageBoxOptionsSelection">
       <summary>
-        <para></para>
+        <para>Contains item selection options for the <see cref="T:DevExpress.XtraEditors.SvgImageBox"/> control.</para>
       </summary>
     </member>
-    <member name="M:DevExpress.XtraEditors.SvgImageBoxOptionsSelection.#ctor">
+    <member name="M:DevExpress.XtraEditors.SvgImageBoxOptionsSelection.#ctor(DevExpress.XtraEditors.SvgImageBox)">
       <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.XtraEditors.SvgImageBoxOptionsSelection"/> class.</para>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.XtraEditors.SvgImageBoxOptionsSelection"/> class with specified settings.</para>
       </summary>
+      <param name="owner"></param>
     </member>
     <member name="M:DevExpress.XtraEditors.SvgImageBoxOptionsSelection.Assign(DevExpress.XtraEditors.SvgImageBoxOptionsSelection)">
       <summary>
-        <para></para>
+        <para>Copies settings from the specified object to the current object.</para>
       </summary>
-      <param name="options"></param>
+      <param name="options">The object whose settings are copied to the current object.</param>
     </member>
     <member name="P:DevExpress.XtraEditors.SvgImageBoxOptionsSelection.SelectionMode">
       <summary>
-        <para></para>
+        <para>Gets or sets item selection mode.</para>
       </summary>
-      <value></value>
+      <value>Item selection mode. The Default value is equivalent to Multiple.</value>
     </member>
     <member name="P:DevExpress.XtraEditors.SvgImageBoxOptionsSelection.UseCtrlToMultiSelect">
       <summary>
-        <para></para>
+        <para>Gets or sets whether a user needs to press the CTRL key to select image items by clicking them  with the mouse cursor.  This property is in effect in Multiple selection mode.</para>
       </summary>
-      <value></value>
+      <value>True, if a user needs to press the CTRL key to select image items by clicking them with the mouse cursor; otherwise, False or Default.</value>
     </member>
     <member name="T:DevExpress.XtraEditors.SvgImageItem">
       <summary>
-        <para></para>
+        <para>An item within an SVG image.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraEditors.SvgImageItem.#ctor(System.Int32[])">
       <summary>
-        <para></para>
+        <para>Initializes a new instance of the class. For internal use.</para>
       </summary>
       <param name="treePath"></param>
     </member>
     <member name="M:DevExpress.XtraEditors.SvgImageItem.#ctor(System.String)">
       <summary>
-        <para></para>
+        <para>Initializes a new instance of the class. For internal use.</para>
       </summary>
       <param name="treePath"></param>
     </member>
     <member name="P:DevExpress.XtraEditors.SvgImageItem.ActualVisible">
       <summary>
-        <para></para>
+        <para>Returns whether the item is actually visible.</para>
       </summary>
-      <value></value>
+      <value>true, if the item is actually visible; otherwise, false</value>
     </member>
     <member name="P:DevExpress.XtraEditors.SvgImageItem.Appearance">
       <summary>
-        <para></para>
+        <para>Allows you to customize the item&#39;s appearance.</para>
       </summary>
-      <value></value>
+      <value>The appearance settings applied to the current item.</value>
     </member>
     <member name="P:DevExpress.XtraEditors.SvgImageItem.Bounds">
       <summary>
@@ -14716,101 +14797,101 @@ When a control&#39;s OptionsFind.Behavior property is set to Default, the actual
     </member>
     <member name="M:DevExpress.XtraEditors.SvgImageItem.Clone">
       <summary>
-        <para></para>
+        <para>Creates a copy of the current item.</para>
       </summary>
-      <returns></returns>
+      <returns>A copy of the current item.</returns>
     </member>
     <member name="P:DevExpress.XtraEditors.SvgImageItem.Descendants">
       <summary>
-        <para></para>
+        <para>Returns a linear list of the item&#39;s descendants.</para>
       </summary>
-      <value></value>
+      <value>The linear list of the item&#39;s descendants.</value>
     </member>
     <member name="M:DevExpress.XtraEditors.SvgImageItem.FindAncestor(System.Predicate{DevExpress.XtraEditors.SvgImageItem})">
       <summary>
-        <para></para>
+        <para>Returns the item&#39;s ancestor that matches the specified condition.</para>
       </summary>
-      <param name="predicate"></param>
-      <returns></returns>
+      <param name="predicate">The search condition.</param>
+      <returns>The found item. Null, if no ancestor matches the specified condition.</returns>
     </member>
     <member name="M:DevExpress.XtraEditors.SvgImageItem.FindAncestorById(System.String)">
       <summary>
-        <para></para>
+        <para>Returns the item&#39;s ancestor with the specified Id.</para>
       </summary>
-      <param name="id"></param>
-      <returns></returns>
+      <param name="id">The Id property value of the target ancestor.</param>
+      <returns>The found item. Null, if no item with the specified ID is found.</returns>
     </member>
     <member name="M:DevExpress.XtraEditors.SvgImageItem.FindAncestorByTag(System.Object)">
       <summary>
-        <para></para>
+        <para>Returns the item&#39;s ancestor with the specified Tag.</para>
       </summary>
-      <param name="tag"></param>
-      <returns></returns>
+      <param name="tag">The Tag property value of the target ancestor.</param>
+      <returns>The found item. Null, if no item with the specified Tag is found.</returns>
     </member>
     <member name="M:DevExpress.XtraEditors.SvgImageItem.FindAncestors(System.Predicate{DevExpress.XtraEditors.SvgImageItem})">
       <summary>
-        <para></para>
+        <para>Returns a list of the item&#39;s ancestors that match the specified condition.</para>
       </summary>
-      <param name="predicate"></param>
-      <returns></returns>
+      <param name="predicate">The search condition.</param>
+      <returns>The list that contains found items.</returns>
     </member>
     <member name="M:DevExpress.XtraEditors.SvgImageItem.FindDescendant(System.Predicate{DevExpress.XtraEditors.SvgImageItem})">
       <summary>
-        <para></para>
+        <para>Returns the item&#39;s descendant that matches the specified condition.</para>
       </summary>
-      <param name="predicate"></param>
-      <returns></returns>
+      <param name="predicate">The search condition.</param>
+      <returns>The found item. Null, if no descendant matches the specified condition.</returns>
     </member>
     <member name="M:DevExpress.XtraEditors.SvgImageItem.FindDescendantById(System.String)">
       <summary>
-        <para></para>
+        <para>Returns the item&#39;s descendant with the specified Id.</para>
       </summary>
-      <param name="id"></param>
-      <returns></returns>
+      <param name="id">The Id property value of the target descendant.</param>
+      <returns>The found item. Null, if no item with the specified ID is found.</returns>
     </member>
     <member name="M:DevExpress.XtraEditors.SvgImageItem.FindDescendantByTag(System.Object)">
       <summary>
-        <para></para>
+        <para>Returns the item&#39;s descendant with the specified Tag.</para>
       </summary>
-      <param name="tag"></param>
-      <returns></returns>
+      <param name="tag">The Tag property value of the target descendant.</param>
+      <returns>The found item. Null, if no item with the specified Tag is found.</returns>
     </member>
     <member name="M:DevExpress.XtraEditors.SvgImageItem.FindDescendants(System.Predicate{DevExpress.XtraEditors.SvgImageItem})">
       <summary>
-        <para></para>
+        <para>Returns a list of the item&#39;s descendants that match the specified condition.</para>
       </summary>
-      <param name="predicate"></param>
-      <returns></returns>
+      <param name="predicate">The search condition.</param>
+      <returns>The list that contains found items.</returns>
     </member>
     <member name="P:DevExpress.XtraEditors.SvgImageItem.Hovered">
       <summary>
-        <para></para>
+        <para>Gets whether the item is hovered.</para>
       </summary>
-      <value></value>
+      <value>true, if the item is hovered; otherwise, false.</value>
     </member>
     <member name="P:DevExpress.XtraEditors.SvgImageItem.Id">
       <summary>
-        <para></para>
+        <para>Gets or sets the item&#39;s unique identifier. The SVG image format allows IDs to be assigned to items via the id attribute.</para>
       </summary>
-      <value></value>
+      <value>The item&#39;s ID.</value>
     </member>
     <member name="P:DevExpress.XtraEditors.SvgImageItem.IsGroup">
       <summary>
-        <para></para>
+        <para>Gets whether the current item is a group.</para>
       </summary>
-      <value></value>
+      <value>true, if the current item is a group; otherwise, false.</value>
     </member>
     <member name="P:DevExpress.XtraEditors.SvgImageItem.IsRoot">
       <summary>
-        <para></para>
+        <para>Gets whether the current item is the root item.</para>
       </summary>
-      <value></value>
+      <value>true, if the current item is the root item; otherwise, false.</value>
     </member>
     <member name="P:DevExpress.XtraEditors.SvgImageItem.Items">
       <summary>
-        <para></para>
+        <para>Gets the current group&#39;s children.</para>
       </summary>
-      <value></value>
+      <value>A child item collection.</value>
     </member>
     <member name="P:DevExpress.XtraEditors.SvgImageItem.OutlinePen">
       <summary>
@@ -14820,9 +14901,9 @@ When a control&#39;s OptionsFind.Behavior property is set to Default, the actual
     </member>
     <member name="P:DevExpress.XtraEditors.SvgImageItem.Parent">
       <summary>
-        <para></para>
+        <para>Returns the item&#39;s immediate parent.</para>
       </summary>
-      <value></value>
+      <value>The item&#39;s parent.</value>
     </member>
     <member name="P:DevExpress.XtraEditors.SvgImageItem.Path">
       <summary>
@@ -14832,26 +14913,26 @@ When a control&#39;s OptionsFind.Behavior property is set to Default, the actual
     </member>
     <member name="E:DevExpress.XtraEditors.SvgImageItem.PropertyChanged">
       <summary>
-        <para></para>
+        <para>Fires when the item&#39;s properties are changed.</para>
       </summary>
     </member>
     <member name="P:DevExpress.XtraEditors.SvgImageItem.Root">
       <summary>
-        <para></para>
+        <para>Gets the item&#39;s root ancestor.</para>
       </summary>
-      <value></value>
+      <value>The item&#39;s root parent.</value>
     </member>
     <member name="P:DevExpress.XtraEditors.SvgImageItem.Selected">
       <summary>
-        <para></para>
+        <para>Gets or sets whether the item is selected.</para>
       </summary>
-      <value></value>
+      <value>true, if the item is selected; otherwise, false.</value>
     </member>
     <member name="P:DevExpress.XtraEditors.SvgImageItem.Tag">
       <summary>
-        <para></para>
+        <para>Use this property to associate custom data with the item.</para>
       </summary>
-      <value></value>
+      <value>An object associated with the item.</value>
     </member>
     <member name="P:DevExpress.XtraEditors.SvgImageItem.Transform">
       <summary>
@@ -14861,211 +14942,257 @@ When a control&#39;s OptionsFind.Behavior property is set to Default, the actual
     </member>
     <member name="P:DevExpress.XtraEditors.SvgImageItem.Visible">
       <summary>
-        <para></para>
+        <para>Gets or sets the item&#39;s visibility. An item can still be hidden if any parent group of the item is hidden.</para>
       </summary>
-      <value></value>
+      <value>true, if item item is visible; otherwise, false</value>
+    </member>
+    <member name="T:DevExpress.XtraEditors.SvgImageItemAppearance">
+      <summary>
+        <para>Contains appearance settings to paint image items.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.XtraEditors.SvgImageItemAppearance.#ctor(DevExpress.XtraEditors.SvgImageBox)">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.XtraEditors.SvgImageItemAppearance"/> class with specified settings.</para>
+      </summary>
+      <param name="owner">The owner of the created SvgImageItemAppearance object.</param>
+    </member>
+    <member name="M:DevExpress.XtraEditors.SvgImageItemAppearance.#ctor(DevExpress.XtraEditors.SvgImageItem)">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.XtraEditors.SvgImageItemAppearance"/> class with specified settings.</para>
+      </summary>
+      <param name="owner">The owner of the created SvgImageItemAppearance object.</param>
+    </member>
+    <member name="M:DevExpress.XtraEditors.SvgImageItemAppearance.Assign(DevExpress.XtraEditors.SvgImageItemAppearance)">
+      <summary>
+        <para>Copies settings from the specified object to the current object.</para>
+      </summary>
+      <param name="appearance">The object whose settings are copied to the current object.</param>
+    </member>
+    <member name="P:DevExpress.XtraEditors.SvgImageItemAppearance.BorderColor">
+      <summary>
+        <para>Gets or sets a custom border color applied to an image item.</para>
+      </summary>
+      <value>A custom border color.</value>
+    </member>
+    <member name="P:DevExpress.XtraEditors.SvgImageItemAppearance.BorderThickness">
+      <summary>
+        <para>Gets or sets the custom border&#39;s thickness, in pixels. When the image is scaled based on the <see cref="P:DevExpress.XtraEditors.SvgImageBox.SizeMode"/> setting, the custom borders are scaled as well.</para>
+      </summary>
+      <value>The border&#39;s thickness, in pixels. If the value is zero or negative, no custom border is painted.</value>
+    </member>
+    <member name="P:DevExpress.XtraEditors.SvgImageItemAppearance.FillColor">
+      <summary>
+        <para>Gets or sets a custom background color applied to an image item.</para>
+      </summary>
+      <value>A custom background color.</value>
     </member>
     <member name="T:DevExpress.XtraEditors.SvgImageItemAppearanceCollection">
       <summary>
-        <para></para>
+        <para>Contains appearance settings for SVG image items.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraEditors.SvgImageItemAppearanceCollection.#ctor(DevExpress.XtraEditors.SvgImageBox)">
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.XtraEditors.SvgImageItemAppearanceCollection"/> class with specified settings.</para>
       </summary>
-      <param name="owner"></param>
+      <param name="owner">The control that will own the created collection.</param>
     </member>
     <member name="M:DevExpress.XtraEditors.SvgImageItemAppearanceCollection.#ctor(DevExpress.XtraEditors.SvgImageItem)">
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.XtraEditors.SvgImageItemAppearanceCollection"/> class with specified settings.</para>
       </summary>
-      <param name="owner"></param>
+      <param name="owner">The item that will own the created collection.</param>
     </member>
     <member name="M:DevExpress.XtraEditors.SvgImageItemAppearanceCollection.Assign(DevExpress.XtraEditors.SvgImageItemAppearanceCollection)">
       <summary>
-        <para></para>
+        <para>Copies settings from the specified object to the current object.</para>
       </summary>
-      <param name="appearanceCollection"></param>
+      <param name="appearanceCollection">The object whose settings are copied to the current object.</param>
     </member>
     <member name="P:DevExpress.XtraEditors.SvgImageItemAppearanceCollection.Hovered">
       <summary>
-        <para></para>
+        <para>Gets the appearance settings applied in the hovered state.</para>
       </summary>
-      <value></value>
+      <value>The appearance settings applied in the hovered state.</value>
     </member>
     <member name="P:DevExpress.XtraEditors.SvgImageItemAppearanceCollection.Normal">
       <summary>
-        <para></para>
+        <para>Gets the appearance settings applied in the normal state.</para>
       </summary>
-      <value></value>
+      <value>The appearance settings applied in the normal state.</value>
     </member>
     <member name="E:DevExpress.XtraEditors.SvgImageItemAppearanceCollection.PropertyChanged">
+      <summary>
+        <para>Fires when the object&#39;s properties are changed.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.XtraEditors.SvgImageItemAppearanceCollection.Reset">
       <summary>
         <para></para>
       </summary>
     </member>
     <member name="P:DevExpress.XtraEditors.SvgImageItemAppearanceCollection.Selected">
       <summary>
-        <para></para>
+        <para>Gets the appearance settings applied in the selected state.</para>
       </summary>
-      <value></value>
+      <value>The appearance settings applied in the selected state.</value>
     </member>
     <member name="M:DevExpress.XtraEditors.SvgImageItemAppearanceCollection.ToString">
       <summary>
-        <para></para>
+        <para>Gets the object&#39;s textual representation.</para>
       </summary>
-      <returns></returns>
+      <returns>The object&#39;s textual representation.</returns>
     </member>
     <member name="T:DevExpress.XtraEditors.SvgImageItemCollection">
       <summary>
-        <para></para>
+        <para>A collection of <see cref="T:DevExpress.XtraEditors.SvgImageItem"/> objects.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraEditors.SvgImageItemCollection.#ctor(DevExpress.XtraEditors.SvgImageItem)">
       <summary>
-        <para></para>
+        <para>Initializes a new instance of the class.</para>
       </summary>
       <param name="owner"></param>
     </member>
     <member name="M:DevExpress.XtraEditors.SvgImageItemCollection.Dispose">
       <summary>
-        <para></para>
+        <para>Disposes of the current collection.</para>
       </summary>
     </member>
     <member name="P:DevExpress.XtraEditors.SvgImageItemCollection.Item(System.Int32)">
       <summary>
-        <para></para>
+        <para>Provides indexed access to items in the current collection.</para>
       </summary>
-      <param name="index"></param>
-      <value></value>
+      <param name="index">A zero-based item position within the collection. If it&#39;s negative or exceeds the last available index, an exception is raised.</param>
+      <value>An item at the specified position.</value>
     </member>
     <member name="T:DevExpress.XtraEditors.SvgImageItemEventArgs">
       <summary>
-        <para></para>
+        <para>Provides data for image item related events.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraEditors.SvgImageItemEventArgs.#ctor(DevExpress.XtraEditors.SvgImageItem)">
       <summary>
-        <para></para>
+        <para>Initializes a new instance of the class.</para>
       </summary>
-      <param name="item"></param>
+      <param name="item">The object to initialize the SvgImageItemEventArgs.Item property.</param>
     </member>
     <member name="P:DevExpress.XtraEditors.SvgImageItemEventArgs.Item">
       <summary>
-        <para></para>
+        <para>Gets the currently processed item.</para>
       </summary>
-      <value></value>
+      <value>The currently processed item.</value>
     </member>
     <member name="T:DevExpress.XtraEditors.SvgImagePopupMenuShowingEventArgs">
       <summary>
-        <para></para>
+        <para>Provides data for the PopupMenuShowing event.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraEditors.SvgImagePopupMenuShowingEventArgs.#ctor(DevExpress.Utils.Menu.DXPopupMenu,DevExpress.XtraEditors.SvgImageItem,System.Drawing.Point,System.Boolean)">
       <summary>
-        <para></para>
+        <para>Initializes a new instance of the class.</para>
       </summary>
-      <param name="menu"></param>
-      <param name="item"></param>
-      <param name="point"></param>
-      <param name="allow"></param>
+      <param name="menu">The object to initialize the Menu property.</param>
+      <param name="item">The object to initialize the Item property.</param>
+      <param name="point">The object to initialize the Point property.</param>
+      <param name="allow">The object to initialize the Allow property.</param>
     </member>
     <member name="P:DevExpress.XtraEditors.SvgImagePopupMenuShowingEventArgs.Allow">
       <summary>
-        <para></para>
+        <para>Gets or sets whether to allow the menu to be displayed.</para>
       </summary>
-      <value></value>
+      <value>true, to allow the menu to be displayed; otherwise, false</value>
     </member>
     <member name="P:DevExpress.XtraEditors.SvgImagePopupMenuShowingEventArgs.Item">
       <summary>
-        <para></para>
+        <para>Gets the clicked item.</para>
       </summary>
-      <value></value>
+      <value>The clicked item.</value>
     </member>
     <member name="P:DevExpress.XtraEditors.SvgImagePopupMenuShowingEventArgs.Menu">
       <summary>
-        <para></para>
+        <para>Gets or sets the popup menu that is about to be displayed</para>
       </summary>
-      <value></value>
+      <value>Gets or sets the popup menu that is about to be displayed</value>
     </member>
     <member name="P:DevExpress.XtraEditors.SvgImagePopupMenuShowingEventArgs.Point">
       <summary>
-        <para></para>
+        <para>Gets the position where the menu is to be invoked.</para>
       </summary>
-      <value></value>
+      <value>The position where the menu is to be invoked.</value>
     </member>
     <member name="T:DevExpress.XtraEditors.SvgImageSelection">
       <summary>
-        <para></para>
+        <para>Stores selected image items.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraEditors.SvgImageSelection.#ctor(DevExpress.XtraEditors.SvgImageBox)">
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.XtraEditors.SvgImageSelection"/> class with specified settings.</para>
       </summary>
-      <param name="owner"></param>
+      <param name="owner">The control that will own the created collection.</param>
     </member>
     <member name="M:DevExpress.XtraEditors.SvgImageSelection.AddRange(System.Collections.ICollection)">
       <summary>
-        <para></para>
+        <para>Adds the specified items to the collection, and thus selects these items.</para>
       </summary>
-      <param name="collection"></param>
+      <param name="collection">The items to be selected.</param>
     </member>
     <member name="P:DevExpress.XtraEditors.SvgImageSelection.Item(System.Int32)">
       <summary>
-        <para></para>
+        <para>Provides indexed access to items in the current collection.</para>
       </summary>
-      <param name="index"></param>
-      <value></value>
+      <param name="index">A zero-based item position within the collection. If it&#39;s negative or exceeds the last available index, an exception is raised.</param>
+      <value>An item at the specified position.</value>
     </member>
     <member name="T:DevExpress.XtraEditors.SvgImageSelectionChangingEventArgs">
       <summary>
-        <para></para>
+        <para>Provides data for the <see cref="E:DevExpress.XtraEditors.SvgImageBox.SelectionChanging"/> event.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraEditors.SvgImageSelectionChangingEventArgs.#ctor(DevExpress.XtraEditors.SvgImageItem,DevExpress.XtraEditors.SvgImageSelectionChangeAction)">
       <summary>
-        <para></para>
+        <para>Initializes a new instance of the class.</para>
       </summary>
-      <param name="item"></param>
-      <param name="action"></param>
+      <param name="item">The object to initialize the Item property.</param>
+      <param name="action">The object to initialize the Action property.</param>
     </member>
     <member name="P:DevExpress.XtraEditors.SvgImageSelectionChangingEventArgs.Action">
       <summary>
-        <para></para>
+        <para>Gets or sets how the selected item collection has been changed.</para>
       </summary>
-      <value></value>
+      <value>A value that specifies how the selected item collection has been changed.</value>
     </member>
     <member name="P:DevExpress.XtraEditors.SvgImageSelectionChangingEventArgs.Item">
       <summary>
-        <para></para>
+        <para>Gets or sets the currently processed item.</para>
       </summary>
-      <value></value>
+      <value>The currently processed item.</value>
     </member>
     <member name="T:DevExpress.XtraEditors.SvgImageSizeMode">
       <summary>
-        <para></para>
+        <para>Specifies size mode for images within the SvgImageBox control.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraEditors.SvgImageSizeMode.Clip">
       <summary>
-        <para></para>
+        <para>An image is not stretched.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraEditors.SvgImageSizeMode.Squeeze">
       <summary>
-        <para></para>
+        <para>An image is displayed as is if its actual size is smaller than the size of the container. If the image size is larger than the container&#39;s size, the image is shrunk proportionally to fit the container&#39;s bounds.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraEditors.SvgImageSizeMode.Stretch">
       <summary>
-        <para></para>
+        <para>An image is stretched to fit in the control&#39;s area.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraEditors.SvgImageSizeMode.Zoom">
       <summary>
-        <para></para>
+        <para>An image is stretched proportionally. The image fits within the area of the container in at least one direction.</para>
       </summary>
     </member>
     <member name="N:DevExpress.XtraEditors.ViewInfo">
@@ -15309,6 +15436,11 @@ When a control&#39;s OptionsFind.Behavior property is set to Default, the actual
         <para>Disables the title bar skinning feature for MDI child DevExpress forms.</para>
       </summary>
     </member>
+    <member name="M:DevExpress.XtraEditors.WindowsFormsSettings.DisableWindowShadows">
+      <summary>
+        <para></para>
+      </summary>
+    </member>
     <member name="P:DevExpress.XtraEditors.WindowsFormsSettings.DockingViewStyle">
       <summary>
         <para>Gets or sets the style for all <see cref="T:DevExpress.XtraBars.Docking.DockManager"/> and <see cref="T:DevExpress.XtraBars.Docking2010.DocumentManager"/> panels in this application.</para>
@@ -15350,9 +15482,9 @@ When a control&#39;s OptionsFind.Behavior property is set to Default, the actual
     </member>
     <member name="P:DevExpress.XtraEditors.WindowsFormsSettings.FindPanelBehavior">
       <summary>
-        <para>Gets or sets whether records that do not match a query in the Find Panel are hidden.</para>
+        <para>Gets or sets whether records that do not match a query in a find panel are hidden.</para>
       </summary>
-      <value>A DevExpress.XtraEditors.FindPanelBehavior enumeration value that specifies whether records that do not match the query are hidden.</value>
+      <value>A <see cref="T:DevExpress.XtraEditors.FindPanelBehavior"/> enumeration value that specifies whether records that do not match the query are hidden.</value>
     </member>
     <member name="P:DevExpress.XtraEditors.WindowsFormsSettings.FindPanelCondition">
       <summary>
@@ -15469,6 +15601,13 @@ When a control&#39;s OptionsFind.Behavior property is set to Default, the actual
       </summary>
       <param name="control">A Control object.</param>
       <returns>A Boolean value that indicates whether right-to-left mirror placement is turned on for the specified control or form.</returns>
+    </member>
+    <member name="M:DevExpress.XtraEditors.WindowsFormsSettings.GetPopupShadowStyle(DevExpress.LookAndFeel.UserLookAndFeel)">
+      <summary>
+        <para></para>
+      </summary>
+      <param name="lookAndFeel"></param>
+      <returns></returns>
     </member>
     <member name="M:DevExpress.XtraEditors.WindowsFormsSettings.GetRightToLeft(System.Windows.Forms.Control)">
       <summary>

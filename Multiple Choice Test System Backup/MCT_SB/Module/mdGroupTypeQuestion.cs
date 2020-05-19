@@ -74,7 +74,7 @@ namespace Module
                 con.Open();
                 SqlTransaction sqlTrans = con.BeginTransaction();
 
-                string query = @"insert into GROUP_TYPE_QUESTIONS values ('" + ltGroupTypeQuestion[0] + "','" + ltGroupTypeQuestion[1] + "','','" + ltGroupTypeQuestion[2] + "','" + ltGroupTypeQuestion[3] + "','" + ltGroupTypeQuestion[4] + "')";
+                string query = @"insert into GROUP_TYPE_QUESTIONS values ('" + ltGroupTypeQuestion[0] + "','" + ltGroupTypeQuestion[1] + "','image','" + ltGroupTypeQuestion[2] + "','" + ltGroupTypeQuestion[3] + "','" + ltGroupTypeQuestion[4] + "')";
                 SqlCommand cmdInsert = new SqlCommand(query, con);
                 cmdInsert.CommandType = CommandType.Text;               
                 cmdInsert.Transaction = sqlTrans;
@@ -97,7 +97,7 @@ namespace Module
                         sqlTrans.Rollback();
                         sqlTrans.Dispose();
                         con.Close();
-                        return Provider.ErroString("Module", "mdGroupTypeQuestion", "Insert", "Insert GROUP_TYPE_QUESTIONS Erro");
+                        return Provider.ErroString("Module", "mdGroupTypeQuestion", "Insert", "Insert GROUP_TYPE_QUESTIONS Error");
                     }
                 }
                 else
@@ -105,7 +105,7 @@ namespace Module
                     sqlTrans.Rollback();
                     sqlTrans.Dispose();
                     con.Close();
-                    return Provider.ErroString("Module", "mdGroupTypeQuestion", "Insert", "Insert GROUP_TYPE_QUESTIONS Erro");
+                    return Provider.ErroString("Module", "mdGroupTypeQuestion", "Insert", "Insert GROUP_TYPE_QUESTIONS Error");
                 }
 
                 sqlTrans.Dispose();
@@ -115,6 +115,37 @@ namespace Module
             catch (Exception e)
             {
                 return Provider.ErroString("Module", "mdGroupTypeQuestion", "Insert", e.Message);
+            }
+        }
+        public static string Update(int IDGroupType, List<string> ltGroupType)
+        {
+            try
+            {
+                string conStr = Provider.ConnectString();
+                SqlConnection con = new SqlConnection(conStr);
+                con.Open();
+                SqlTransaction sqlTrans = con.BeginTransaction();
+                string query = @"Update GROUP_TYPE_QUESTIONS set Name =N'" + ltGroupType[0] + "',Descriptions = '" + ltGroupType[1] + "',Images = 'image',AudioName =N'" + ltGroupType[2] + "',Status='" + ltGroupType[3] + "' where ID = '" + IDGroupType + "';";
+                SqlCommand cmdUpdate = new SqlCommand(query, con);
+                cmdUpdate.CommandType = CommandType.Text;
+                cmdUpdate.Transaction = sqlTrans;
+                int result = cmdUpdate.ExecuteNonQuery();
+                if (result != 1)
+                {
+                    sqlTrans.Rollback();
+                    sqlTrans.Dispose();
+                    con.Close();
+
+                    return Provider.ErroString("Module", "mdGroupTypeQuestion", "Update", "Update Group Type Question Error");
+                }
+                sqlTrans.Commit();
+                sqlTrans.Dispose();
+                con.Close();
+                return "OK";
+            }
+            catch (Exception e)
+            {
+                return Provider.ErroString("Module", "mdGrouptypeQuestion", "Update", e.Message);
             }
         }
         public static string GetAll(ref DataTable dtGroupTypeQuestion)
@@ -137,6 +168,73 @@ namespace Module
                 return Provider.ErroString("Module", "mdPart", "GetAll", e.Message);
             }
         }
-     //   public static bool CheckAudioFile(string )
+        public static bool CheckAudioFile(string AudioName)
+        {
+            try
+            {
+                string conStr = Provider.ConnectString();
+                SqlConnection con = new SqlConnection(conStr);
+                con.Open();
+                string query = "SELECT COUNT(*) FROM GROUP_TYPE_QUESTIONS WHERE AudioName = '"+ AudioName +"'";
+                SqlCommand cmdCheckAudio = new SqlCommand(query, con);
+                int count = (int)cmdCheckAudio.ExecuteScalar();
+                con.Close();
+                return count > 0 ? false : true;
+            }
+            catch (Exception e)
+            {
+                return false;
+            }
+        }
+        public static string Delete(int IDGroupType)
+        {
+            try
+            {
+                string conStr = Provider.ConnectString();
+                SqlConnection con = new SqlConnection(conStr);
+                con.Open();
+                SqlTransaction sqlTrans = con.BeginTransaction();
+                string query = @"DELETE GROUP_TYPE_QUESTIONS WHERE ID = " + IDGroupType;
+                SqlCommand cmdDelete = new SqlCommand(query, con);
+                cmdDelete.CommandType = CommandType.Text;
+                cmdDelete.Transaction = sqlTrans;
+                int result = cmdDelete.ExecuteNonQuery();
+                if (result != 1)
+                {
+                    sqlTrans.Rollback();
+                    sqlTrans.Dispose();
+                    con.Close();
+                    return Provider.ErroString("Module", "mdGroupTypeQuestion", "Delete", "Datete Group Type Question Error");
+                }
+                sqlTrans.Commit();
+                sqlTrans.Dispose();
+                con.Close();
+                return "OK";
+            }
+            catch (Exception e)
+            {
+                return Provider.ErroString("Module", "mdGroupTypeQuestion", "Delete", e.Message);
+            }
+        }
+        public static string GetByID(ref DataTable dtGroupType, string IDGroupType)
+        {
+            try
+            {
+                string conStr = Provider.ConnectString();
+                SqlConnection con = new SqlConnection(conStr);
+                con.Open();
+                string query = "SELECT * FROM GROUP_TYPE_QUESTIONS Where ID = " + IDGroupType + "";
+                SqlCommand cmdGetData = new SqlCommand(query, con);
+                cmdGetData.CommandType = CommandType.Text;
+                SqlDataAdapter da = new SqlDataAdapter(cmdGetData);
+                int result = da.Fill(dtGroupType);
+                con.Close();
+                return "OK";
+            }
+            catch (Exception e)
+            {
+                return Provider.ErroString("Module", "mdGroupTypeQuestion", "GetByID", e.Message);
+            }
+        }
     }
 }

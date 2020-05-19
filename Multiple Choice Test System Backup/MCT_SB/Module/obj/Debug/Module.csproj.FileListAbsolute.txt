@@ -16,3 +16,9 @@ D:\Project\C#\MCST\Multiple Choice Test System Backup\MCT_SB\Module\obj\Debug\Mo
 D:\Project\C#\MCST\Multiple Choice Test System Backup\MCT_SB\Module\obj\Debug\Module.dll
 D:\Project\C#\MCST\Multiple Choice Test System Backup\MCT_SB\Module\obj\Debug\Module.pdb
 D:\Project\C#\MCST\Multiple Choice Test System Backup\MCT_SB\Module\obj\Debug\Module.csprojAssemblyReference.cache
+C:\Users\phamh\Desktop\Khoá Luận\MCST\Multiple Choice Test System Backup\MCT_SB\Module\bin\Debug\Module.dll
+C:\Users\phamh\Desktop\Khoá Luận\MCST\Multiple Choice Test System Backup\MCT_SB\Module\bin\Debug\Module.pdb
+C:\Users\phamh\Desktop\Khoá Luận\MCST\Multiple Choice Test System Backup\MCT_SB\Module\obj\Debug\Module.csprojAssemblyReference.cache
+C:\Users\phamh\Desktop\Khoá Luận\MCST\Multiple Choice Test System Backup\MCT_SB\Module\obj\Debug\Module.csproj.CoreCompileInputs.cache
+C:\Users\phamh\Desktop\Khoá Luận\MCST\Multiple Choice Test System Backup\MCT_SB\Module\obj\Debug\Module.dll
+C:\Users\phamh\Desktop\Khoá Luận\MCST\Multiple Choice Test System Backup\MCT_SB\Module\obj\Debug\Module.pdb

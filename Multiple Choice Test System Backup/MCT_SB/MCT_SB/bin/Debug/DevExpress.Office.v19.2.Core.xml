@@ -294,12 +294,12 @@
     </member>
     <member name="F:DevExpress.Office.Options.DataSourceTypes.Federation">
       <summary>
-        <para></para>
+        <para>Indicates a Federated data source.</para>
       </summary>
     </member>
     <member name="F:DevExpress.Office.Options.DataSourceTypes.Json">
       <summary>
-        <para></para>
+        <para>Indicates a JSON data source.</para>
       </summary>
     </member>
     <member name="F:DevExpress.Office.Options.DataSourceTypes.Object">
