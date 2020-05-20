@@ -612,3 +612,4 @@ C:\Users\phamh\Desktop\Khoá Luận\MCST\Multiple Choice Test System Backup\MCT_
 C:\Users\phamh\Desktop\Khoá Luận\MCST\Multiple Choice Test System Backup\MCT_SB\MCT_SB\obj\Debug\Server.csproj.CopyComplete
 C:\Users\phamh\Desktop\Khoá Luận\MCST\Multiple Choice Test System Backup\MCT_SB\MCT_SB\obj\Debug\MCT_SB.exe
 C:\Users\phamh\Desktop\Khoá Luận\MCST\Multiple Choice Test System Backup\MCT_SB\MCT_SB\obj\Debug\MCT_SB.pdb
+C:\Users\phamh\Desktop\Khoá Luận\MCST\Multiple Choice Test System Backup\MCT_SB\MCT_SB\obj\Debug\MCT_SB.frmAddType.resources

@@ -30,36 +30,36 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAddPart));
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-            this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.lookGroup = new DevExpress.XtraEditors.LookUpEdit();
-            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.txtPart = new DevExpress.XtraEditors.TextEdit();
-            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.btnSave = new DevExpress.XtraEditors.SimpleButton();
-            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.simpleSeparator1 = new DevExpress.XtraLayout.SimpleSeparator();
+            this.mm = new DevExpress.XtraEditors.MemoEdit();
+            this.ckStatus = new DevExpress.XtraEditors.CheckEdit();
             this.btnUpdate = new DevExpress.XtraEditors.CheckButton();
+            this.btnSave = new DevExpress.XtraEditors.SimpleButton();
+            this.txtPart = new DevExpress.XtraEditors.TextEdit();
+            this.lookGroup = new DevExpress.XtraEditors.LookUpEdit();
+            this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.ckStatus = new DevExpress.XtraEditors.CheckEdit();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.mm = new DevExpress.XtraEditors.MemoEdit();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.simpleSeparator1 = new DevExpress.XtraLayout.SimpleSeparator();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookGroup.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mm.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ckStatus.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPart.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lookGroup.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.simpleSeparator1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ckStatus.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mm.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.simpleSeparator1)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -79,6 +79,64 @@
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
+            // mm
+            // 
+            this.mm.Location = new System.Drawing.Point(59, 55);
+            this.mm.Name = "mm";
+            this.mm.Size = new System.Drawing.Size(516, 111);
+            this.mm.TabIndex = 10;
+            // 
+            // ckStatus
+            // 
+            this.ckStatus.EditValue = true;
+            this.ckStatus.Location = new System.Drawing.Point(501, 31);
+            this.ckStatus.Name = "ckStatus";
+            this.ckStatus.Properties.Caption = "Status";
+            this.ckStatus.Size = new System.Drawing.Size(74, 20);
+            this.ckStatus.TabIndex = 9;
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Enabled = false;
+            this.btnUpdate.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnUpdate.ImageOptions.Image")));
+            this.btnUpdate.Location = new System.Drawing.Point(411, 171);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(76, 22);
+            this.btnUpdate.TabIndex = 8;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.CheckedChanged += new System.EventHandler(this.btnUpdate_CheckedChanged);
+            // 
+            // btnSave
+            // 
+            this.btnSave.Enabled = false;
+            this.btnSave.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.ImageOptions.Image")));
+            this.btnSave.Location = new System.Drawing.Point(491, 171);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(84, 22);
+            this.btnSave.TabIndex = 7;
+            this.btnSave.Text = "Save";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // txtPart
+            // 
+            this.txtPart.Location = new System.Drawing.Point(59, 31);
+            this.txtPart.Name = "txtPart";
+            this.txtPart.Size = new System.Drawing.Size(438, 20);
+            this.txtPart.TabIndex = 6;
+            // 
+            // lookGroup
+            // 
+            this.lookGroup.Location = new System.Drawing.Point(59, 7);
+            this.lookGroup.Name = "lookGroup";
+            this.lookGroup.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lookGroup.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("ID", "ID", 20, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.False),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "Name")});
+            this.lookGroup.Properties.NullText = "";
+            this.lookGroup.Size = new System.Drawing.Size(516, 20);
+            this.lookGroup.TabIndex = 4;
+            // 
             // Root
             // 
             this.Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
@@ -97,20 +155,6 @@
             this.Root.Size = new System.Drawing.Size(582, 200);
             this.Root.TextVisible = false;
             // 
-            // lookGroup
-            // 
-            this.lookGroup.Location = new System.Drawing.Point(68, 7);
-            this.lookGroup.Name = "lookGroup";
-            this.lookGroup.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lookGroup.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("ID", "ID", 20, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.False),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "Name")});
-            this.lookGroup.Properties.NullText = "";
-            this.lookGroup.Size = new System.Drawing.Size(507, 20);
-            this.lookGroup.StyleController = this.layoutControl1;
-            this.lookGroup.TabIndex = 4;
-            // 
             // layoutControlItem1
             // 
             this.layoutControlItem1.Control = this.lookGroup;
@@ -119,14 +163,6 @@
             this.layoutControlItem1.Size = new System.Drawing.Size(572, 24);
             this.layoutControlItem1.Text = "Group";
             this.layoutControlItem1.TextSize = new System.Drawing.Size(49, 13);
-            // 
-            // txtPart
-            // 
-            this.txtPart.Location = new System.Drawing.Point(68, 31);
-            this.txtPart.Name = "txtPart";
-            this.txtPart.Size = new System.Drawing.Size(429, 20);
-            this.txtPart.StyleController = this.layoutControl1;
-            this.txtPart.TabIndex = 6;
             // 
             // layoutControlItem3
             // 
@@ -137,18 +173,6 @@
             this.layoutControlItem3.Text = "Part";
             this.layoutControlItem3.TextSize = new System.Drawing.Size(49, 13);
             // 
-            // btnSave
-            // 
-            this.btnSave.Enabled = false;
-            this.btnSave.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
-            this.btnSave.Location = new System.Drawing.Point(491, 171);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(84, 22);
-            this.btnSave.StyleController = this.layoutControl1;
-            this.btnSave.TabIndex = 7;
-            this.btnSave.Text = "Save";
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
             // layoutControlItem4
             // 
             this.layoutControlItem4.Control = this.btnSave;
@@ -157,25 +181,6 @@
             this.layoutControlItem4.Size = new System.Drawing.Size(88, 26);
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem4.TextVisible = false;
-            // 
-            // simpleSeparator1
-            // 
-            this.simpleSeparator1.AllowHotTrack = false;
-            this.simpleSeparator1.Location = new System.Drawing.Point(0, 163);
-            this.simpleSeparator1.Name = "simpleSeparator1";
-            this.simpleSeparator1.Size = new System.Drawing.Size(572, 1);
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.Enabled = false;
-            this.btnUpdate.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("checkButton1.ImageOptions.Image")));
-            this.btnUpdate.Location = new System.Drawing.Point(411, 171);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(76, 22);
-            this.btnUpdate.StyleController = this.layoutControl1;
-            this.btnUpdate.TabIndex = 8;
-            this.btnUpdate.Text = "Update";
-            this.btnUpdate.CheckedChanged += new System.EventHandler(this.btnUpdate_CheckedChanged);
             // 
             // layoutControlItem5
             // 
@@ -194,16 +199,6 @@
             this.emptySpaceItem1.Size = new System.Drawing.Size(404, 26);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
-            // ckStatus
-            // 
-            this.ckStatus.EditValue = true;
-            this.ckStatus.Location = new System.Drawing.Point(501, 31);
-            this.ckStatus.Name = "ckStatus";
-            this.ckStatus.Properties.Caption = "Status";
-            this.ckStatus.Size = new System.Drawing.Size(74, 20);
-            this.ckStatus.StyleController = this.layoutControl1;
-            this.ckStatus.TabIndex = 9;
-            // 
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.ckStatus;
@@ -213,14 +208,6 @@
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
             // 
-            // mm
-            // 
-            this.mm.Location = new System.Drawing.Point(68, 55);
-            this.mm.Name = "mm";
-            this.mm.Size = new System.Drawing.Size(507, 111);
-            this.mm.StyleController = this.layoutControl1;
-            this.mm.TabIndex = 10;
-            // 
             // layoutControlItem6
             // 
             this.layoutControlItem6.Control = this.mm;
@@ -229,6 +216,13 @@
             this.layoutControlItem6.Size = new System.Drawing.Size(572, 115);
             this.layoutControlItem6.Text = "Discription";
             this.layoutControlItem6.TextSize = new System.Drawing.Size(49, 13);
+            // 
+            // simpleSeparator1
+            // 
+            this.simpleSeparator1.AllowHotTrack = false;
+            this.simpleSeparator1.Location = new System.Drawing.Point(0, 163);
+            this.simpleSeparator1.Name = "simpleSeparator1";
+            this.simpleSeparator1.Size = new System.Drawing.Size(572, 1);
             // 
             // frmAddPart
             // 
@@ -245,19 +239,19 @@
             this.Load += new System.EventHandler(this.frmAddPart_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookGroup.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mm.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ckStatus.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPart.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lookGroup.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.simpleSeparator1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ckStatus.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mm.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.simpleSeparator1)).EndInit();
             this.ResumeLayout(false);
 
         }
