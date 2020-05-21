@@ -58,5 +58,15 @@ namespace MCT_SB
                 frm.Show();
             }
         }
+
+        private void btnImportCandidate_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            if (!Utility.IsFocusForm(typeof(frmImportCandidate), this))
+            {
+                frmImportCandidate frm = new frmImportCandidate();
+                frm.MdiParent = this;
+                frm.Show();
+            }
+        }
     }
 }

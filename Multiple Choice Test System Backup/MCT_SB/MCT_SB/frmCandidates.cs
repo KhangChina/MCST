@@ -67,6 +67,7 @@ namespace MCT_SB
             int IDCandidates = int.Parse(grvCandidate.GetFocusedRowCellValue(colID).ToString());
             frmAddCadidate frm = new frmAddCadidate(IDCandidates);
             frm.ShowDialog();
+            LoadCandidate();
         }
     }
 }

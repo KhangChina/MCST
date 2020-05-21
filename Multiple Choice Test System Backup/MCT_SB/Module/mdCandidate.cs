@@ -36,14 +36,66 @@ namespace Module
             {
                 string conStr = Provider.ConnectString();
                 SqlConnection con = new SqlConnection(conStr);
+                con.Open();
+                SqlTransaction sqlTrans = con.BeginTransaction();
+
+                string query = @"set dateformat dmy INSERT INTO CANDIDATES VALUES(N'" + ltCandidate[0] + "',N'"+ ltCandidate[1] + "',N'"+ ltCandidate[2] + "',N'"+ ltCandidate[3] + "',N'"+ ltCandidate[4] + "',N'"+ ltCandidate[5] + "',N'"+ ltCandidate[6] + "',@Image,N'"+ ltCandidate[7] + "')";
+                SqlCommand cmdInsert = new SqlCommand(query, con);
+                cmdInsert.CommandType = CommandType.Text;             
+                cmdInsert.Parameters.Add("@Image", SqlDbType.Image).Value = Image;
+                cmdInsert.Transaction = sqlTrans;
+                int result = cmdInsert.ExecuteNonQuery();
+                if (result == 1)
+                {
+                    query = "SELECT IDENT_CURRENT('CANDIDATES')";
+                    SqlCommand cmdGetID = new SqlCommand(query, con);
+                    cmdGetID.CommandType = CommandType.Text;
+                    cmdGetID.Transaction = sqlTrans;
+
+                    object id = cmdGetID.ExecuteScalar();
+
+                    IDCandidate = Convert.ToInt32(id);
+
+                    if (result > 0)
+                        sqlTrans.Commit();
+                    else
+                    {
+                        sqlTrans.Rollback();
+                        sqlTrans.Dispose();
+                        con.Close();
+                        return Provider.ErroString("Module", "mdCandidate", "insert", "Insert Candidate Erro");
+                    }
+                }
+                else
+                {
+                    sqlTrans.Rollback();
+                    sqlTrans.Dispose();
+                    con.Close();
+                    return Provider.ErroString("Module", "mdCandidate", "insert", "Insert Candidate Erro");
+                }
+
+                sqlTrans.Dispose();
+                con.Close();
+                return "OK";
+            }
+            catch (Exception e)
+            {
+                return Provider.ErroString("Module", "mdCandidate", "insert", e.Message);
+            }
+        }
+        public static string Insert(ref int IDCandidate, List<string> ltCandidate)
+        {
+            try
+            {
+                string conStr = Provider.ConnectString();
+                SqlConnection con = new SqlConnection(conStr);
 
                 con.Open();
                 SqlTransaction sqlTrans = con.BeginTransaction();
 
-                string query = @"INSERT INTO CANDIDATES VALUES('"+ ltCandidate[0] + "',N'"+ ltCandidate[1] + "','"+ ltCandidate[2] + "','"+ ltCandidate[3] + "',N'"+ ltCandidate[4] + "','"+ ltCandidate[5] + "','"+ ltCandidate[6] + "',@Image,'"+ ltCandidate[7] + "')";
+                string query = @"set dateformat dmy INSERT INTO CANDIDATES VALUES(N'" + ltCandidate[0] + "',N'" + ltCandidate[1] + "',N'" + ltCandidate[2] + "',N'" + ltCandidate[3] + "',N'" + ltCandidate[4] + "',N'" + ltCandidate[5] + "',N'" + ltCandidate[6] + "','',N'" + ltCandidate[7] + "')";
                 SqlCommand cmdInsert = new SqlCommand(query, con);
-                cmdInsert.CommandType = CommandType.Text;             
-                cmdInsert.Parameters.Add("@Image", SqlDbType.Image).Value = Image;
+                cmdInsert.CommandType = CommandType.Text;
                 cmdInsert.Transaction = sqlTrans;
                 int result = cmdInsert.ExecuteNonQuery();
                 if (result == 1)

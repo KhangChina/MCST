@@ -21,29 +21,6 @@ namespace MCT_SB
         {
             InitializeComponent();
         }
-        private void btnChooseFile_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                OpenFileDialog openFileDialog1 = new OpenFileDialog();  //create openfileDialog Object
-                openFileDialog1.Filter = "XML Files (*.xml; *.xls; *.xlsx; *.xlsm; *.xlsb) |*.xml; *.xls; *.xlsx; *.xlsm; *.xlsb";//open file format define Excel Files(.xls)|*.xls| Excel Files(.xlsx)|*.xlsx| 
-                openFileDialog1.FilterIndex = 3;
-
-                openFileDialog1.Multiselect = false;        //not allow multiline selection at the file selection level
-                openFileDialog1.Title = "Open Text File-R13";   //define the name of openfileDialog
-                openFileDialog1.InitialDirectory = @"Desktop"; //define the initial directory
-
-                if (openFileDialog1.ShowDialog() == DialogResult.OK)        //executing when file open
-                {
-                    txtPath.Text = openFileDialog1.FileName;
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-            }
-        }
-
         private void btnRun_Click(object sender, EventArgs e)
         {
             if (File.Exists(txtPath.Text))
@@ -133,25 +110,52 @@ namespace MCT_SB
             foreach (DataRow dr in dt.Rows)
             {
                 List<string> list = new List<string>();
-                list.Add(dr[1].ToString());
                 list.Add(dr[0].ToString());
+                list.Add(dr[1].ToString());
                 list.Add(dr[2].ToString());
                 list.Add(dr[3].ToString());
                 list.Add(dr[4].ToString());
                 list.Add(dr[5].ToString());
                 list.Add(dr[6].ToString());
-                list.Add(dr[7].ToString());
-                byte[] Img = null;
+                list.Add(dr[8].ToString());
                 int ID = -1;
-                string res = mdCandidate.Insert(ref ID, list, Img);
+                string res = mdCandidate.Insert(ref ID, list);
                 if (res != "OK")
-                    XtraMessageBox.Show(res);
-                else
                 {
-                    XtraMessageBox.Show("List candidate has been saved !","Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Close();
-                    resetFrom(false);
+                    XtraMessageBox.Show(res);
+                    return;
                 }
+            }
+            XtraMessageBox.Show("List candidate has been saved !", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.Close();
+            resetFrom(false);
+        }
+
+        private void grcImport_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtPath_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            try
+            {
+                OpenFileDialog openFileDialog1 = new OpenFileDialog();  //create openfileDialog Object
+                openFileDialog1.Filter = "XML Files (*.xml; *.xls; *.xlsx; *.xlsm; *.xlsb) |*.xml; *.xls; *.xlsx; *.xlsm; *.xlsb";//open file format define Excel Files(.xls)|*.xls| Excel Files(.xlsx)|*.xlsx| 
+                openFileDialog1.FilterIndex = 3;
+
+                openFileDialog1.Multiselect = false;        //not allow multiline selection at the file selection level
+                openFileDialog1.Title = "Open Text File-R13";   //define the name of openfileDialog
+                openFileDialog1.InitialDirectory = @"Desktop"; //define the initial directory
+
+                if (openFileDialog1.ShowDialog() == DialogResult.OK)        //executing when file open
+                {
+                    txtPath.Text = openFileDialog1.FileName;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
             }
         }
     }
