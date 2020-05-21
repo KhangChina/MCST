@@ -42,7 +42,6 @@ namespace MCT_SB
             }
             if(e.Button.ButtonType == NavigatorButtonType.Remove)
             {
-
                 if (XtraMessageBox.Show("Are you sure you want to delete ?", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 {
                     e.Handled = true;
@@ -58,6 +57,7 @@ namespace MCT_SB
                         LoadCandidate();
                     }
                 }
+                LoadCandidate();
             }
         }     
         private void grcCadidate_DoubleClick(object sender, EventArgs e)

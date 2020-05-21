@@ -66,7 +66,7 @@ namespace MCT_SB
             string[] arrListStr = reportName.Split('.');
             if (arrListStr[1] == "1")
             {
-                btnDeleteGroupType.Enabled = false;
+                btnRemoveGroupType.Enabled = false;
                 btnUpdateGroupType.Enabled = false;
                 btnRemoveType.Enabled = true;
                 btnAddType.Enabled = true;
@@ -74,7 +74,7 @@ namespace MCT_SB
             }
             else
             {
-                btnDeleteGroupType.Enabled = true;
+                btnRemoveGroupType.Enabled = true;
                 btnUpdateGroupType.Enabled = true;
                 btnRemoveType.Enabled = false;
                 btnAddType.Enabled = false;
@@ -134,7 +134,7 @@ namespace MCT_SB
             }
         }
 
-        private void btnAddGroupType_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void simpleButton1_Click(object sender, EventArgs e)
         {
             TreeListNode node = tree.FocusedNode;
             string reportName = node.GetValue("PARENTID").ToString();
@@ -150,18 +150,7 @@ namespace MCT_SB
             TreeLoad();//Set Icon
         }
 
-        private void btnUpdateGroupType_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            TreeListNode node = tree.FocusedNode;
-            object reportName = node.GetValue("ID");
-            int ID = int.Parse(Math.Truncate(double.Parse(reportName.ToString())).ToString());
-            frmAddGroupTypeQuestion frm = new frmAddGroupTypeQuestion(ID, -1);
-            frm.ShowDialog();
-            LoadTreeList();
-            TreeLoad();//Set Icon
-        }
-
-        private void btnDeleteGroupType_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void btnRemoveGroupType_Click(object sender, EventArgs e)
         {
             if (XtraMessageBox.Show("Are you sure you want to delete ?", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
@@ -180,6 +169,17 @@ namespace MCT_SB
                     XtraMessageBox.Show(res);
                 }
             }
+        }
+
+        private void btnUpdateGroupType_Click(object sender, EventArgs e)
+        {
+            TreeListNode node = tree.FocusedNode;
+            object reportName = node.GetValue("ID");
+            int ID = int.Parse(Math.Truncate(double.Parse(reportName.ToString())).ToString());
+            frmAddGroupTypeQuestion frm = new frmAddGroupTypeQuestion(ID, -1);
+            frm.ShowDialog();
+            LoadTreeList();
+            TreeLoad();//Set Icon
         }
     }
 }
