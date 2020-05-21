@@ -67,6 +67,12 @@
     <Compile Include="frmAddGroupTypeQuestion.Designer.cs">
       <DependentUpon>frmAddGroupTypeQuestion.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmImportCandidate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmImportCandidate.Designer.cs">
+      <DependentUpon>frmImportCandidate.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAddPart.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -133,6 +139,9 @@
     <EmbeddedResource Include="frmAddGroupTypeQuestion.resx">
       <DependentUpon>frmAddGroupTypeQuestion.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmImportCandidate.resx">
+      <DependentUpon>frmImportCandidate.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAddPart.resx">
       <DependentUpon>frmAddPart.cs</DependentUpon>
     </EmbeddedResource>
@@ -186,6 +195,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BUS\BUS.csproj">
+      <Project>{ebcd66b0-a71b-4b5c-9d99-372087597ecd}</Project>
+      <Name>BUS</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Module\Module.csproj">
       <Project>{f3bba7bb-ca8f-46b5-8c16-369ce843ede1}</Project>
       <Name>Module</Name>

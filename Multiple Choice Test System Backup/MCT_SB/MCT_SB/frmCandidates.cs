@@ -42,8 +42,8 @@ namespace MCT_SB
             }
             if(e.Button.ButtonType == NavigatorButtonType.Remove)
             {
-                
-                if (XtraMessageBox.Show("Are you sure you delete") == DialogResult.OK)
+
+                if (XtraMessageBox.Show("Are you sure you want to delete ?", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 {
                     e.Handled = true;
                     int IDCandidates = int.Parse(grvCandidate.GetFocusedRowCellValue(colID).ToString());

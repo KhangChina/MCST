@@ -181,7 +181,7 @@ namespace Module
                 con.Close();
                 return count > 0 ? false : true;
             }
-            catch (Exception e)
+            catch
             {
                 return false;
             }

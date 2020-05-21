@@ -1,0 +1,33 @@
+<idThiSinh>
+    <idQuestion id = "1">
+        <answer>A(id)</answer>
+        <statust>true</statust>
+    </idQuestion>
+    <idQuestion id = "1">
+        <answer>A</answer>
+        <statust>true</statust>
+    </idQuestion>
+    <idQuestion id = "1">
+        <answer>A</answer>
+        <statust>true</statust>
+    </idQuestion>
+    <idQuestion id = "1">
+        <answer>A</answer>
+        <statust>true</statust>
+    </idQuestion>
+</idThiSinh>
+//=============================================
+<idmade>
+    <idQuestion>
+        <A id = ""></A>
+        <B id = ""></B>
+        <D id = ""></B>
+        <C id = ""></B>
+    </idQuestion>
+    <idQuestion>
+        <A id = ""></A>
+        <B id = ""></B>
+        <D id = ""></B>
+        <C id = ""></B>
+    </idQuestion>
+</idmade>

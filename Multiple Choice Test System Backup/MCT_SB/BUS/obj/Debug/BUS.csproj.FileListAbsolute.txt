@@ -1,0 +1,6 @@
+C:\Users\phamh\Desktop\Khoá Luận\MCST\Multiple Choice Test System Backup\MCT_SB\BUS\bin\Debug\BUS.dll
+C:\Users\phamh\Desktop\Khoá Luận\MCST\Multiple Choice Test System Backup\MCT_SB\BUS\bin\Debug\BUS.pdb
+C:\Users\phamh\Desktop\Khoá Luận\MCST\Multiple Choice Test System Backup\MCT_SB\BUS\obj\Debug\BUS.csprojAssemblyReference.cache
+C:\Users\phamh\Desktop\Khoá Luận\MCST\Multiple Choice Test System Backup\MCT_SB\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+C:\Users\phamh\Desktop\Khoá Luận\MCST\Multiple Choice Test System Backup\MCT_SB\BUS\obj\Debug\BUS.dll
+C:\Users\phamh\Desktop\Khoá Luận\MCST\Multiple Choice Test System Backup\MCT_SB\BUS\obj\Debug\BUS.pdb

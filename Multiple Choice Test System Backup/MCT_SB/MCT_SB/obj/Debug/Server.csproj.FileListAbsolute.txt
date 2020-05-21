@@ -596,8 +596,10 @@ C:\Users\phamh\Desktop\Khoá Luận\MCST\Multiple Choice Test System Backup\MCT_
 C:\Users\phamh\Desktop\Khoá Luận\MCST\Multiple Choice Test System Backup\MCT_SB\MCT_SB\bin\Debug\ru\DevExpress.Office.v19.2.Core.resources.dll
 C:\Users\phamh\Desktop\Khoá Luận\MCST\Multiple Choice Test System Backup\MCT_SB\MCT_SB\obj\Debug\Server.csprojAssemblyReference.cache
 C:\Users\phamh\Desktop\Khoá Luận\MCST\Multiple Choice Test System Backup\MCT_SB\MCT_SB\obj\Debug\MCT_SB.frmAddGroupTypeQuestion.resources
+C:\Users\phamh\Desktop\Khoá Luận\MCST\Multiple Choice Test System Backup\MCT_SB\MCT_SB\obj\Debug\MCT_SB.frmImportCandidate.resources
 C:\Users\phamh\Desktop\Khoá Luận\MCST\Multiple Choice Test System Backup\MCT_SB\MCT_SB\obj\Debug\MCT_SB.frmAddPart.resources
 C:\Users\phamh\Desktop\Khoá Luận\MCST\Multiple Choice Test System Backup\MCT_SB\MCT_SB\obj\Debug\MCT_SB.frmAddCadidate.resources
+C:\Users\phamh\Desktop\Khoá Luận\MCST\Multiple Choice Test System Backup\MCT_SB\MCT_SB\obj\Debug\MCT_SB.frmAddType.resources
 C:\Users\phamh\Desktop\Khoá Luận\MCST\Multiple Choice Test System Backup\MCT_SB\MCT_SB\obj\Debug\MCT_SB.frmCandidates.resources
 C:\Users\phamh\Desktop\Khoá Luận\MCST\Multiple Choice Test System Backup\MCT_SB\MCT_SB\obj\Debug\MCT_SB.frmAddExam.resources
 C:\Users\phamh\Desktop\Khoá Luận\MCST\Multiple Choice Test System Backup\MCT_SB\MCT_SB\obj\Debug\MCT_SB.frmMain.resources
@@ -612,4 +614,5 @@ C:\Users\phamh\Desktop\Khoá Luận\MCST\Multiple Choice Test System Backup\MCT_
 C:\Users\phamh\Desktop\Khoá Luận\MCST\Multiple Choice Test System Backup\MCT_SB\MCT_SB\obj\Debug\Server.csproj.CopyComplete
 C:\Users\phamh\Desktop\Khoá Luận\MCST\Multiple Choice Test System Backup\MCT_SB\MCT_SB\obj\Debug\MCT_SB.exe
 C:\Users\phamh\Desktop\Khoá Luận\MCST\Multiple Choice Test System Backup\MCT_SB\MCT_SB\obj\Debug\MCT_SB.pdb
-C:\Users\phamh\Desktop\Khoá Luận\MCST\Multiple Choice Test System Backup\MCT_SB\MCT_SB\obj\Debug\MCT_SB.frmAddType.resources
+C:\Users\phamh\Desktop\Khoá Luận\MCST\Multiple Choice Test System Backup\MCT_SB\MCT_SB\bin\Debug\BUS.dll
+C:\Users\phamh\Desktop\Khoá Luận\MCST\Multiple Choice Test System Backup\MCT_SB\MCT_SB\bin\Debug\BUS.pdb

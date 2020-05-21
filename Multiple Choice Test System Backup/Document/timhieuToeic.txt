@@ -1,0 +1,12 @@
+Thông tin trên phiếu điểm : 
+1. Thông tin cá nhân
+2. Điểm phần thi Nghe
+3. Điểm phần thi đọc
+4. Tổng điểm
+5. Tỉ lệ phần trăm trả lời đúng của mỗi phần
+6. Miêu tả mức độ thông thạo theo điểm số của thí sinh
+   -  miêu tả khả năng sử dụng ngôn ngữ tiếng Anh của thí sinh
+dựa trên điểm số đạt được cho từng mức điểm cụ thể(dựa trên một nghiên cứu do ETS tiến hành)
+
+* Điểm thi TOEIC sẽ được quy đổi theo bảng. 
+Việc này nhằm đảm bảo điểm số của bạn tương đương với các thí sinh thi bài thi khác.
