@@ -39,6 +39,14 @@ namespace MCT_SB
                 XtraMessageBox.Show(res);
             }
         }
+        void LoadQuestionByGroupType(int IDgrouptype) //load danh sách câu hỏi dựa vào ID group type question
+        {
+            DataTable dtQuestion = new DataTable();
+            string res =mdQuestion.GetByGroupType(ref dtQuestion, IDgrouptype);
+            if (res == "OK")
+                grcQuestionListenImage.DataSource = dtQuestion;
+            else XtraMessageBox.Show(res);
+        }
         void LoadType_Question()
         {
             DataTable dtType_Question = new DataTable();
@@ -47,9 +55,19 @@ namespace MCT_SB
             {
                 lookTypeQuestion.Properties.DataSource = dtType_Question;
                 lookTypeQuestion.Properties.DisplayMember = "Name";
-                lookTypeQuestion.Properties.ValueMember = "ID";
-                //lookTypeQuestion.ItemIndex = 0;
+                lookTypeQuestion.Properties.ValueMember = "ID";            }
+        }
+        void loadGroupType() //load danh sách group type question
+        {
+            DataTable dt = new DataTable();
+            string res = mdGroupTypeQuestion.GetAll(ref dt);
+            if (res == "OK")
+            {
+                lookUpGroupType.Properties.DataSource = dt;
+                lookUpGroupType.Properties.DisplayMember = "Name";
+                lookUpGroupType.Properties.ValueMember = "ID";
             }
+            else XtraMessageBox.Show(res);
         }
         void LoadGrid()
         {
@@ -72,11 +90,7 @@ namespace MCT_SB
             lookAnswer.ValueMember = "Status";
 
             colAnwer.ColumnEdit = lookAnswer;
-            grc.DataSource = dt;
-
-            txtDescriptions.Text = "";
-            AudioName.Text = "";
-            txtNameGroupTypeQuestion.Text = "";
+            grcQuestionListenImage.DataSource = dt;
         }
         private void lookGroup_EditValueChanged(object sender, EventArgs e)
         {
@@ -102,6 +116,7 @@ namespace MCT_SB
 
         private void lookTypeQuestion_EditValueChanged(object sender, EventArgs e)
         {
+            loadGroupType();
             mmTypeQuestion.Text = lookTypeQuestion.Properties.GetDataSourceValue("Descriptions", lookTypeQuestion.ItemIndex).ToString();
             string CodeQuestionGroup = lookTypeQuestion.Properties.GetDataSourceValue("Code", lookTypeQuestion.ItemIndex).ToString();
             if (CodeQuestionGroup.Length > 0)
@@ -136,28 +151,7 @@ namespace MCT_SB
         }
         private void btnSave_Click(object sender, EventArgs e)
         {
-            InsertGroupTypeQuestion();
-
-        }
-        void InsertGroupTypeQuestion()
-        {
-            List<string> ltGroupTypeQuestion = new List<string>();
-            ltGroupTypeQuestion.Add(txtNameGroupTypeQuestion.Text);
-            ltGroupTypeQuestion.Add(txtDescriptions.Text);
-            ltGroupTypeQuestion.Add(Path.GetFileName(AudioName.Text));
-            ltGroupTypeQuestion.Add(cbxStatus.EditValue.ToString());
-            ltGroupTypeQuestion.Add(lookTypeQuestion.EditValue.ToString());
-            int IDGroupTypeQuestion = -1;
-            string res = mdGroupTypeQuestion.Insert(ref IDGroupTypeQuestion, ltGroupTypeQuestion);
-            if (res != "OK")
-            {
-                XtraMessageBox.Show(res);
-            }
-            else
-            {
-                InsertQuestion(IDGroupTypeQuestion);
-            }
-
+            InsertQuestion(int.Parse(lookUpGroupType.EditValue.ToString()));
         }
         void InsertQuestion(int IDGroupTypeQuestion)
         {
@@ -212,29 +206,15 @@ namespace MCT_SB
                 }
             }
         }
-
-        private void AudioName_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
-        {
-            op.Filter = "Mp3 Files (*.Mp3)|*.Mp3|All Files (*.*)|*.*";
-            if (op.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-            {
-                AudioName.Text = op.FileName;
-                if (File.Exists(Application.StartupPath + "\\Audio\\" + Path.GetFileName(AudioName.Text)))
-                {
-                    XtraMessageBox.Show("File Exists");
-                }
-                else
-                {
-                    File.Copy(AudioName.Text, Application.StartupPath + "\\Audio\\" + Path.GetFileName(AudioName.Text));
-                }
-
-            }
-        }
-
         private void btnClear_Click(object sender, EventArgs e)
         {
             LoadGrid();
             
+        }
+
+        private void lookUpGroupType_EditValueChanged(object sender, EventArgs e)
+        {
+            LoadQuestionByGroupType(int.Parse(lookUpGroupType.EditValue.ToString()));
         }
     }
 }

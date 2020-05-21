@@ -91,7 +91,7 @@ namespace Module
                 string conStr = Provider.ConnectString();
                 SqlConnection con = new SqlConnection(conStr);
                 con.Open();
-                string query = "select * from QUESTIONS where IdGroupTypeQuestions = " + GroupTypeID;
+                string query = "select QUESTIONS.ID,QUESTIONS.Descriptions, QUESTIONS.Status, Images,ANSWERS.ID as IDAnswer, ANSWERS.Descriptions as AnswerDescription  from QUESTIONS,ANSWERS where QUESTIONS.ID = ANSWERS.IdQuestion and ANSWERS.Status = 1 and IdGroupTypeQuestions = " + GroupTypeID;
                 SqlCommand cmdGetData = new SqlCommand(query, con);
                 cmdGetData.CommandType = CommandType.Text;
                 SqlDataAdapter da = new SqlDataAdapter(cmdGetData);

@@ -149,19 +149,13 @@
         AcRgvAYQAkQZcOgFdgwCg8cFMAzVTroLoNoQANlUYjBUGzUAAwMAyb9LEcKUmG8AAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="editorButtonImageOptions1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAABGdBTUEAALGPC/xhBQAAALVJREFUKFNj
-        mFbj4gLDU6udrBgIgTn17h93TQ39BsJruv0+zGvw6INKYQcLm72e396Q+h+EbwHxyk7/b/OavH7Pa/LE
-        wEDDfzLMrHH9t7Y3+D8MH12c8v/Dycb/X8+1YuCl7f5/GUAETODB4e7/C5fMxcA4NZzZOfF/z6wl/3O7
-        1v5fvWoWnI1Xg1/VVgxMXQ0kOenavr7/Ff0rMTCKhjkNHj/2zY3/TgwGqWWYVuFmTDx2MwYAaTlUlRzp
-        fF4AAAAASUVORK5CYII=
-</value>
-  </data>
   <metadata name="vdt.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>140, 20</value>
   </metadata>
   <metadata name="op.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>209, 20</value>
+  </metadata>
+  <metadata name="behaviorManager1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>275, 20</value>
   </metadata>
 </root>
