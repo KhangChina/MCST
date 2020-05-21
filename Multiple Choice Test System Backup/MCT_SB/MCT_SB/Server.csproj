@@ -34,6 +34,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Accessibility" />
     <Reference Include="DevExpress.BonusSkins.v19.2" />
     <Reference Include="DevExpress.Data.v19.2" />
     <Reference Include="DevExpress.Dialogs.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
@@ -49,7 +50,13 @@
     <Reference Include="DevExpress.XtraTreeList.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -66,6 +73,12 @@
     </Compile>
     <Compile Include="frmAddGroupTypeQuestion.Designer.cs">
       <DependentUpon>frmAddGroupTypeQuestion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddQuestion2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddQuestion2.Designer.cs">
+      <DependentUpon>frmAddQuestion2.cs</DependentUpon>
     </Compile>
     <Compile Include="frmImportCandidate.cs">
       <SubType>Form</SubType>
@@ -138,6 +151,9 @@
     <Compile Include="Utility.cs" />
     <EmbeddedResource Include="frmAddGroupTypeQuestion.resx">
       <DependentUpon>frmAddGroupTypeQuestion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddQuestion2.resx">
+      <DependentUpon>frmAddQuestion2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmImportCandidate.resx">
       <DependentUpon>frmImportCandidate.cs</DependentUpon>

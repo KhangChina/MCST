@@ -35,14 +35,6 @@
             this.TabQuestion = new DevExpress.XtraTab.XtraTabControl();
             this.tabLI = new DevExpress.XtraTab.XtraTabPage();
             this.layoutControl3 = new DevExpress.XtraLayout.LayoutControl();
-            this.lookUpGroupType = new DevExpress.XtraEditors.LookUpEdit();
-            this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
-            this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
-            this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
-            this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
-            this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
-            this.btnCreateQuestion = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             this.btnClear = new DevExpress.XtraEditors.SimpleButton();
             this.btnSave = new DevExpress.XtraEditors.SimpleButton();
             this.grcQuestionListenImage = new DevExpress.XtraGrid.GridControl();
@@ -53,21 +45,45 @@
             this.lookAnswer = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.colDiscription = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colStatus = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
+            this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
+            this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
+            this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
+            this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
+            this.btnCreateQuestion = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem13 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem14 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
             this.layoutControl4 = new DevExpress.XtraLayout.LayoutControl();
+            this.layoutControl5 = new DevExpress.XtraLayout.LayoutControl();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnSaveListenFull = new DevExpress.XtraEditors.SimpleButton();
+            this.btnClearListenFull = new DevExpress.XtraEditors.SimpleButton();
+            this.grcListenFull = new DevExpress.XtraGrid.GridControl();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.Answer = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemLookUpEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
+            this.repositoryItemPictureEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit();
+            this.layoutControlGroup4 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem15 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem16 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlGroup3 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
             this.xtraTabPage3 = new DevExpress.XtraTab.XtraTabPage();
             this.xtraTabPage4 = new DevExpress.XtraTab.XtraTabPage();
             this.xtraTabPage5 = new DevExpress.XtraTab.XtraTabPage();
             this.xtraTabPage6 = new DevExpress.XtraTab.XtraTabPage();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.layoutControl2 = new DevExpress.XtraLayout.LayoutControl();
+            this.lookUpGroupType = new DevExpress.XtraEditors.LookUpEdit();
             this.mmTypeQuestion = new DevExpress.XtraEditors.MemoEdit();
             this.mmDescription = new DevExpress.XtraEditors.MemoEdit();
             this.lookTypeQuestion = new DevExpress.XtraEditors.LookUpEdit();
@@ -80,6 +96,7 @@
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -96,25 +113,37 @@
             this.tabLI.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl3)).BeginInit();
             this.layoutControl3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpGroupType.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grcQuestionListenImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemPictureEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookAnswer)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             this.xtraTabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl4)).BeginInit();
+            this.layoutControl4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControl5)).BeginInit();
+            this.layoutControl5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grcListenFull)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemPictureEdit2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem15)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).BeginInit();
             this.layoutControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.lookUpGroupType.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mmTypeQuestion.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mmDescription.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookTypeQuestion.Properties)).BeginInit();
@@ -127,6 +156,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
@@ -183,7 +213,6 @@
             // 
             // layoutControl3
             // 
-            this.layoutControl3.Controls.Add(this.lookUpGroupType);
             this.layoutControl3.Controls.Add(this.btnClear);
             this.layoutControl3.Controls.Add(this.btnSave);
             this.layoutControl3.Controls.Add(this.grcQuestionListenImage);
@@ -195,74 +224,6 @@
             this.layoutControl3.Size = new System.Drawing.Size(757, 568);
             this.layoutControl3.TabIndex = 0;
             this.layoutControl3.Text = "layoutControl3";
-            // 
-            // lookUpGroupType
-            // 
-            this.lookUpGroupType.Location = new System.Drawing.Point(108, 7);
-            this.lookUpGroupType.MenuManager = this.barManager1;
-            this.lookUpGroupType.Name = "lookUpGroupType";
-            this.lookUpGroupType.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lookUpGroupType.Size = new System.Drawing.Size(642, 20);
-            this.lookUpGroupType.StyleController = this.layoutControl3;
-            this.lookUpGroupType.TabIndex = 14;
-            this.lookUpGroupType.EditValueChanged += new System.EventHandler(this.lookUpGroupType_EditValueChanged);
-            // 
-            // barManager1
-            // 
-            this.barManager1.DockControls.Add(this.barDockControlTop);
-            this.barManager1.DockControls.Add(this.barDockControlBottom);
-            this.barManager1.DockControls.Add(this.barDockControlLeft);
-            this.barManager1.DockControls.Add(this.barDockControlRight);
-            this.barManager1.Form = this;
-            this.barManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
-            this.btnCreateQuestion,
-            this.barButtonItem2});
-            this.barManager1.MaxItemId = 2;
-            // 
-            // barDockControlTop
-            // 
-            this.barDockControlTop.CausesValidation = false;
-            this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
-            this.barDockControlTop.Manager = this.barManager1;
-            this.barDockControlTop.Size = new System.Drawing.Size(1124, 0);
-            // 
-            // barDockControlBottom
-            // 
-            this.barDockControlBottom.CausesValidation = false;
-            this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 632);
-            this.barDockControlBottom.Manager = this.barManager1;
-            this.barDockControlBottom.Size = new System.Drawing.Size(1124, 0);
-            // 
-            // barDockControlLeft
-            // 
-            this.barDockControlLeft.CausesValidation = false;
-            this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 0);
-            this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 632);
-            // 
-            // barDockControlRight
-            // 
-            this.barDockControlRight.CausesValidation = false;
-            this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1124, 0);
-            this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 632);
-            // 
-            // btnCreateQuestion
-            // 
-            this.btnCreateQuestion.Caption = "Create Question";
-            this.btnCreateQuestion.Id = 0;
-            this.btnCreateQuestion.Name = "btnCreateQuestion";
-            // 
-            // barButtonItem2
-            // 
-            this.barButtonItem2.Caption = "Import Question";
-            this.barButtonItem2.Id = 1;
-            this.barButtonItem2.Name = "barButtonItem2";
             // 
             // btnClear
             // 
@@ -288,14 +249,14 @@
             // 
             // grcQuestionListenImage
             // 
-            this.grcQuestionListenImage.Location = new System.Drawing.Point(7, 31);
+            this.grcQuestionListenImage.Location = new System.Drawing.Point(7, 7);
             this.grcQuestionListenImage.MainView = this.grv;
             this.grcQuestionListenImage.MenuManager = this.barManager1;
             this.grcQuestionListenImage.Name = "grcQuestionListenImage";
             this.grcQuestionListenImage.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.lookAnswer,
             this.repositoryItemPictureEdit1});
-            this.grcQuestionListenImage.Size = new System.Drawing.Size(743, 504);
+            this.grcQuestionListenImage.Size = new System.Drawing.Size(743, 528);
             this.grcQuestionListenImage.TabIndex = 7;
             this.grcQuestionListenImage.UseEmbeddedNavigator = true;
             this.grcQuestionListenImage.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -367,6 +328,62 @@
             this.colStatus.Visible = true;
             this.colStatus.VisibleIndex = 3;
             // 
+            // barManager1
+            // 
+            this.barManager1.DockControls.Add(this.barDockControlTop);
+            this.barManager1.DockControls.Add(this.barDockControlBottom);
+            this.barManager1.DockControls.Add(this.barDockControlLeft);
+            this.barManager1.DockControls.Add(this.barDockControlRight);
+            this.barManager1.Form = this;
+            this.barManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
+            this.btnCreateQuestion,
+            this.barButtonItem2});
+            this.barManager1.MaxItemId = 2;
+            // 
+            // barDockControlTop
+            // 
+            this.barDockControlTop.CausesValidation = false;
+            this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
+            this.barDockControlTop.Manager = this.barManager1;
+            this.barDockControlTop.Size = new System.Drawing.Size(1124, 0);
+            // 
+            // barDockControlBottom
+            // 
+            this.barDockControlBottom.CausesValidation = false;
+            this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 632);
+            this.barDockControlBottom.Manager = this.barManager1;
+            this.barDockControlBottom.Size = new System.Drawing.Size(1124, 0);
+            // 
+            // barDockControlLeft
+            // 
+            this.barDockControlLeft.CausesValidation = false;
+            this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 0);
+            this.barDockControlLeft.Manager = this.barManager1;
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 632);
+            // 
+            // barDockControlRight
+            // 
+            this.barDockControlRight.CausesValidation = false;
+            this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
+            this.barDockControlRight.Location = new System.Drawing.Point(1124, 0);
+            this.barDockControlRight.Manager = this.barManager1;
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 632);
+            // 
+            // btnCreateQuestion
+            // 
+            this.btnCreateQuestion.Caption = "Create Question";
+            this.btnCreateQuestion.Id = 0;
+            this.btnCreateQuestion.Name = "btnCreateQuestion";
+            // 
+            // barButtonItem2
+            // 
+            this.barButtonItem2.Caption = "Import Question";
+            this.barButtonItem2.Id = 1;
+            this.barButtonItem2.Name = "barButtonItem2";
+            // 
             // layoutControlGroup2
             // 
             this.layoutControlGroup2.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
@@ -375,8 +392,7 @@
             this.layoutControlItem11,
             this.layoutControlItem13,
             this.emptySpaceItem2,
-            this.layoutControlItem14,
-            this.layoutControlItem6});
+            this.layoutControlItem14});
             this.layoutControlGroup2.Name = "Root";
             this.layoutControlGroup2.Padding = new DevExpress.XtraLayout.Utils.Padding(5, 5, 5, 5);
             this.layoutControlGroup2.Size = new System.Drawing.Size(757, 568);
@@ -385,9 +401,9 @@
             // layoutControlItem11
             // 
             this.layoutControlItem11.Control = this.grcQuestionListenImage;
-            this.layoutControlItem11.Location = new System.Drawing.Point(0, 24);
+            this.layoutControlItem11.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem11.Name = "layoutControlItem11";
-            this.layoutControlItem11.Size = new System.Drawing.Size(747, 508);
+            this.layoutControlItem11.Size = new System.Drawing.Size(747, 532);
             this.layoutControlItem11.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem11.TextVisible = false;
             // 
@@ -417,15 +433,6 @@
             this.layoutControlItem14.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem14.TextVisible = false;
             // 
-            // layoutControlItem6
-            // 
-            this.layoutControlItem6.Control = this.lookUpGroupType;
-            this.layoutControlItem6.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(747, 24);
-            this.layoutControlItem6.Text = "Group type question";
-            this.layoutControlItem6.TextSize = new System.Drawing.Size(98, 13);
-            // 
             // xtraTabPage2
             // 
             this.xtraTabPage2.Controls.Add(this.layoutControl4);
@@ -436,6 +443,7 @@
             // 
             // layoutControl4
             // 
+            this.layoutControl4.Controls.Add(this.layoutControl5);
             this.layoutControl4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl4.Location = new System.Drawing.Point(0, 0);
             this.layoutControl4.Name = "layoutControl4";
@@ -444,13 +452,189 @@
             this.layoutControl4.TabIndex = 0;
             this.layoutControl4.Text = "layoutControl4";
             // 
+            // layoutControl5
+            // 
+            this.layoutControl5.Controls.Add(this.label1);
+            this.layoutControl5.Controls.Add(this.btnSaveListenFull);
+            this.layoutControl5.Controls.Add(this.btnClearListenFull);
+            this.layoutControl5.Controls.Add(this.grcListenFull);
+            this.layoutControl5.Location = new System.Drawing.Point(7, 7);
+            this.layoutControl5.Name = "layoutControl5";
+            this.layoutControl5.Root = this.layoutControlGroup4;
+            this.layoutControl5.Size = new System.Drawing.Size(743, 554);
+            this.layoutControl5.TabIndex = 4;
+            this.layoutControl5.Text = "layoutControl5";
+            // 
+            // label1
+            // 
+            this.label1.Location = new System.Drawing.Point(2, 530);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(577, 22);
+            this.label1.TabIndex = 11;
+            // 
+            // btnSaveListenFull
+            // 
+            this.btnSaveListenFull.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSaveListenFull.Appearance.Options.UseFont = true;
+            this.btnSaveListenFull.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSaveListenFull.ImageOptions.Image")));
+            this.btnSaveListenFull.Location = new System.Drawing.Point(667, 530);
+            this.btnSaveListenFull.Name = "btnSaveListenFull";
+            this.btnSaveListenFull.Size = new System.Drawing.Size(74, 22);
+            this.btnSaveListenFull.StyleController = this.layoutControl5;
+            this.btnSaveListenFull.TabIndex = 10;
+            this.btnSaveListenFull.Text = "Save";
+            // 
+            // btnClearListenFull
+            // 
+            this.btnClearListenFull.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClearListenFull.Appearance.Options.UseFont = true;
+            this.btnClearListenFull.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnClearListenFull.ImageOptions.Image")));
+            this.btnClearListenFull.Location = new System.Drawing.Point(583, 530);
+            this.btnClearListenFull.Name = "btnClearListenFull";
+            this.btnClearListenFull.Size = new System.Drawing.Size(80, 22);
+            this.btnClearListenFull.StyleController = this.layoutControl5;
+            this.btnClearListenFull.TabIndex = 9;
+            this.btnClearListenFull.Text = "Clear";
+            // 
+            // grcListenFull
+            // 
+            this.grcListenFull.Location = new System.Drawing.Point(2, 2);
+            this.grcListenFull.MainView = this.gridView1;
+            this.grcListenFull.MenuManager = this.barManager1;
+            this.grcListenFull.Name = "grcListenFull";
+            this.grcListenFull.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.repositoryItemLookUpEdit1,
+            this.repositoryItemPictureEdit2});
+            this.grcListenFull.Size = new System.Drawing.Size(739, 524);
+            this.grcListenFull.TabIndex = 8;
+            this.grcListenFull.UseEmbeddedNavigator = true;
+            this.grcListenFull.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView1});
+            // 
+            // gridView1
+            // 
+            this.gridView1.Appearance.HeaderPanel.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridView1.Appearance.HeaderPanel.Options.UseFont = true;
+            this.gridView1.Appearance.HeaderPanel.Options.UseTextOptions = true;
+            this.gridView1.Appearance.HeaderPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn2,
+            this.Answer,
+            this.gridColumn4});
+            this.gridView1.GridControl = this.grcListenFull;
+            this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsBehavior.EditingMode = DevExpress.XtraGrid.Views.Grid.GridEditingMode.EditFormInplaceHideCurrentRow;
+            this.gridView1.OptionsBehavior.EditorShowMode = DevExpress.Utils.EditorShowMode.Click;
+            this.gridView1.OptionsView.ShowGroupPanel = false;
+            // 
+            // gridColumn2
+            // 
+            this.gridColumn2.Caption = "Description";
+            this.gridColumn2.FieldName = "Descriptions";
+            this.gridColumn2.Name = "gridColumn2";
+            this.gridColumn2.Visible = true;
+            this.gridColumn2.VisibleIndex = 0;
+            // 
+            // Answer
+            // 
+            this.Answer.Caption = "Answer";
+            this.Answer.FieldName = "Answer";
+            this.Answer.Name = "Answer";
+            this.Answer.Visible = true;
+            this.Answer.VisibleIndex = 1;
+            // 
+            // gridColumn4
+            // 
+            this.gridColumn4.Caption = "Status";
+            this.gridColumn4.FieldName = "Status";
+            this.gridColumn4.Name = "gridColumn4";
+            this.gridColumn4.Visible = true;
+            this.gridColumn4.VisibleIndex = 2;
+            // 
+            // repositoryItemLookUpEdit1
+            // 
+            this.repositoryItemLookUpEdit1.AutoHeight = false;
+            this.repositoryItemLookUpEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemLookUpEdit1.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Answer", "Answer")});
+            this.repositoryItemLookUpEdit1.Name = "repositoryItemLookUpEdit1";
+            this.repositoryItemLookUpEdit1.NullText = "Select Answer True";
+            // 
+            // repositoryItemPictureEdit2
+            // 
+            this.repositoryItemPictureEdit2.Name = "repositoryItemPictureEdit2";
+            this.repositoryItemPictureEdit2.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Zoom;
+            // 
+            // layoutControlGroup4
+            // 
+            this.layoutControlGroup4.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+            this.layoutControlGroup4.GroupBordersVisible = false;
+            this.layoutControlGroup4.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem10,
+            this.layoutControlItem12,
+            this.layoutControlItem15,
+            this.layoutControlItem16});
+            this.layoutControlGroup4.Name = "layoutControlGroup4";
+            this.layoutControlGroup4.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
+            this.layoutControlGroup4.Size = new System.Drawing.Size(743, 554);
+            this.layoutControlGroup4.TextVisible = false;
+            // 
+            // layoutControlItem10
+            // 
+            this.layoutControlItem10.Control = this.grcListenFull;
+            this.layoutControlItem10.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem10.Name = "layoutControlItem10";
+            this.layoutControlItem10.Size = new System.Drawing.Size(743, 528);
+            this.layoutControlItem10.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem10.TextVisible = false;
+            // 
+            // layoutControlItem12
+            // 
+            this.layoutControlItem12.Control = this.btnClearListenFull;
+            this.layoutControlItem12.Location = new System.Drawing.Point(581, 528);
+            this.layoutControlItem12.Name = "layoutControlItem12";
+            this.layoutControlItem12.Size = new System.Drawing.Size(84, 26);
+            this.layoutControlItem12.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem12.TextVisible = false;
+            // 
+            // layoutControlItem15
+            // 
+            this.layoutControlItem15.Control = this.btnSaveListenFull;
+            this.layoutControlItem15.Location = new System.Drawing.Point(665, 528);
+            this.layoutControlItem15.Name = "layoutControlItem15";
+            this.layoutControlItem15.Size = new System.Drawing.Size(78, 26);
+            this.layoutControlItem15.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem15.TextVisible = false;
+            // 
+            // layoutControlItem16
+            // 
+            this.layoutControlItem16.Control = this.label1;
+            this.layoutControlItem16.Location = new System.Drawing.Point(0, 528);
+            this.layoutControlItem16.Name = "layoutControlItem16";
+            this.layoutControlItem16.Size = new System.Drawing.Size(581, 26);
+            this.layoutControlItem16.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem16.TextVisible = false;
+            // 
             // layoutControlGroup3
             // 
             this.layoutControlGroup3.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
             this.layoutControlGroup3.GroupBordersVisible = false;
+            this.layoutControlGroup3.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem9});
             this.layoutControlGroup3.Name = "layoutControlGroup3";
+            this.layoutControlGroup3.Padding = new DevExpress.XtraLayout.Utils.Padding(5, 5, 5, 5);
             this.layoutControlGroup3.Size = new System.Drawing.Size(757, 568);
             this.layoutControlGroup3.TextVisible = false;
+            // 
+            // layoutControlItem9
+            // 
+            this.layoutControlItem9.Control = this.layoutControl5;
+            this.layoutControlItem9.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem9.Name = "layoutControlItem9";
+            this.layoutControlItem9.Size = new System.Drawing.Size(747, 558);
+            this.layoutControlItem9.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem9.TextVisible = false;
             // 
             // xtraTabPage3
             // 
@@ -492,6 +676,7 @@
             // 
             // layoutControl2
             // 
+            this.layoutControl2.Controls.Add(this.lookUpGroupType);
             this.layoutControl2.Controls.Add(this.mmTypeQuestion);
             this.layoutControl2.Controls.Add(this.mmDescription);
             this.layoutControl2.Controls.Add(this.lookTypeQuestion);
@@ -505,6 +690,20 @@
             this.layoutControl2.Size = new System.Drawing.Size(339, 593);
             this.layoutControl2.TabIndex = 0;
             this.layoutControl2.Text = "layoutControl2";
+            // 
+            // lookUpGroupType
+            // 
+            this.lookUpGroupType.Location = new System.Drawing.Point(108, 306);
+            this.lookUpGroupType.MenuManager = this.barManager1;
+            this.lookUpGroupType.Name = "lookUpGroupType";
+            this.lookUpGroupType.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lookUpGroupType.Properties.Appearance.Options.UseFont = true;
+            this.lookUpGroupType.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lookUpGroupType.Size = new System.Drawing.Size(224, 22);
+            this.lookUpGroupType.StyleController = this.layoutControl2;
+            this.lookUpGroupType.TabIndex = 10;
+            this.lookUpGroupType.EditValueChanged += new System.EventHandler(this.lookUpGroupType_EditValueChanged);
             // 
             // mmTypeQuestion
             // 
@@ -526,39 +725,39 @@
             // 
             // lookTypeQuestion
             // 
-            this.lookTypeQuestion.Location = new System.Drawing.Point(85, 151);
+            this.lookTypeQuestion.Location = new System.Drawing.Point(108, 151);
             this.lookTypeQuestion.MenuManager = this.barManager1;
             this.lookTypeQuestion.Name = "lookTypeQuestion";
             this.lookTypeQuestion.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lookTypeQuestion.Size = new System.Drawing.Size(247, 20);
+            this.lookTypeQuestion.Size = new System.Drawing.Size(224, 20);
             this.lookTypeQuestion.StyleController = this.layoutControl2;
             this.lookTypeQuestion.TabIndex = 6;
             this.lookTypeQuestion.EditValueChanged += new System.EventHandler(this.lookTypeQuestion_EditValueChanged);
             // 
             // lookPart
             // 
-            this.lookPart.Location = new System.Drawing.Point(85, 31);
+            this.lookPart.Location = new System.Drawing.Point(108, 31);
             this.lookPart.MenuManager = this.barManager1;
             this.lookPart.Name = "lookPart";
             this.lookPart.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.lookPart.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "Name")});
-            this.lookPart.Size = new System.Drawing.Size(247, 20);
+            this.lookPart.Size = new System.Drawing.Size(224, 20);
             this.lookPart.StyleController = this.layoutControl2;
             this.lookPart.TabIndex = 5;
             this.lookPart.EditValueChanged += new System.EventHandler(this.lookPart_EditValueChanged);
             // 
             // lookGroup
             // 
-            this.lookGroup.Location = new System.Drawing.Point(85, 7);
+            this.lookGroup.Location = new System.Drawing.Point(108, 7);
             this.lookGroup.MenuManager = this.barManager1;
             this.lookGroup.Name = "lookGroup";
             this.lookGroup.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.lookGroup.Properties.NullText = "";
-            this.lookGroup.Size = new System.Drawing.Size(247, 20);
+            this.lookGroup.Size = new System.Drawing.Size(224, 20);
             this.lookGroup.StyleController = this.layoutControl2;
             this.lookGroup.TabIndex = 4;
             this.lookGroup.EditValueChanged += new System.EventHandler(this.lookGroup_EditValueChanged);
@@ -573,7 +772,8 @@
             this.layoutControlItem5,
             this.layoutControlItem7,
             this.layoutControlItem8,
-            this.emptySpaceItem1});
+            this.emptySpaceItem1,
+            this.layoutControlItem6});
             this.layoutControlGroup1.Name = "Root";
             this.layoutControlGroup1.Padding = new DevExpress.XtraLayout.Utils.Padding(5, 5, 5, 5);
             this.layoutControlGroup1.Size = new System.Drawing.Size(339, 593);
@@ -586,7 +786,7 @@
             this.layoutControlItem3.Name = "layoutControlItem3";
             this.layoutControlItem3.Size = new System.Drawing.Size(329, 24);
             this.layoutControlItem3.Text = "Group Part";
-            this.layoutControlItem3.TextSize = new System.Drawing.Size(75, 13);
+            this.layoutControlItem3.TextSize = new System.Drawing.Size(98, 13);
             // 
             // layoutControlItem4
             // 
@@ -595,7 +795,7 @@
             this.layoutControlItem4.Name = "layoutControlItem4";
             this.layoutControlItem4.Size = new System.Drawing.Size(329, 24);
             this.layoutControlItem4.Text = "Part";
-            this.layoutControlItem4.TextSize = new System.Drawing.Size(75, 13);
+            this.layoutControlItem4.TextSize = new System.Drawing.Size(98, 13);
             // 
             // layoutControlItem5
             // 
@@ -603,8 +803,8 @@
             this.layoutControlItem5.Location = new System.Drawing.Point(0, 144);
             this.layoutControlItem5.Name = "layoutControlItem5";
             this.layoutControlItem5.Size = new System.Drawing.Size(329, 24);
-            this.layoutControlItem5.Text = "Group Question";
-            this.layoutControlItem5.TextSize = new System.Drawing.Size(75, 13);
+            this.layoutControlItem5.Text = "Type question";
+            this.layoutControlItem5.TextSize = new System.Drawing.Size(98, 13);
             // 
             // layoutControlItem7
             // 
@@ -628,10 +828,19 @@
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 299);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 325);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(329, 284);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(329, 258);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // layoutControlItem6
+            // 
+            this.layoutControlItem6.Control = this.lookUpGroupType;
+            this.layoutControlItem6.Location = new System.Drawing.Point(0, 299);
+            this.layoutControlItem6.Name = "layoutControlItem6";
+            this.layoutControlItem6.Size = new System.Drawing.Size(329, 26);
+            this.layoutControlItem6.Text = "Group type question";
+            this.layoutControlItem6.TextSize = new System.Drawing.Size(98, 13);
             // 
             // Root
             // 
@@ -697,25 +906,37 @@
             this.tabLI.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl3)).EndInit();
             this.layoutControl3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpGroupType.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grcQuestionListenImage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grv)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemPictureEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookAnswer)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             this.xtraTabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl4)).EndInit();
+            this.layoutControl4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControl5)).EndInit();
+            this.layoutControl5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.grcListenFull)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemPictureEdit2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem15)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).EndInit();
             this.layoutControl2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.lookUpGroupType.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mmTypeQuestion.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mmDescription.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookTypeQuestion.Properties)).EndInit();
@@ -728,6 +949,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
@@ -794,8 +1016,25 @@
         private DevExpress.XtraLayout.LayoutControl layoutControl4;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup3;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
+        private DevExpress.Utils.Behaviors.BehaviorManager behaviorManager1;
+        private DevExpress.XtraLayout.LayoutControl layoutControl5;
+        private System.Windows.Forms.Label label1;
+        private DevExpress.XtraEditors.SimpleButton btnSaveListenFull;
+        private DevExpress.XtraEditors.SimpleButton btnClearListenFull;
+        private DevExpress.XtraGrid.GridControl grcListenFull;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
+        private DevExpress.XtraGrid.Columns.GridColumn Answer;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
+        private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit repositoryItemLookUpEdit1;
+        private DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit repositoryItemPictureEdit2;
+        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup4;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem10;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem12;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem15;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem16;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem9;
         private DevExpress.XtraEditors.LookUpEdit lookUpGroupType;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
-        private DevExpress.Utils.Behaviors.BehaviorManager behaviorManager1;
     }
 }

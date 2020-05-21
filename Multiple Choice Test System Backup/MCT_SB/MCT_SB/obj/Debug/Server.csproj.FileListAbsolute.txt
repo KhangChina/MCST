@@ -616,3 +616,4 @@ C:\Users\phamh\Desktop\Khoá Luận\MCST\Multiple Choice Test System Backup\MCT_
 C:\Users\phamh\Desktop\Khoá Luận\MCST\Multiple Choice Test System Backup\MCT_SB\MCT_SB\obj\Debug\MCT_SB.pdb
 C:\Users\phamh\Desktop\Khoá Luận\MCST\Multiple Choice Test System Backup\MCT_SB\MCT_SB\bin\Debug\BUS.dll
 C:\Users\phamh\Desktop\Khoá Luận\MCST\Multiple Choice Test System Backup\MCT_SB\MCT_SB\bin\Debug\BUS.pdb
+C:\Users\phamh\Desktop\Khoá Luận\MCST\Multiple Choice Test System Backup\MCT_SB\MCT_SB\obj\Debug\MCT_SB.frmAddQuestion2.resources

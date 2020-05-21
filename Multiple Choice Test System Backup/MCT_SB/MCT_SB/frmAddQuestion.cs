@@ -20,8 +20,10 @@ namespace MCT_SB
         {
             LoadGroup();
             LoadType_Question();
+            loadGroupType();
             ResetTab(false);
             LoadGrid();
+            LoadQuestionByGroupType();
         }
         void LoadGroup()
         {
@@ -39,10 +41,10 @@ namespace MCT_SB
                 XtraMessageBox.Show(res);
             }
         }
-        void LoadQuestionByGroupType(int IDgrouptype) //load danh sách câu hỏi dựa vào ID group type question
+        void LoadQuestionByGroupType() //load danh sách câu hỏi dựa vào ID group type question
         {
             DataTable dtQuestion = new DataTable();
-            string res =mdQuestion.GetByGroupType(ref dtQuestion, IDgrouptype);
+            string res =mdQuestion.GetByGroupType(ref dtQuestion, int.Parse(lookUpGroupType.EditValue.ToString()));
             if (res == "OK")
                 grcQuestionListenImage.DataSource = dtQuestion;
             else XtraMessageBox.Show(res);
@@ -55,12 +57,14 @@ namespace MCT_SB
             {
                 lookTypeQuestion.Properties.DataSource = dtType_Question;
                 lookTypeQuestion.Properties.DisplayMember = "Name";
-                lookTypeQuestion.Properties.ValueMember = "ID";            }
+                lookTypeQuestion.Properties.ValueMember = "ID";
+                lookTypeQuestion.ItemIndex = 0;
+            }
         }
-        void loadGroupType() //load danh sách group type question
+        void loadGroupType() //load danh sách group type question dựa vào Part và Type question
         {
             DataTable dt = new DataTable();
-            string res = mdGroupTypeQuestion.GetAll(ref dt);
+            string res = mdGroupTypeQuestion.GetByTypeAndPart(ref dt,lookTypeQuestion.EditValue.ToString(),lookPart.EditValue.ToString());
             if (res == "OK")
             {
                 lookUpGroupType.Properties.DataSource = dt;
@@ -111,6 +115,8 @@ namespace MCT_SB
 
         private void lookPart_EditValueChanged(object sender, EventArgs e)
         {
+            if(lookTypeQuestion.EditValue != null)
+                loadGroupType();
             mmDescription.Text = lookPart.Properties.GetDataSourceValue("Descriptions", lookPart.ItemIndex).ToString();
         }
 
@@ -209,12 +215,11 @@ namespace MCT_SB
         private void btnClear_Click(object sender, EventArgs e)
         {
             LoadGrid();
-            
         }
 
         private void lookUpGroupType_EditValueChanged(object sender, EventArgs e)
         {
-            LoadQuestionByGroupType(int.Parse(lookUpGroupType.EditValue.ToString()));
+            LoadQuestionByGroupType();
         }
     }
 }

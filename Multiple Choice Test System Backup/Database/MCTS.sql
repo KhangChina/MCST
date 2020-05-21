@@ -39,7 +39,9 @@ create table GROUP_TYPE_QUESTIONS
 	AudioName nvarchar(max),
 	Status bit,
 	IdTypeQuestion int,
-	foreign key (IdTypeQuestion) references TYPE_QUESTIONS (Id) ON DELETE CASCADE
+	IdPart int,
+	foreign key (IdTypeQuestion) references TYPE_QUESTIONS (Id) ON DELETE CASCADE,
+	foreign key (IdPart) references PART (Id) ON DELETE CASCADE
 )
 --Mõi Câu hỏi chỉ nằm trong 1 phần
 Create table QUESTIONS
@@ -49,10 +51,8 @@ Create table QUESTIONS
 	LevelOfDificult float,
 	Distinctiveness float,
 	Images image,
-	IdPart int,
 	IdGroupTypeQuestions int,
 	Status bit,
-	foreign key (IdPart) references PART (Id) ON DELETE CASCADE,
 	foreign key (IdGroupTypeQuestions) references GROUP_TYPE_QUESTIONS (Id) ON DELETE CASCADE
 )
 

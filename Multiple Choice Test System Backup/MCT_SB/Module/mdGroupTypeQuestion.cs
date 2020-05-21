@@ -74,7 +74,7 @@ namespace Module
                 con.Open();
                 SqlTransaction sqlTrans = con.BeginTransaction();
 
-                string query = @"insert into GROUP_TYPE_QUESTIONS values ('" + ltGroupTypeQuestion[0] + "','" + ltGroupTypeQuestion[1] + "','image','" + ltGroupTypeQuestion[2] + "','" + ltGroupTypeQuestion[3] + "','" + ltGroupTypeQuestion[4] + "')";
+                string query = @"insert into GROUP_TYPE_QUESTIONS values ('" + ltGroupTypeQuestion[0] + "','" + ltGroupTypeQuestion[1] + "','image','" + ltGroupTypeQuestion[2] + "','" + ltGroupTypeQuestion[3] + "','" + ltGroupTypeQuestion[4] + "','" + ltGroupTypeQuestion[5] + "')";
                 SqlCommand cmdInsert = new SqlCommand(query, con);
                 cmdInsert.CommandType = CommandType.Text;               
                 cmdInsert.Transaction = sqlTrans;
@@ -125,7 +125,7 @@ namespace Module
                 SqlConnection con = new SqlConnection(conStr);
                 con.Open();
                 SqlTransaction sqlTrans = con.BeginTransaction();
-                string query = @"Update GROUP_TYPE_QUESTIONS set Name =N'" + ltGroupType[0] + "',Descriptions = '" + ltGroupType[1] + "',Images = 'image',AudioName =N'" + ltGroupType[2] + "',Status='" + ltGroupType[3] + "' where ID = '" + IDGroupType + "';";
+                string query = @"Update GROUP_TYPE_QUESTIONS set Name =N'" + ltGroupType[0] + "',Descriptions = '" + ltGroupType[1] + "',Images = 'image',AudioName =N'" + ltGroupType[2] + "',Status='" + ltGroupType[3] + "',IdPart ='"+ ltGroupType[5] +"' where ID = '" + IDGroupType + "';";
                 SqlCommand cmdUpdate = new SqlCommand(query, con);
                 cmdUpdate.CommandType = CommandType.Text;
                 cmdUpdate.Transaction = sqlTrans;
@@ -165,7 +165,27 @@ namespace Module
             }
             catch (Exception e)
             {
-                return Provider.ErroString("Module", "mdPart", "GetAll", e.Message);
+                return Provider.ErroString("Module", "mdGroupTypeQuestion", "GetAll", e.Message);
+            }
+        }
+        public static string GetByTypeAndPart(ref DataTable dtGroupTypeQuestion, string IDType, string IDPart)
+        {
+            try
+            {
+                string conStr = Provider.ConnectString();
+                SqlConnection con = new SqlConnection(conStr);
+                con.Open();
+                string query = "SELECT ID,Name,Descriptions,AudioName FROM GROUP_TYPE_QUESTIONS where IdTypeQuestion ='"+ IDType +"' and IdPart = '"+ IDPart +"'";
+                SqlCommand cmdGetData = new SqlCommand(query, con);
+                cmdGetData.CommandType = CommandType.Text;
+                SqlDataAdapter da = new SqlDataAdapter(cmdGetData);
+                int result = da.Fill(dtGroupTypeQuestion);
+                con.Close();
+                return "OK";
+            }
+            catch (Exception e)
+            {
+                return Provider.ErroString("Module", "mdGroupTypeQuestion", "GetByTypeAndPart", e.Message);
             }
         }
         public static bool CheckAudioFile(string AudioName)

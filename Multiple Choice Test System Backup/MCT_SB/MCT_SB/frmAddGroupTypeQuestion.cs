@@ -22,6 +22,7 @@ namespace MCT_SB
         }
         int ID = -1;
         int TypeID = -1;
+        int IdPart = 0;
         public frmAddGroupTypeQuestion(int ID,int TypeID)
         {
             InitializeComponent();
@@ -33,6 +34,7 @@ namespace MCT_SB
                 string res = mdGroupTypeQuestion.GetByID(ref dt, ID.ToString());
                 if (res == "OK")
                 {
+                    IdPart = int.Parse(dt.Rows[0]["IdPart"].ToString());
                     txtAudioName.Text = dt.Rows[0]["Name"].ToString();
                     btnLocation.Text = Conifg.AudioFolder + "\\" + dt.Rows[0]["AudioName"].ToString();
                     mmDescription.Text = dt.Rows[0]["Descriptions"].ToString();
@@ -86,7 +88,22 @@ namespace MCT_SB
         {
             grcGroupTypeQuestion.DataSource = ProcessDirectory(Conifg.AudioFolder);
         }
-
+        void loadPart ()
+        {
+            DataTable dtPart = new DataTable();
+            string res = mdPart.GetAll(ref dtPart);
+            if (res == "OK")
+            {
+                lookUpPart.Properties.DataSource = dtPart;
+                lookUpPart.Properties.DisplayMember = "Name";
+                lookUpPart.Properties.ValueMember = "ID";
+                lookUpPart.EditValue = this.IdPart;
+            }
+            else
+            {
+                XtraMessageBox.Show(res);
+            }
+        }
         private void frmAddGroupTypeQuestion_Load(object sender, EventArgs e)
         {
             if (this.ID != -1)
@@ -94,6 +111,7 @@ namespace MCT_SB
             else
                 ResetForm(false);
             loadDataGrid();
+            loadPart();
         }
 
         private void btnLocation_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
@@ -124,7 +142,8 @@ namespace MCT_SB
                 groupTypeQuestions.Add(Path.GetFileName(btnLocation.Text));
                 groupTypeQuestions.Add("1");
                 groupTypeQuestions.Add(TypeID.ToString());
-                int IDGroupTypeQuestion = -1;
+                groupTypeQuestions.Add(lookUpPart.EditValue.ToString());
+            int IDGroupTypeQuestion = -1;
             if (this.ID == -1)
             {
                 if (mdGroupTypeQuestion.CheckAudioFile(Path.GetFileName(btnLocation.Text)))
