@@ -303,12 +303,6 @@
         <para>Base class for inline layout elements.</para>
       </summary>
     </member>
-    <member name="P:DevExpress.XtraRichEdit.API.Layout.Box.RightToLeft">
-      <summary>
-        <para>Indicates whether the layout element&#39;s direction is right-to-left.</para>
-      </summary>
-      <value>true, if the direction is right-to-left; otherwise, false.</value>
-    </member>
     <member name="P:DevExpress.XtraRichEdit.API.Layout.Box.Type">
       <summary>
         <para>Gets the type of the box descendant.</para>
@@ -362,12 +356,6 @@
         <para>Dispatches to the Visit method that is specific to the current <see cref="T:DevExpress.XtraRichEdit.API.Layout.LayoutType"/>.</para>
       </summary>
       <param name="visitor">A <see cref="T:DevExpress.XtraRichEdit.API.Layout.LayoutVisitor"/> implementation that is the instance of the visitor class defined in the Visitor pattern.</param>
-    </member>
-    <member name="P:DevExpress.XtraRichEdit.API.Layout.CharacterBox.RightToLeft">
-      <summary>
-        <para>Indicates whether the layout element&#39;s direction is right-to-left.</para>
-      </summary>
-      <value>true, if the direction is right-to-left; otherwise, false.</value>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Layout.CharacterBox.Text">
       <summary>
@@ -1779,11 +1767,6 @@
         <para>The type of layout element of the <see cref="T:DevExpress.XtraRichEdit.API.Layout.LineNumberBox"/> class.</para>
       </summary>
     </member>
-    <member name="F:DevExpress.XtraRichEdit.API.Layout.LayoutType.NonBreakingHyphenBox">
-      <summary>
-        <para>The type of layout element of the NonBreakingHyphenBox class.</para>
-      </summary>
-    </member>
     <member name="F:DevExpress.XtraRichEdit.API.Layout.LayoutType.NumberingListMarkBox">
       <summary>
         <para>The type of layout element of the <see cref="T:DevExpress.XtraRichEdit.API.Layout.NumberingListMarkBox"/> class.</para>
@@ -2467,12 +2450,6 @@
         <para>Draws the <see cref="T:DevExpress.XtraRichEdit.API.Layout.LineNumberBox"/> element. Override it in a class descendant to customize the element appearance.</para>
       </summary>
       <param name="lineNumberBox">A layout element to draw.</param>
-    </member>
-    <member name="M:DevExpress.XtraRichEdit.API.Layout.PagePainter.DrawNonBreakingHyphenBox(DevExpress.XtraRichEdit.API.Layout.PlainTextBox)">
-      <summary>
-        <para>Draws the NonBreakingHyphenBox element. Override it in a class descendant to customize the element appearance.</para>
-      </summary>
-      <param name="nonBreakingHyphenBox">A layout element to draw.</param>
     </member>
     <member name="M:DevExpress.XtraRichEdit.API.Layout.PagePainter.DrawNumberingListMarkBox(DevExpress.XtraRichEdit.API.Layout.NumberingListMarkBox)">
       <summary>
@@ -3857,7 +3834,7 @@
     </member>
     <member name="M:DevExpress.XtraRichEdit.API.Native.Document.AppendSection">
       <summary>
-        <para>Appends a new empty section and returns the section to which this section is appended.</para>
+        <para>Appends a new empty section.</para>
       </summary>
       <returns>A <see cref="T:DevExpress.XtraRichEdit.API.Native.Section"/> object that is the section in the document to which a new section is appended.</returns>
     </member>
@@ -6329,7 +6306,7 @@ Supported in Microsoft Word 2007 and higher.</para>
     </member>
     <member name="M:DevExpress.XtraRichEdit.API.Native.IDocumentVisitor.Visit(DevExpress.XtraRichEdit.API.Native.DocumentCheckBox)">
       <summary>
-        <para>Called when a <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentCheckBox"/> element is encountered.</para>
+        <para>Called when a  element is encountered.</para>
       </summary>
       <param name="checkBox">A  object being visited.</param>
     </member>
@@ -9463,7 +9440,7 @@ Example: I, II, III</para>
         <para>Creates a uniform column layout using the current page settings.</para>
       </summary>
       <param name="page">A <see cref="T:DevExpress.XtraRichEdit.API.Native.SectionPage"/> object representing a current page.</param>
-      <param name="columnSpacing">A Single value specifying the spacing between adjacent columns, measured in <see cref="P:DevExpress.XtraRichEdit.API.Native.Document.Unit"/>.</param>
+      <param name="columnSpacing">A Single value specifying the width of an individual column, measured in <see cref="P:DevExpress.XtraRichEdit.API.Native.Document.Unit"/>.</param>
       <param name="columnCount">An <see cref="T:System.Int32"/> value specifying the number of columns on a page. Must be greater than zero.</param>
       <returns>A <see cref="T:DevExpress.XtraRichEdit.API.Native.SectionColumnCollection"/> object representing a collection of columns.</returns>
     </member>
@@ -20371,12 +20348,6 @@ Example: I, II, III</para>
       </summary>
       <value>A command ID.</value>
     </member>
-    <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.InsertNonBreakingHyphen">
-      <summary>
-        <para>A InsertNonBreakingHyphenCommand ID.</para>
-      </summary>
-      <value>A command ID.</value>
-    </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.InsertNonBreakingSpace">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.InsertNonBreakingSpaceCommand"/> ID.</para>
@@ -28986,21 +28957,6 @@ Example: I, II, III</para>
       </summary>
       <param name="name">A string that is the name of the variable to remove.</param>
     </member>
-    <member name="T:DevExpress.XtraRichEdit.DocumentViewDirection">
-      <summary>
-        <para>Lists values indicating the page order in Print Layout view and in Print Preview.</para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.XtraRichEdit.DocumentViewDirection.LeftToRight">
-      <summary>
-        <para>Pages are displayed in left to right order.</para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.XtraRichEdit.DocumentViewDirection.RightToLeft">
-      <summary>
-        <para>Pages are displayed in right to left order.</para>
-      </summary>
-    </member>
     <member name="T:DevExpress.XtraRichEdit.DocVariableValue">
       <summary>
         <para>A class which allows you to specify the current value of a DOCVARIABLE field in the <see cref="E:DevExpress.XtraRichEdit.API.Native.Document.CalculateDocumentVariable"/> event handler.</para>
@@ -31058,12 +31014,6 @@ Example: I, II, III</para>
       </summary>
       <value>A <see cref="T:DevExpress.XtraRichEdit.API.Native.Document"/> interface representing a document loaded in the control.</value>
     </member>
-    <member name="P:DevExpress.XtraRichEdit.IRichEditControl.DocumentViewDirection">
-      <summary>
-        <para>Specifies the page order in Print Layout view and in Print Preview.</para>
-      </summary>
-      <value>One of the DocumentViewDirection enumeration values indicating the page order.</value>
-    </member>
     <member name="M:DevExpress.XtraRichEdit.IRichEditControl.DoDragDrop(System.Object,System.Windows.Forms.DragDropEffects)">
       <summary>
         <para>For internal use.</para>
@@ -32839,17 +32789,35 @@ Example: I, II, III</para>
       </summary>
       <value>A <see cref="T:DevExpress.XtraRichEdit.DocumentCapability"/> enumeration value.</value>
     </member>
+    <member name="P:DevExpress.XtraRichEdit.RichEditBehaviorOptions.CopyAllowed">
+      <summary>
+        <para>For internal use. Use the <see cref="P:DevExpress.XtraRichEdit.RichEditBehaviorOptions.Copy"/> property instead.</para>
+      </summary>
+      <value>true if an operation is allowed; otherwise, false.</value>
+    </member>
     <member name="P:DevExpress.XtraRichEdit.RichEditBehaviorOptions.CreateNew">
       <summary>
         <para>Specifies whether or not the Create New Document operation is permitted.</para>
       </summary>
       <value>A <see cref="T:DevExpress.XtraRichEdit.DocumentCapability"/> enumeration value.</value>
     </member>
+    <member name="P:DevExpress.XtraRichEdit.RichEditBehaviorOptions.CreateNewAllowed">
+      <summary>
+        <para>For internal use. Use the <see cref="P:DevExpress.XtraRichEdit.RichEditBehaviorOptions.CreateNew"/> property instead.</para>
+      </summary>
+      <value>true if an operation is allowed; otherwise, false.</value>
+    </member>
     <member name="P:DevExpress.XtraRichEdit.RichEditBehaviorOptions.Cut">
       <summary>
         <para>Specifies whether or not the Cut operation is permitted.</para>
       </summary>
       <value>A <see cref="T:DevExpress.XtraRichEdit.DocumentCapability"/> enumeration value.</value>
+    </member>
+    <member name="P:DevExpress.XtraRichEdit.RichEditBehaviorOptions.CutAllowed">
+      <summary>
+        <para>For internal use. Use the <see cref="P:DevExpress.XtraRichEdit.RichEditBehaviorOptions.Cut"/> property instead.</para>
+      </summary>
+      <value>true if an operation is allowed; otherwise, false.</value>
     </member>
     <member name="P:DevExpress.XtraRichEdit.RichEditBehaviorOptions.DefaultMaxZoomFactor">
       <summary>
@@ -32875,11 +32843,23 @@ Example: I, II, III</para>
       </summary>
       <value>A <see cref="T:DevExpress.XtraRichEdit.DocumentCapability"/> enumeration value.</value>
     </member>
+    <member name="P:DevExpress.XtraRichEdit.RichEditBehaviorOptions.DragAllowed">
+      <summary>
+        <para>For internal use. Use the <see cref="P:DevExpress.XtraRichEdit.RichEditBehaviorOptions.Drag"/> property instead.</para>
+      </summary>
+      <value>true if an operation is allowed; otherwise, false.</value>
+    </member>
     <member name="P:DevExpress.XtraRichEdit.RichEditBehaviorOptions.Drop">
       <summary>
         <para>Specifies whether or not the Drop operation is permitted.</para>
       </summary>
       <value>A <see cref="T:DevExpress.XtraRichEdit.DocumentCapability"/> enumeration value.</value>
+    </member>
+    <member name="P:DevExpress.XtraRichEdit.RichEditBehaviorOptions.DropAllowed">
+      <summary>
+        <para>For internal use. Use the <see cref="P:DevExpress.XtraRichEdit.RichEditBehaviorOptions.Drop"/> property instead.</para>
+      </summary>
+      <value>true if an operation is allowed; otherwise, false.</value>
     </member>
     <member name="P:DevExpress.XtraRichEdit.RichEditBehaviorOptions.EastAsianTextAlignment">
       <summary>
@@ -32887,11 +32867,23 @@ Example: I, II, III</para>
       </summary>
       <value>A <see cref="T:DevExpress.XtraRichEdit.DocumentCapability"/> enumeration value.</value>
     </member>
+    <member name="P:DevExpress.XtraRichEdit.RichEditBehaviorOptions.EastAsianTextAlignmentAllowed">
+      <summary>
+        <para>For internal use. Use the <see cref="P:DevExpress.XtraRichEdit.RichEditBehaviorOptions.EastAsianTextAlignment"/> property instead.</para>
+      </summary>
+      <value>true, if an operation is allowed; otherwise, false.</value>
+    </member>
     <member name="P:DevExpress.XtraRichEdit.RichEditBehaviorOptions.Encrypt">
       <summary>
         <para>Gets or sets whether to enable document encryption.</para>
       </summary>
       <value>One of the <see cref="T:DevExpress.XtraRichEdit.DocumentCapability"/> enumeration values, indicating the feature availability.</value>
+    </member>
+    <member name="P:DevExpress.XtraRichEdit.RichEditBehaviorOptions.EncryptAllowed">
+      <summary>
+        <para>For internal use. Use the <see cref="P:DevExpress.XtraRichEdit.RichEditBehaviorOptions.Encrypt"/> option instead.</para>
+      </summary>
+      <value></value>
     </member>
     <member name="P:DevExpress.XtraRichEdit.RichEditBehaviorOptions.FontSource">
       <summary>
@@ -32929,11 +32921,23 @@ Example: I, II, III</para>
       </summary>
       <value>A <see cref="T:DevExpress.XtraRichEdit.DocumentCapability"/> enumeration value.</value>
     </member>
+    <member name="P:DevExpress.XtraRichEdit.RichEditBehaviorOptions.OfficeScrollingAllowed">
+      <summary>
+        <para>For internal use. Use the <see cref="P:DevExpress.XtraRichEdit.RichEditBehaviorOptions.OfficeScrolling"/> property instead.</para>
+      </summary>
+      <value>true if office scrolling feature is enabled; otherwise, false.</value>
+    </member>
     <member name="P:DevExpress.XtraRichEdit.RichEditBehaviorOptions.Open">
       <summary>
         <para>Specifies whether or not the Open Document operation is permitted.</para>
       </summary>
       <value>A <see cref="T:DevExpress.XtraRichEdit.DocumentCapability"/> enumeration value.</value>
+    </member>
+    <member name="P:DevExpress.XtraRichEdit.RichEditBehaviorOptions.OpenAllowed">
+      <summary>
+        <para>For internal use. Use the <see cref="P:DevExpress.XtraRichEdit.RichEditBehaviorOptions.Open"/> property instead.</para>
+      </summary>
+      <value>true if an operation is allowed; otherwise, false.</value>
     </member>
     <member name="P:DevExpress.XtraRichEdit.RichEditBehaviorOptions.OvertypeAllowed">
       <summary>
@@ -32953,6 +32957,12 @@ Example: I, II, III</para>
       </summary>
       <value>A <see cref="T:DevExpress.XtraRichEdit.DocumentCapability"/> enumeration value.</value>
     </member>
+    <member name="P:DevExpress.XtraRichEdit.RichEditBehaviorOptions.PasteAllowed">
+      <summary>
+        <para>For internal use. Use the <see cref="P:DevExpress.XtraRichEdit.RichEditBehaviorOptions.Paste"/> property instead.</para>
+      </summary>
+      <value>true if an operation is allowed; otherwise, false.</value>
+    </member>
     <member name="P:DevExpress.XtraRichEdit.RichEditBehaviorOptions.PasteLineBreakSubstitution">
       <summary>
         <para>Specifies the substitute character that is used to replace the line break in pasted HTML.</para>
@@ -32971,11 +32981,23 @@ Example: I, II, III</para>
       </summary>
       <value>A <see cref="T:DevExpress.XtraRichEdit.DocumentCapability"/> enumeration value.</value>
     </member>
+    <member name="P:DevExpress.XtraRichEdit.RichEditBehaviorOptions.PrintingAllowed">
+      <summary>
+        <para>For internal use. Use the <see cref="P:DevExpress.XtraRichEdit.RichEditBehaviorOptions.Printing"/> property instead.</para>
+      </summary>
+      <value>true if an operation is allowed; otherwise, false.</value>
+    </member>
     <member name="P:DevExpress.XtraRichEdit.RichEditBehaviorOptions.RightToLeftTextDirection">
       <summary>
         <para>Specifies whether or not the right-to-left text direction is permitted.</para>
       </summary>
       <value>One of the <see cref="T:DevExpress.XtraRichEdit.DocumentCapability"/> enumeration values indicating the feature availability.</value>
+    </member>
+    <member name="P:DevExpress.XtraRichEdit.RichEditBehaviorOptions.RightToLeftTextDirectionAllowed">
+      <summary>
+        <para>For internal use. Use the <see cref="P:DevExpress.XtraRichEdit.RichEditBehaviorOptions.RightToLeftTextDirection"/> property instead.</para>
+      </summary>
+      <value>true, if an operation is allowed; otherwise, false.</value>
     </member>
     <member name="P:DevExpress.XtraRichEdit.RichEditBehaviorOptions.Save">
       <summary>
@@ -32983,17 +33005,35 @@ Example: I, II, III</para>
       </summary>
       <value>A <see cref="T:DevExpress.XtraRichEdit.DocumentCapability"/> enumeration value.</value>
     </member>
+    <member name="P:DevExpress.XtraRichEdit.RichEditBehaviorOptions.SaveAllowed">
+      <summary>
+        <para>For internal use. Use the <see cref="P:DevExpress.XtraRichEdit.RichEditBehaviorOptions.Save"/> property instead.</para>
+      </summary>
+      <value>true if an operation is allowed; otherwise, false.</value>
+    </member>
     <member name="P:DevExpress.XtraRichEdit.RichEditBehaviorOptions.SaveAs">
       <summary>
         <para>Specifies whether or not the Save Document As... operation is permitted.</para>
       </summary>
       <value>A <see cref="T:DevExpress.XtraRichEdit.DocumentCapability"/> enumeration value.</value>
     </member>
+    <member name="P:DevExpress.XtraRichEdit.RichEditBehaviorOptions.SaveAsAllowed">
+      <summary>
+        <para>For internal use. Use the <see cref="P:DevExpress.XtraRichEdit.RichEditBehaviorOptions.SaveAs"/> property instead.</para>
+      </summary>
+      <value>true if an operation is allowed; otherwise, false.</value>
+    </member>
     <member name="P:DevExpress.XtraRichEdit.RichEditBehaviorOptions.ShowPopupMenu">
       <summary>
         <para>Specifies whether or not the RichEdit popup menu can be displayed.</para>
       </summary>
       <value>A <see cref="T:DevExpress.XtraRichEdit.DocumentCapability"/> enumeration value.</value>
+    </member>
+    <member name="P:DevExpress.XtraRichEdit.RichEditBehaviorOptions.ShowPopupMenuAllowed">
+      <summary>
+        <para>For internal use. Use the <see cref="P:DevExpress.XtraRichEdit.RichEditBehaviorOptions.ShowPopupMenu"/> property instead.</para>
+      </summary>
+      <value>true if an operation is allowed; otherwise, false.</value>
     </member>
     <member name="P:DevExpress.XtraRichEdit.RichEditBehaviorOptions.TabMarker">
       <summary>
@@ -33006,6 +33046,12 @@ Example: I, II, III</para>
         <para>Specifies whether or not the touch device input is analyzed.</para>
       </summary>
       <value>A <see cref="T:DevExpress.XtraRichEdit.DocumentCapability"/> enumeration value.</value>
+    </member>
+    <member name="P:DevExpress.XtraRichEdit.RichEditBehaviorOptions.TouchAllowed">
+      <summary>
+        <para>For internal use. Use the <see cref="P:DevExpress.XtraRichEdit.RichEditBehaviorOptions.Touch"/> property instead.</para>
+      </summary>
+      <value>true if an operation is allowed; otherwise, false.</value>
     </member>
     <member name="P:DevExpress.XtraRichEdit.RichEditBehaviorOptions.UseFontSubstitution">
       <summary>
@@ -33024,6 +33070,12 @@ Example: I, II, III</para>
         <para>Specifies whether or not the Zoom operation is permitted.</para>
       </summary>
       <value>A <see cref="T:DevExpress.XtraRichEdit.DocumentCapability"/> enumeration value.</value>
+    </member>
+    <member name="P:DevExpress.XtraRichEdit.RichEditBehaviorOptions.ZoomingAllowed">
+      <summary>
+        <para>For internal use. Use the <see cref="P:DevExpress.XtraRichEdit.RichEditBehaviorOptions.Zooming"/> property instead.</para>
+      </summary>
+      <value>true if an operation is allowed; otherwise, false.</value>
     </member>
     <member name="T:DevExpress.XtraRichEdit.RichEditBookmarkVisibility">
       <summary>
@@ -33161,7 +33213,7 @@ Example: I, II, III</para>
     </member>
     <member name="P:DevExpress.XtraRichEdit.RichEditControlCompatibility.UsePrintingSystemPdfExport">
       <summary>
-        <para>Allows you to use an obsolete PDF export implemented in earlier versions. <span data-platform="netstandard">Not supported in .NET Standard 2.0+ / .NET Core 2.1+</span></para>
+        <para>Allows you to use an obsolete PDF export implemented in earlier versions.</para>
       </summary>
       <value>True, to use PDF export based on the Printing System functionality; otherwise, false.</value>
     </member>
@@ -34698,12 +34750,6 @@ Example: I, II, III</para>
         <para>Gets or sets how horizontal table indents are applied.</para>
       </summary>
       <value>true, if the table&#39;s left border is aligned to the view margin; false, if the edge of the text inside the top left cell is aligned to the view margin.</value>
-    </member>
-    <member name="P:DevExpress.XtraRichEdit.SimpleViewLayoutOptions.ResizeTablesToFitContent">
-      <summary>
-        <para>Specifies whether to resize the table cells if their contents extend the cell margins.</para>
-      </summary>
-      <value>true, to resize the table; otherwise, false.</value>
     </member>
     <member name="T:DevExpress.XtraRichEdit.SpellCheckerOptions">
       <summary>

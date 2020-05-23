@@ -11,38 +11,73 @@ namespace MCT_SB
         public frmAddQuestion2()
         {
             InitializeComponent();
+            dtAnwer = new DataTable();
+            dtAnwer.Columns.Add("Dis", typeof(string));
+            dtAnwer.Columns.Add("Status", typeof(bool));
         }
-        public frmAddQuestion2(int ID)
+        public frmAddQuestion2(int IDGroupTypeQuestion)
         {
             InitializeComponent();
-        }
-        int ID = -1;
-        private void frmAddQuestion2_Load(object sender, EventArgs e)
-        {
-            DataTable dtStatus = new DataTable();
-            dtStatus.Columns.Add("ID");
-            dtStatus.Columns.Add("Name");
-            dtStatus.Rows.Add("1", "True");
-            dtStatus.Rows.Add("0", "False");
+            this.IDGroupTypeQuestion = IDGroupTypeQuestion;
+            dtAnwer = new DataTable();
+            dtAnwer.Columns.Add("Dis",typeof(string));
+            dtAnwer.Columns.Add("Status",typeof(bool));
 
-            lookStatusAnswer.Properties.DataSource = dtStatus;
-            lookStatusAnswer.Properties.DisplayMember = "Name";
-            lookStatusAnswer.Properties.ValueMember = "ID";
-            lookStatusAnswer.ItemIndex = 0;
         }
-
+        DataTable dtAnwer;
+        int IDGroupTypeQuestion = -1;    
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
+        }    
+        private void btnSaveAnswer_Click_1(object sender, EventArgs e)
+        {
+            if (cbx.EditValue.ToString() == true.ToString())
+            {
+                foreach (DataRow item in dtAnwer.Rows)
+                {
+                    if (item["Status"].ToString() == true.ToString())
+                    {
+                        XtraMessageBox.Show("This question has a true answer!");
+                        return;
+                    }
+                }
+            }
+            dtAnwer.Rows.Add(mmDescriptionAnswer.Text,cbx.EditValue.ToString());
+            gridControl1.DataSource = dtAnwer;
         }
 
-        private void btnSaveAnswer_Click(object sender, EventArgs e)
+        private void btnFinish_Click(object sender, EventArgs e)
         {
-            /*DataRow dr;
-            dr["MaSV"] = "SV0001";
-            dr["TenSV"] = "Nguyen Van A";
-            dr["SDT"] = "123123";
-            grcAnswer.Rows.Add(dr);*/
+            if(IDGroupTypeQuestion!=-1 && picImage.Image == null)
+            {
+                List<string> ltQuestion = new List<string>();
+                ltQuestion.Add(mmDescription.Text);
+                ltQuestion.Add("");
+                ltQuestion.Add("");
+                ltQuestion.Add(IDGroupTypeQuestion.ToString());
+                ltQuestion.Add("1");
+                int IDQuestion = -1;
+                string res = mdQuestion.Insert(ref IDQuestion,ltQuestion);
+
+                //Insert Anwer
+
+                if(res == "OK")
+                {
+                    List<string> ltAnswer = new List<string>();
+                    ltAnswer.Add(mmDescriptionAnswer.Text);
+                    ltAnswer.Add(cbx.EditValue.ToString());
+                    ltAnswer.Add("");
+                    ltAnswer.Add(IDQuestion.ToString());
+                   // int IDAnswer = -1;
+                   /// res = mdAnswer.Insert(ref );
+
+
+                }
+
+
+            }
+            
         }
     }
 }

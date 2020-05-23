@@ -214,7 +214,9 @@ namespace MCT_SB
         }
         private void btnClear_Click(object sender, EventArgs e)
         {
-            LoadGrid();
+
+            frmAddQuestion2 frm = new frmAddQuestion2(int.Parse(lookUpGroupType.EditValue.ToString()));
+            frm.ShowDialog();
         }
 
         private void lookUpGroupType_EditValueChanged(object sender, EventArgs e)

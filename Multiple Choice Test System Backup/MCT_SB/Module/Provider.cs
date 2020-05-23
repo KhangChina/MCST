@@ -8,9 +8,9 @@ namespace Module
 {
     public class Provider
     {
-        private static string ServerName = "DESKTOP-SSRU1D3\\SQLEXPRESS";
+        private static string ServerName = "NXKCHINA";
         private static string UserName = "sa";
-        private static string Password = "sa2012";
+        private static string Password = "1";
         private static string DatabaseName = "MCTS";
         /// <summary>
         /// Chuỗi Connect kết nối Database

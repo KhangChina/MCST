@@ -34,22 +34,29 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Accessibility" />
     <Reference Include="DevExpress.BonusSkins.v19.2" />
     <Reference Include="DevExpress.Data.v19.2" />
-    <Reference Include="DevExpress.Dialogs.v19.2.Core, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Dialogs.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Printing.v19.2.Core" />
     <Reference Include="DevExpress.Utils.v19.2" />
     <Reference Include="DevExpress.XtraBars.v19.2" />
     <Reference Include="DevExpress.Sparkline.v19.2.Core" />
-    <Reference Include="DevExpress.XtraDialogs.v19.2, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraDialogs.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v19.2" />
-    <Reference Include="DevExpress.XtraGrid.v19.2, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraLayout.v19.2, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraPrinting.v19.2, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraTreeList.v19.2, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGrid.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -67,6 +74,18 @@
     <Compile Include="frmAddGroupTypeQuestion.Designer.cs">
       <DependentUpon>frmAddGroupTypeQuestion.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmAddQuestion2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddQuestion2.Designer.cs">
+      <DependentUpon>frmAddQuestion2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmImportCandidate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmImportCandidate.Designer.cs">
+      <DependentUpon>frmImportCandidate.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAddPart.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,6 +97,12 @@
     </Compile>
     <Compile Include="frmAddCadidate.Designer.cs">
       <DependentUpon>frmAddCadidate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddType.Designer.cs">
+      <DependentUpon>frmAddType.cs</DependentUpon>
     </Compile>
     <Compile Include="frmCandidates.cs">
       <SubType>Form</SubType>
@@ -127,11 +152,20 @@
     <EmbeddedResource Include="frmAddGroupTypeQuestion.resx">
       <DependentUpon>frmAddGroupTypeQuestion.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmAddQuestion2.resx">
+      <DependentUpon>frmAddQuestion2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmImportCandidate.resx">
+      <DependentUpon>frmImportCandidate.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAddPart.resx">
       <DependentUpon>frmAddPart.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAddCadidate.resx">
       <DependentUpon>frmAddCadidate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddType.resx">
+      <DependentUpon>frmAddType.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCandidates.resx">
       <DependentUpon>frmCandidates.cs</DependentUpon>
@@ -177,6 +211,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BUS\BUS.csproj">
+      <Project>{ebcd66b0-a71b-4b5c-9d99-372087597ecd}</Project>
+      <Name>BUS</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Module\Module.csproj">
       <Project>{f3bba7bb-ca8f-46b5-8c16-369ce843ede1}</Project>
       <Name>Module</Name>

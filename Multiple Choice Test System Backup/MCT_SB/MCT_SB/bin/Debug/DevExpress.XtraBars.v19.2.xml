@@ -1306,15 +1306,9 @@ This option is in effect if you subscribed to the parent BarManager&#39;s <see c
     </member>
     <member name="P:DevExpress.XtraBars.BarBaseButtonItem.CloseSubMenuOnClick">
       <summary>
-        <para>Gets or sets whether a submenu which contains the button item&#39;s link is closed when the link is clicked.</para>
+        <para>Gets or sets a value indicating whether a submenu which contains the button item&#39;s link is closed on a click.</para>
       </summary>
-      <value>true, if a submenu containing the button item&#39;s link is closed when the link is clicked; otherwise, false.</value>
-    </member>
-    <member name="P:DevExpress.XtraBars.BarBaseButtonItem.CloseSubMenuOnClickMode">
-      <summary>
-        <para>Gets or sets whether a click on the button closes the submenu that contains this button.</para>
-      </summary>
-      <value>A value that specifies whether a click on the button closes the submenu that contains this button.</value>
+      <value>true, if a submenu containing the button item&#39;s link is closed on a click; otherwise, false.</value>
     </member>
     <member name="P:DevExpress.XtraBars.BarBaseButtonItem.Down">
       <summary>
@@ -2402,18 +2396,6 @@ A specific version of the addressed image is automatically chosen, based on the 
       </summary>
       <value>An integer value.</value>
     </member>
-    <member name="P:DevExpress.XtraBars.BarEditItem.MaxWidth">
-      <summary>
-        <para></para>
-      </summary>
-      <value></value>
-    </member>
-    <member name="P:DevExpress.XtraBars.BarEditItem.MinWidth">
-      <summary>
-        <para></para>
-      </summary>
-      <value></value>
-    </member>
     <member name="E:DevExpress.XtraBars.BarEditItem.ShowingEditor">
       <summary>
         <para>Occurs before activating an editor.</para>
@@ -2539,12 +2521,6 @@ A specific version of the addressed image is automatically chosen, based on the 
         <para>Returns a <see cref="T:DevExpress.XtraBars.BarEditItem"/> to which the current item link corresponds.</para>
       </summary>
       <value>A <see cref="T:DevExpress.XtraBars.BarEditItem"/> to which the current item link corresponds.</value>
-    </member>
-    <member name="P:DevExpress.XtraBars.BarEditItemLink.MaxWidth">
-      <summary>
-        <para></para>
-      </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.BarEditItemLink.MinWidth">
       <summary>
@@ -6808,18 +6784,6 @@ Merge-related toolbars of inactive child forms are visible in these forms, and a
       </summary>
       <value>Left text indent in pixels within the <see cref="T:DevExpress.XtraBars.BarStaticItem"/>.</value>
     </member>
-    <member name="P:DevExpress.XtraBars.BarStaticItem.MaxWidth">
-      <summary>
-        <para></para>
-      </summary>
-      <value></value>
-    </member>
-    <member name="P:DevExpress.XtraBars.BarStaticItem.MinWidth">
-      <summary>
-        <para></para>
-      </summary>
-      <value></value>
-    </member>
     <member name="P:DevExpress.XtraBars.BarStaticItem.RightIndent">
       <summary>
         <para>Gets or sets the right text indent within a <see cref="T:DevExpress.XtraBars.BarStaticItem"/> - in pixels .</para>
@@ -7501,15 +7465,15 @@ Merge-related toolbars of inactive child forms are visible in these forms, and a
     </member>
     <member name="P:DevExpress.XtraBars.Docking.DockingOptions.HideImmediatelyOnAutoHide">
       <summary>
-        <para>Gets or sets whether a panel hides immediately (without animation) when the user unpins the panel.</para>
+        <para>Gets or sets whether dock panels are immediately hidden when their auto hide functionality is enabled.</para>
       </summary>
-      <value>true, if a panel hides immediately (without animation) when the user unpins the panel; otherwise, false.</value>
+      <value>true to hide dock panels immediately when their auto hide functionality is enabled; false to hide dock panels using the sliding animation effect, and only when the mouse pointer leaves their area.</value>
     </member>
     <member name="P:DevExpress.XtraBars.Docking.DockingOptions.HidePanelsImmediately">
       <summary>
-        <para>Gets or sets whether a panel hides immediately (without animation) when the user unpins the panel and whether a panel hides immediately when it loses the focus.</para>
+        <para></para>
       </summary>
-      <value>A value that specifies whether a panel hides immediately (without animation) when the user unpins the panel and whether a panel hides immediately when it loses focus.</value>
+      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Docking.DockingOptions.ShowCaptionImage">
       <summary>
@@ -10344,12 +10308,6 @@ Dock Panels support &quot;Press and Tap&quot; and &quot;Two-Finger Tap&quot; ges
         <para>Gets or sets which Documents a Document Selector will display.</para>
       </summary>
       <value>A DocumentActivationScope enumerator value that specifies which Documents a Document Selector will display.</value>
-    </member>
-    <member name="P:DevExpress.XtraBars.Docking2010.DocumentManager.EnableThumbnailRenderingOnShowing">
-      <summary>
-        <para>Gets or sets whether thumbnails for documents are generated right before these thumbnails are displayed.</para>
-      </summary>
-      <value>true, to generate thumbnails right before they are displayed; false, to generate thumbnails when a document changes.</value>
     </member>
     <member name="M:DevExpress.XtraBars.Docking2010.DocumentManager.ForceInitialize">
       <summary>
@@ -18001,9 +17959,9 @@ Dock Panels support &quot;Press and Tap&quot; and &quot;Two-Finger Tap&quot; ges
     </member>
     <member name="P:DevExpress.XtraBars.FluentDesignSystem.FluentDesignForm.ToolbarFormControl">
       <summary>
-        <para>Gets or sets the <see cref="T:DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl"/> associated with this <see cref="T:DevExpress.XtraBars.FluentDesignSystem.FluentDesignForm"/>.</para>
+        <para></para>
       </summary>
-      <value>The <see cref="T:DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl"/> associated with this <see cref="T:DevExpress.XtraBars.FluentDesignSystem.FluentDesignForm"/>.</value>
+      <value></value>
     </member>
     <member name="T:DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer">
       <summary>
@@ -18051,9 +18009,9 @@ Dock Panels support &quot;Press and Tap&quot; and &quot;Two-Finger Tap&quot; ges
     </member>
     <member name="P:DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl.Items">
       <summary>
-        <para>Provides access to the collection of bar items.</para>
+        <para></para>
       </summary>
-      <value>A <see cref="T:DevExpress.XtraBars.BarItems"/> object that specifies the bar item collection.</value>
+      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl.LinkProvider">
       <summary>
@@ -18073,9 +18031,9 @@ Dock Panels support &quot;Press and Tap&quot; and &quot;Two-Finger Tap&quot; ges
     </member>
     <member name="P:DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl.RepositoryItems">
       <summary>
-        <para>Provides access to the bar manager&#39;s internal repository.</para>
+        <para></para>
       </summary>
-      <value>An object that contains repository items used to create in-place editors.</value>
+      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl.TitleItemLinks">
       <summary>
@@ -18686,12 +18644,12 @@ Dock Panels support &quot;Press and Tap&quot; and &quot;Two-Finger Tap&quot; ges
     </member>
     <member name="F:DevExpress.XtraBars.Localization.BarString.RibbonSearchItemNoMatchesFound">
       <summary>
-        <para>Return value: &quot;No matches found&quot;.</para>
+        <para></para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraBars.Localization.BarString.RibbonSearchItemNullText">
       <summary>
-        <para>Return value: &quot;Search&quot;.</para>
+        <para></para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraBars.Localization.BarString.RibbonToolbarAbove">
@@ -18767,61 +18725,6 @@ Dock Panels support &quot;Press and Tap&quot; and &quot;Two-Finger Tap&quot; ges
     <member name="F:DevExpress.XtraBars.Localization.BarString.SkinCaptions">
       <summary>
         <para>Specifies the captions of DevExpress skins.Return value: &quot;|DevExpress Style|Caramel|Money Twins|DevExpress Dark Style|iMaginary|Lilian|Black|Blue|Office 2010 Blue|Office 2010 Black|Office 2010 Silver|Office 2007 Blue|Office 2007 Black|Office 2007 Silver|Office 2007 Green|Office 2007 Pink|Seven|Seven Classic|Darkroom|McSkin|Sharp|Sharp Plus|Foggy|Dark Side|Xmas (Blue)|Springtime|Summer|Pumpkin|Valentine|Stardust|Coffee|Glass Oceans|High Contrast|Liquid Sky|London Liquid Sky|The Asphalt World|Blueprint|Whiteprint|VS2010|Metropolis|Metropolis Dark|Office 2013|&quot;</para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.XtraBars.Localization.BarString.SkinCategoryCustom">
-      <summary>
-        <para></para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.XtraBars.Localization.BarString.SkinCategoryDefault">
-      <summary>
-        <para></para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.XtraBars.Localization.BarString.SkinCategoryLatestOfficeSkins">
-      <summary>
-        <para></para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.XtraBars.Localization.BarString.SkinCategoryPreviousOfficeSkins">
-      <summary>
-        <para></para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.XtraBars.Localization.BarString.SkinCategoryRetro3D">
-      <summary>
-        <para></para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.XtraBars.Localization.BarString.SkinCategoryRetroFlat">
-      <summary>
-        <para></para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.XtraBars.Localization.BarString.SkinCategorySeasonal">
-      <summary>
-        <para></para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.XtraBars.Localization.BarString.SkinCategorySVG">
-      <summary>
-        <para></para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.XtraBars.Localization.BarString.SkinCategoryThematic">
-      <summary>
-        <para></para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.XtraBars.Localization.BarString.SkinCategoryThematicFlat">
-      <summary>
-        <para></para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.XtraBars.Localization.BarString.SkinCategoryVisualStudio">
-      <summary>
-        <para></para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraBars.Localization.BarString.SkinPaletteGalleryDisabledItemCaption">
@@ -19251,7 +19154,7 @@ The Default value is equivalent to ScrollUp.</value>
     </member>
     <member name="E:DevExpress.XtraBars.Navigation.AccordionControl.FilterContent">
       <summary>
-        <para>Fires when the query in the search box is changed and allows you to show or hide an element regardless of the query.</para>
+        <para>Allows you to control an element&#39;s visibility during a filtration performed using the built-in filter control.</para>
       </summary>
     </member>
     <member name="P:DevExpress.XtraBars.Navigation.AccordionControl.FilterControl">
@@ -19577,12 +19480,6 @@ This method is in effect if item selection is enabled with the <see cref="P:DevE
       </summary>
       <value>true, if item elements should display their expand/collapse buttons; otherwise, false.</value>
     </member>
-    <member name="M:DevExpress.XtraBars.Navigation.AccordionControl.ShowPopupForm(DevExpress.XtraBars.Navigation.AccordionControlElement)">
-      <summary>
-        <para>Shows the pop-up form.</para>
-      </summary>
-      <param name="elem">An object that specifies the element for which to show the pop-up form.</param>
-    </member>
     <member name="E:DevExpress.XtraBars.Navigation.AccordionControl.StartElementDragging">
       <summary>
         <para>Occurs whenever an end-user presses an element owned by this <see cref="T:DevExpress.XtraBars.Navigation.AccordionControl"/> and starts dragging this element away from its original location.</para>
@@ -19808,9 +19705,9 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
     </member>
     <member name="P:DevExpress.XtraBars.Navigation.AccordionControlElementBase.ContextButtons">
       <summary>
-        <para>Provides access to context buttons displayed in this navigation element.</para>
+        <para>Provides access to the collection of context buttons displayed by this element.</para>
       </summary>
-      <value>A DevExpress.Utils.ContextItemCollection object that stores context buttons displayed in this navigation element.</value>
+      <value>A DevExpress.Utils.ContextItemCollection object that stores context buttons displayed by this element.</value>
     </member>
     <member name="E:DevExpress.XtraBars.Navigation.AccordionControlElementBase.DragDrop">
       <summary>
@@ -20345,12 +20242,6 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
       </summary>
       <value>The <see cref="T:DevExpress.Utils.AppearanceObject"/> object that contains the appearance settings applied to the current <see cref="T:DevExpress.XtraBars.Navigation.NavElement"/> rendered as a button in the nav bar.</value>
     </member>
-    <member name="P:DevExpress.XtraBars.Navigation.NavElement.AppearanceDisabled">
-      <summary>
-        <para>Provides access to the appearance settings applied to the current <see cref="T:DevExpress.XtraBars.Navigation.NavElement"/> rendered as a button in the nav bar, when it is in the disabled state.</para>
-      </summary>
-      <value>The <see cref="T:DevExpress.Utils.AppearanceObject"/> object that contains the appearance settings applied to the current <see cref="T:DevExpress.XtraBars.Navigation.NavElement"/> rendered as a button in the nav bar, when it is in the disabled state.</value>
-    </member>
     <member name="P:DevExpress.XtraBars.Navigation.NavElement.AppearanceHovered">
       <summary>
         <para>Provides access to the appearance settings applied to the current <see cref="T:DevExpress.XtraBars.Navigation.NavElement"/> rendered as a button in the nav bar, when it is in the hovered state.</para>
@@ -20359,9 +20250,9 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
     </member>
     <member name="P:DevExpress.XtraBars.Navigation.NavElement.AppearanceSelected">
       <summary>
-        <para>Provides access to the appearance settings used to paint the current button (NavElement) in the pressed state, when it resides within the nav bar. The specified background colors are also applied to the element&#39;s primary dropdown tile bar (if present).</para>
+        <para>Provides access to the appearance settings applied to the current <see cref="T:DevExpress.XtraBars.Navigation.NavElement"/> rendered as a button in the nav bar, when it is in the selected state.</para>
       </summary>
-      <value>The appearance settings applied to the current <see cref="T:DevExpress.XtraBars.Navigation.NavElement"/> rendered as a button in the nav bar, when the button is in the pressed state.</value>
+      <value>The <see cref="T:DevExpress.Utils.AppearanceObject"/> object that contains the appearance settings applied to the current <see cref="T:DevExpress.XtraBars.Navigation.NavElement"/> rendered as a button in the nav bar, when it is in the selected state.</value>
     </member>
     <member name="P:DevExpress.XtraBars.Navigation.NavElement.Caption">
       <summary>
@@ -20718,12 +20609,6 @@ See Navigation Frame and Tab Pane.</para>
       <summary>
         <para>Allows you to customize an animated state transition.</para>
       </summary>
-    </member>
-    <member name="P:DevExpress.XtraBars.Navigation.NavigationFrame.TransitionManager">
-      <summary>
-        <para></para>
-      </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Navigation.NavigationFrame.TransitionType">
       <summary>
@@ -22406,12 +22291,6 @@ See Navigation Frame and Tab Pane.</para>
       </summary>
       <value>The <see cref="T:DevExpress.Utils.AppearanceObject"/> object that contains the appearance settings.</value>
     </member>
-    <member name="P:DevExpress.XtraBars.Navigation.TileNavPane.AppearanceDisabled">
-      <summary>
-        <para></para>
-      </summary>
-      <value></value>
-    </member>
     <member name="P:DevExpress.XtraBars.Navigation.TileNavPane.AppearanceHovered">
       <summary>
         <para>Provides access to the appearance settings common to all buttons in the nav bar when they are in the hovered state.</para>
@@ -22420,9 +22299,9 @@ See Navigation Frame and Tab Pane.</para>
     </member>
     <member name="P:DevExpress.XtraBars.Navigation.TileNavPane.AppearanceSelected">
       <summary>
-        <para>Provides access to the default appearance settings used to paint pressed buttons (NavElements), when they reside within the nav bar. The specified background colors are also applied to the pressed element&#39;s primary dropdown tile bar (if present).</para>
+        <para>Provides access to the appearance settings common to all buttons in the nav bar when they are in the selected state.</para>
       </summary>
-      <value>The default appearance settings applied to all pressed buttons in the nav bar.</value>
+      <value>The <see cref="T:DevExpress.Utils.AppearanceObject"/> object that contains the appearance settings common to all buttons in the nav bar when they are in the selected state.</value>
     </member>
     <member name="M:DevExpress.XtraBars.Navigation.TileNavPane.Assign(DevExpress.XtraBars.Navigation.TileNavPane)">
       <summary>
@@ -22612,12 +22491,6 @@ See Navigation Frame and Tab Pane.</para>
         <para>Gets or sets the mode that specifies for which navigation elements tooltips are shown.</para>
       </summary>
       <value>A ToolTipShowMode enumeration value that specifies for which elements tooltips are shown.</value>
-    </member>
-    <member name="P:DevExpress.XtraBars.Navigation.TileNavPane.UseDisabledStateAppearance">
-      <summary>
-        <para></para>
-      </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Navigation.TileNavPane.ViewInfo">
       <summary>
@@ -23993,9 +23866,9 @@ See Navigation Frame and Tab Pane.</para>
     </member>
     <member name="P:DevExpress.XtraBars.Ribbon.BackstageViewControl.VisibleInDesignTime">
       <summary>
-        <para>Gets or sets whether the control is visible on the design surface. For internal use.</para>
+        <para></para>
       </summary>
-      <value>true, if the control is visible on the design surface; otherwise, **false.</value>
+      <value></value>
     </member>
     <member name="T:DevExpress.XtraBars.Ribbon.BackstageViewItem">
       <summary>
@@ -27451,7 +27324,7 @@ This option is in effect when a custom control is embedded into the gallery grou
     </member>
     <member name="M:DevExpress.XtraBars.Ribbon.RecentPanelBase.ClearSelection">
       <summary>
-        <para>Unselects the currently selected pin item.</para>
+        <para></para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraBars.Ribbon.RecentPanelBase.GetViewInfo">
@@ -27954,11 +27827,6 @@ This option is in effect when a custom control is embedded into the gallery grou
         <para>Fires when the Application Button&#39;s associated control (<see cref="P:DevExpress.XtraBars.Ribbon.RibbonControl.ApplicationButtonDropDownControl"/>) is about to be displayed.</para>
       </summary>
     </member>
-    <member name="E:DevExpress.XtraBars.Ribbon.RibbonControl.BeforeLoadLayout">
-      <summary>
-        <para>Fires before a layout is restored from a storage (a stream, xml file, or the system registry).</para>
-      </summary>
-    </member>
     <member name="E:DevExpress.XtraBars.Ribbon.RibbonControl.BeforeUnMerge">
       <summary>
         <para>Raises before this <see cref="T:DevExpress.XtraBars.Ribbon.RibbonControl"/> is unmerged and allows you to react to this upcoming change.</para>
@@ -28287,11 +28155,6 @@ This option is in effect when a custom control is embedded into the gallery grou
         <para>Updates a Ribbon Control.</para>
       </summary>
     </member>
-    <member name="E:DevExpress.XtraBars.Ribbon.RibbonControl.LayoutUpgrade">
-      <summary>
-        <para>Fires when a layout is restored from a storage (a stream, xml file, or system registry).</para>
-      </summary>
-    </member>
     <member name="P:DevExpress.XtraBars.Ribbon.RibbonControl.Manager">
       <summary>
         <para>Gets the Ribbon BarManager.</para>
@@ -28408,12 +28271,6 @@ This option is in effect when a custom control is embedded into the gallery grou
         <para>Gets or sets the minimum width of the Display Options button&#39;s dropdown window.</para>
       </summary>
       <value>An integer value that specifies the minimum width of the Display Options button&#39;s dropdown window.</value>
-    </member>
-    <member name="P:DevExpress.XtraBars.Ribbon.RibbonControl.OptionsPageCategories">
-      <summary>
-        <para></para>
-      </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Ribbon.RibbonControl.OptionsStubGlyphs">
       <summary>
@@ -28909,7 +28766,7 @@ This option is in effect when a custom control is embedded into the gallery grou
     </member>
     <member name="F:DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2019">
       <summary>
-        <para>Office 2019-inspired style. Features a flat appearance, tab animations (when the &quot;Office 2019 Colorful&quot;, &quot;Office 2019 Black&quot;, &quot;Office 2019 White&quot;, or &quot;Office 2019 Dark Gray&quot; vector skin is applied), and the capability to collapse into a single-row &quot;Simplified&quot; state.</para>
+        <para>Office 2019-inspired style. Features a flat appearance, tab animations (when the &quot;Office 2019 Colorful&quot; vector skin is applied), and the capability to collapse into a single-row &quot;Simplified&quot; state.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraBars.Ribbon.RibbonControlStyle.OfficeUniversal">
@@ -29414,9 +29271,9 @@ This option is in effect when a custom control is embedded into the gallery grou
     </member>
     <member name="P:DevExpress.XtraBars.Ribbon.RibbonOptionsTouch.ShowTouchUISelectorInSearchMenu">
       <summary>
-        <para>Gets or sets whether the search box finds the Touch/Mouse Mode selector.</para>
+        <para></para>
       </summary>
-      <value>true, if the search box finds the Touch/Mouse Mode selector; otherwise, false.</value>
+      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Ribbon.RibbonOptionsTouch.ShowTouchUISelectorVisibilityItemInQATMenu">
       <summary>
@@ -33345,7 +33202,7 @@ This image is shown when the notification has the Generic template applied.</par
     </member>
     <member name="T:DevExpress.XtraBars.ToolbarForm.ToolbarFormManager">
       <summary>
-        <para>A <see cref="T:DevExpress.XtraBars.BarManager"/> that owns bar items displayed inside a <see cref="T:DevExpress.XtraBars.ToolbarForm.ToolbarFormControl"/>.</para>
+        <para>A <see cref="T:DevExpress.XtraBars.BarManager"/> that keeps items displayed inside a <see cref="T:DevExpress.XtraBars.ToolbarForm.ToolbarFormControl"/>.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraBars.ToolbarForm.ToolbarFormManager.#ctor">
@@ -34400,7 +34257,7 @@ This image is shown when the notification has the Generic template applied.</par
     </member>
     <member name="T:DevExpress.XtraTabbedMdi.XtraMdiTabPage">
       <summary>
-        <para>A tab page that represents an MDI child form.</para>
+        <para>Represents a single tab page.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraTabbedMdi.XtraMdiTabPage.#ctor(DevExpress.XtraTab.IXtraTab,System.Windows.Forms.Form)">

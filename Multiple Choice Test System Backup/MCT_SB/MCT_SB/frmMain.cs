@@ -20,12 +20,12 @@ namespace MCT_SB
 
         private void btnCreateQuestion_ItemClick(object sender, ItemClickEventArgs e)
         {
-            if (!Utility.IsFocusForm(typeof(frmAddQuestion), this))
-            {
-                frmAddQuestion frm = new frmAddQuestion();
-                frm.MdiParent = this;
-                frm.Show();
-            }
+            //if (!Utility.IsFocusForm(typeof(frmAddQuestion), this))
+            //{
+            //    frmAddQuestion frm = new frmAddQuestion();
+            //    frm.MdiParent = this;
+            //    frm.Show();
+            //}
         }
 
         private void btnListCandidate_ItemClick(object sender, ItemClickEventArgs e)

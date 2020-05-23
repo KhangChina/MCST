@@ -1877,9 +1877,9 @@
     </member>
     <member name="P:DevExpress.Export.ExportSettings.EncodeCsvExecutableContent">
       <summary>
-        <para>Encodes potentially dangerous content prior to exporting it to the CSV format.</para>
+        <para></para>
       </summary>
-      <value>One of the <see cref="T:DevExpress.Utils.DefaultBoolean"/> enumeration values.</value>
+      <value></value>
     </member>
     <member name="T:DevExpress.Export.ExportType">
       <summary>
@@ -4949,7 +4949,7 @@ When exporting to XLS and XLSX formats, the layout of control elements is retain
       <summary>
         <para>Provides access to the collection of custom icons used in the conditional formatting rule.</para>
       </summary>
-      <value>A IList&lt;<see cref="T:DevExpress.Export.Xl.XlCondFmtCustomIcon"/>&gt; object representing the list of the custom icons.</value>
+      <value>A <see cref="T:System.Collections.Generic.IList`1"/>&lt;<see cref="T:DevExpress.Export.Xl.XlCondFmtCustomIcon"/>,&gt; object representing the list of the custom icons.</value>
     </member>
     <member name="P:DevExpress.Export.Xl.XlCondFmtRuleIconSet.IconSetType">
       <summary>
@@ -4985,7 +4985,7 @@ When exporting to XLS and XLSX formats, the layout of control elements is retain
       <summary>
         <para>Gets the list of threshold values used in the icon set conditional formatting rule.</para>
       </summary>
-      <value>A IList&lt;<see cref="T:DevExpress.Export.Xl.XlCondFmtValueObject"/>&gt; object representing the list of threshold values.</value>
+      <value>A <see cref="T:System.Collections.Generic.IList`1"/>&lt;<see cref="T:DevExpress.Export.Xl.XlCondFmtValueObject"/>,&gt; object representing the list of threshold values.</value>
     </member>
     <member name="T:DevExpress.Export.Xl.XlCondFmtRuleSpecificText">
       <summary>
@@ -5332,13 +5332,13 @@ When exporting to XLS and XLSX formats, the layout of control elements is retain
       <summary>
         <para>Provides access to the collection of ranges to which the conditional formating rule is applied.</para>
       </summary>
-      <value>A IList&lt;<see cref="T:DevExpress.Export.Xl.XlCellRange"/>&gt; object that is the ranges collection.</value>
+      <value>A <see cref="T:System.Collections.Generic.IList`1"/>&lt;<see cref="T:DevExpress.Export.Xl.XlCellRange"/>,&gt; object that is the ranges collection.</value>
     </member>
     <member name="P:DevExpress.Export.Xl.XlConditionalFormatting.Rules">
       <summary>
         <para>Provides access to the collection of conditional formatting rules contained in the current instance.</para>
       </summary>
-      <value>A IList&lt;<see cref="T:DevExpress.Export.Xl.XlCondFmtRule"/>&gt; object representing the rules collection.</value>
+      <value>A <see cref="T:System.Collections.Generic.IList`1"/>&lt;<see cref="T:DevExpress.Export.Xl.XlCondFmtRule"/>,&gt; object representing the rules collection.</value>
     </member>
     <member name="T:DevExpress.Export.Xl.XlCustomFilterCriteria">
       <summary>
@@ -5535,15 +5535,15 @@ When exporting to XLS and XLSX formats, the layout of control elements is retain
     </member>
     <member name="P:DevExpress.Export.Xl.XlDataValidation.ListRange">
       <summary>
-        <para>Gets or sets the lists of cell ranges whose values should be used as the data validation criteria.</para>
+        <para>Gets or sets the lists of cell ranges to which the data validation rule is applied.</para>
       </summary>
-      <value>A <see cref="T:DevExpress.Export.Xl.XlCellRange"/> object representing cell ranges list.</value>
+      <value>A <see cref="T:DevExpress.Export.Xl.XlCellRange"/> object representing the lists of cell ranges.</value>
     </member>
     <member name="P:DevExpress.Export.Xl.XlDataValidation.ListValues">
       <summary>
         <para>Provides access to the list of values used in the data validation rule.</para>
       </summary>
-      <value>A IList&lt;<see cref="T:DevExpress.Export.Xl.XlVariantValue"/>&gt; object that is the list of values.</value>
+      <value>A <see cref="T:System.Collections.Generic.IList`1"/>&lt;<see cref="T:DevExpress.Export.Xl.XlVariantValue"/>,&gt; object that is the list of values.</value>
     </member>
     <member name="P:DevExpress.Export.Xl.XlDataValidation.Operator">
       <summary>
@@ -5553,7 +5553,7 @@ When exporting to XLS and XLSX formats, the layout of control elements is retain
     </member>
     <member name="P:DevExpress.Export.Xl.XlDataValidation.PromptTitle">
       <summary>
-        <para>Gets or sets the title bar text of the prompt message.</para>
+        <para>Gets or sets the title bar text of the prompt dialog window.</para>
       </summary>
       <value>A <see cref="T:System.String"/> that is the title text.</value>
     </member>
@@ -5561,13 +5561,13 @@ When exporting to XLS and XLSX formats, the layout of control elements is retain
       <summary>
         <para>Provides access to the collection of cell ranges to which the data validation rule is applied.</para>
       </summary>
-      <value>A IList&lt;<see cref="T:DevExpress.Export.Xl.XlCellRange"/>&gt; object representing the list of cell ranges.</value>
+      <value>A <see cref="T:System.Collections.Generic.IList`1"/>&lt;<see cref="T:DevExpress.Export.Xl.XlCellRange"/>,&gt; object representing the list of cell ranges.</value>
     </member>
     <member name="P:DevExpress.Export.Xl.XlDataValidation.ShowDropDown">
       <summary>
-        <para>Gets or sets whether to display the dropdown combo box for the <see cref="F:DevExpress.Export.Xl.XlDataValidationType.List"/> validation rule.</para>
+        <para>Gets or sets whether to display the dropdown combo box for validation of the <see cref="F:DevExpress.Export.Xl.XlDataValidationType.List"/> type.</para>
       </summary>
-      <value>true, to display a dropdown combo box; otherwise, false.</value>
+      <value>true, to display a dropdown combo box ; otherwise, false.</value>
     </member>
     <member name="P:DevExpress.Export.Xl.XlDataValidation.ShowErrorMessage">
       <summary>
@@ -5868,7 +5868,7 @@ When exporting to XLS and XLSX formats, the layout of control elements is retain
       <summary>
         <para>Provides access to the collection of custom property names.</para>
       </summary>
-      <value>A collection of custom property names which implements the IEnumerable&lt;<see cref="T:System.String"/>&gt; interface.</value>
+      <value>A collection of custom property names which implements the <see cref="T:System.Collections.Generic.IEnumerable`1"/>&lt;<see cref="T:System.String"/>,&gt; interface.</value>
     </member>
     <member name="T:DevExpress.Export.Xl.XlDocumentFormat">
       <summary>
@@ -8444,7 +8444,7 @@ When exporting to XLS and XLSX formats, the layout of control elements is retain
       <summary>
         <para>Provides access to the collection of sparklines contained in the sparkline group.</para>
       </summary>
-      <value>A IList&lt;<see cref="T:DevExpress.Export.Xl.XlSparkline"/>&gt; object that is a collection of sparklines.</value>
+      <value>A <see cref="T:System.Collections.Generic.IList`1"/>&lt;<see cref="T:DevExpress.Export.Xl.XlSparkline"/>,&gt; object that is a collection of sparklines.</value>
     </member>
     <member name="P:DevExpress.Export.Xl.XlSparklineGroup.SparklineType">
       <summary>
@@ -8882,126 +8882,6 @@ When exporting to XLS and XLSX formats, the layout of control elements is retain
       <summary>
         <para>Specifies a single accounting underline.Adds a single-line underline that is displayed lower than the <see cref="F:DevExpress.Export.Xl.XlUnderlineType.Single"/> underline and fills the entire cell width if the cell contains text or date values.</para>
       </summary>
-    </member>
-    <member name="T:DevExpress.Export.Xl.XlValueObject">
-      <summary>
-        <para>An object that can be used to create a criterion for data validation and as a threshold value specified in the conditional formatting rule.</para>
-      </summary>
-    </member>
-    <member name="P:DevExpress.Export.Xl.XlValueObject.BooleanValue">
-      <summary>
-        <para>Converts the object&#39;s value to Boolean and returns the result.</para>
-      </summary>
-      <value>A <see cref="T:System.Boolean"/> value.</value>
-    </member>
-    <member name="P:DevExpress.Export.Xl.XlValueObject.DateTimeValue">
-      <summary>
-        <para>Converts the object&#39;s value to <see cref="T:System.DateTime"/> type and returns the result.</para>
-      </summary>
-      <value>A <see cref="T:System.DateTime"/> value.</value>
-    </member>
-    <member name="P:DevExpress.Export.Xl.XlValueObject.Empty">
-      <summary>
-        <para>Returns an empty object.</para>
-      </summary>
-      <value>A <see cref="T:DevExpress.Export.Xl.XlValueObject"/> object specifying an empty value.</value>
-    </member>
-    <member name="P:DevExpress.Export.Xl.XlValueObject.ErrorValue">
-      <summary>
-        <para>Converts the object&#39;s value to cell error type and returns the result.</para>
-      </summary>
-      <value>An object that contains information on a cell error.</value>
-    </member>
-    <member name="P:DevExpress.Export.Xl.XlValueObject.Expression">
-      <summary>
-        <para>Converts the object&#39;s value to XlExpression and returns the result.</para>
-      </summary>
-      <value>A <see cref="T:DevExpress.Export.Xl.XlExpression"/> value.</value>
-    </member>
-    <member name="P:DevExpress.Export.Xl.XlValueObject.Formula">
-      <summary>
-        <para>Converts the object&#39;s value to a worksheet formula and returns the result.</para>
-      </summary>
-      <value>A string that is the worksheet formula. It starts with an equal sign (=). If conversion fails, returns an empty string.</value>
-    </member>
-    <member name="M:DevExpress.Export.Xl.XlValueObject.FromObject(System.Object)">
-      <summary>
-        <para>Converts the specified object to a value object using the default converter.</para>
-      </summary>
-      <param name="value">An object to be converted to a <see cref="T:DevExpress.Export.Xl.XlValueObject"/></param>
-      <returns>A <see cref="T:DevExpress.Export.Xl.XlValueObject"/> object. If the conversion cannot be performed, an InvalidCastException is thrown.</returns>
-    </member>
-    <member name="P:DevExpress.Export.Xl.XlValueObject.IsBoolean">
-      <summary>
-        <para>Gets whether the object originates from the value of the boolean type.</para>
-      </summary>
-      <value>true, if the object has a boolean value; otherwise, false.</value>
-    </member>
-    <member name="P:DevExpress.Export.Xl.XlValueObject.IsEmpty">
-      <summary>
-        <para>Gets whether the object has an empty value.</para>
-      </summary>
-      <value>true, if the object has an empty value; otherwise, false.</value>
-    </member>
-    <member name="P:DevExpress.Export.Xl.XlValueObject.IsError">
-      <summary>
-        <para>Gets whether the object contains a Cell Error value.</para>
-      </summary>
-      <value>true, if the parameter has a cell error value; otherwise, false.</value>
-    </member>
-    <member name="P:DevExpress.Export.Xl.XlValueObject.IsExpression">
-      <summary>
-        <para>Gets whether the object contains an expression value.</para>
-      </summary>
-      <value>true, if the parameter has an expression value; otherwise, false.</value>
-    </member>
-    <member name="P:DevExpress.Export.Xl.XlValueObject.IsFormula">
-      <summary>
-        <para>Gets whether the object contains a cell formula value.</para>
-      </summary>
-      <value>true, if the object contains a cell formula; otherwise, false.</value>
-    </member>
-    <member name="P:DevExpress.Export.Xl.XlValueObject.IsNumeric">
-      <summary>
-        <para>Gets whether the current object contains a number.</para>
-      </summary>
-      <value>true, if the current value is of the numeric type; otherwise, false</value>
-    </member>
-    <member name="P:DevExpress.Export.Xl.XlValueObject.IsRange">
-      <summary>
-        <para>Gets whether the object originates from a worksheet Range.</para>
-      </summary>
-      <value>true, if the object has a XlCellRange value; otherwise, false.</value>
-    </member>
-    <member name="P:DevExpress.Export.Xl.XlValueObject.IsText">
-      <summary>
-        <para>Gets whether the object originates from a text string.</para>
-      </summary>
-      <value>true, if the object has a text value; otherwise, false.</value>
-    </member>
-    <member name="P:DevExpress.Export.Xl.XlValueObject.NumericValue">
-      <summary>
-        <para>Converts the object&#39;s value to numeric and returns the result.</para>
-      </summary>
-      <value>A Double value.</value>
-    </member>
-    <member name="P:DevExpress.Export.Xl.XlValueObject.RangeValue">
-      <summary>
-        <para>Converts the object&#39;s value to a worksheet range and returns the result.</para>
-      </summary>
-      <value>A XlCellRange object that specifies the worksheet Range.</value>
-    </member>
-    <member name="P:DevExpress.Export.Xl.XlValueObject.TextValue">
-      <summary>
-        <para>Converts the object&#39;s value to a string and returns the result.</para>
-      </summary>
-      <value>A String value</value>
-    </member>
-    <member name="M:DevExpress.Export.Xl.XlValueObject.ToString">
-      <summary>
-        <para>Returns a string that represents the current object.</para>
-      </summary>
-      <returns>A string that represents the current object.</returns>
     </member>
     <member name="T:DevExpress.Export.Xl.XlValuesFilter">
       <summary>
@@ -16105,9 +15985,9 @@ When exporting to XLS and XLSX formats, the layout of control elements is retain
     </member>
     <member name="P:DevExpress.XtraPrinting.CsvExportOptions.EncodeExecutableContent">
       <summary>
-        <para>Encodes potentially dangerous content prior to exporting it to the CSV format.</para>
+        <para></para>
       </summary>
-      <value>One of the <see cref="T:DevExpress.Utils.DefaultBoolean"/> enumeration values.</value>
+      <value></value>
     </member>
     <member name="P:DevExpress.XtraPrinting.CsvExportOptions.FollowReportLayout">
       <summary>
@@ -20515,7 +20395,7 @@ When exporting to XLS and XLSX formats, the layout of control elements is retain
       <summary>
         <para>Specifies the date of the attachment file creation.</para>
       </summary>
-      <value>A Nullable&lt;<see cref="T:System.DateTime"/>&gt; value, that specifies the date of the attachment file creation.</value>
+      <value>A <see cref="T:System.Nullable`1"/>&lt;<see cref="T:System.DateTime"/>,&gt; value, that specifies the date of the attachment file creation.</value>
     </member>
     <member name="P:DevExpress.XtraPrinting.PdfAttachment.Data">
       <summary>
@@ -20545,7 +20425,7 @@ When exporting to XLS and XLSX formats, the layout of control elements is retain
       <summary>
         <para>Specifies the date of the attachment file&#39;s last modification.</para>
       </summary>
-      <value>A Nullable&lt;<see cref="T:System.DateTime"/>&gt; value that specifies the date of the attachment file&#39;s last modification.</value>
+      <value>A <see cref="T:System.Nullable`1"/>&lt;<see cref="T:System.DateTime"/>,&gt; value that specifies the date of the attachment file&#39;s last modification.</value>
     </member>
     <member name="P:DevExpress.XtraPrinting.PdfAttachment.Relationship">
       <summary>
@@ -20699,7 +20579,7 @@ When exporting to XLS and XLSX formats, the layout of control elements is retain
       <summary>
         <para>Provides access to the attachment files list of the document.</para>
       </summary>
-      <value>A ICollection&lt;<see cref="T:DevExpress.XtraPrinting.PdfAttachment"/>&gt; collection of files to be attached to the document.</value>
+      <value>A <see cref="T:System.Collections.Generic.ICollection`1"/>&lt;<see cref="T:DevExpress.XtraPrinting.PdfAttachment"/>,&gt; collection of files to be attached to the document.</value>
     </member>
     <member name="P:DevExpress.XtraPrinting.PdfExportOptions.ConvertImagesToJpeg">
       <summary>
@@ -25280,76 +25160,76 @@ The DefaultBoolean.Default value is equivalent to True.</value>
     </member>
     <member name="N:DevExpress.XtraReports.Expressions">
       <summary>
-        <para>Provides types that describe binding expressions for report parameters&#39; properties.</para>
+        <para></para>
       </summary>
     </member>
     <member name="T:DevExpress.XtraReports.Expressions.BasicExpressionBinding">
       <summary>
-        <para>Stores a binding expression that is parsed and processed to specify a report parameter&#39;s property value.</para>
+        <para></para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraReports.Expressions.BasicExpressionBinding.#ctor">
       <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.XtraReports.Expressions.BasicExpressionBinding"/> class with the default settings.</para>
+        <para></para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraReports.Expressions.BasicExpressionBinding.#ctor(System.String,System.String)">
       <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.XtraReports.Expressions.BasicExpressionBinding"/> class with the parameter&#39;s property name and binding expression.</para>
+        <para></para>
       </summary>
-      <param name="propertyName">The name of a parameter&#39;s property to which an expression is bound. Only the <see cref="P:DevExpress.XtraReports.Parameters.Parameter.Value"/> property is supported.</param>
-      <param name="expression">A binding expression that is parsed and processed to specify the parameter&#39;s property value.</param>
+      <param name="propertyName"></param>
+      <param name="expression"></param>
     </member>
     <member name="P:DevExpress.XtraReports.Expressions.BasicExpressionBinding.Expression">
       <summary>
-        <para>A binding expression that is parsed and processed to specify the parameter&#39;s property value.</para>
+        <para></para>
       </summary>
-      <value>A binding expression that is parsed and processed to specify the parameter&#39;s property value.</value>
+      <value></value>
     </member>
     <member name="P:DevExpress.XtraReports.Expressions.BasicExpressionBinding.PropertyName">
       <summary>
-        <para>The name of the report parameter&#39;s property for which an <see cref="P:DevExpress.XtraReports.Expressions.BasicExpressionBinding.Expression"/> is specified.</para>
+        <para></para>
       </summary>
-      <value>The name of a parameter&#39;s property for which an expression is specified. Only the <see cref="P:DevExpress.XtraReports.Parameters.Parameter.Value"/> property is supported.</value>
+      <value></value>
     </member>
     <member name="T:DevExpress.XtraReports.Expressions.BasicExpressionBindingCollection">
       <summary>
-        <para>A collection of <see cref="T:DevExpress.XtraReports.Expressions.BasicExpressionBinding"/> objects.</para>
+        <para></para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraReports.Expressions.BasicExpressionBindingCollection.#ctor">
       <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.XtraReports.Expressions.BasicExpressionBindingCollection"/> class.</para>
+        <para></para>
       </summary>
     </member>
     <member name="P:DevExpress.XtraReports.Expressions.BasicExpressionBindingCollection.Item(System.String)">
       <summary>
-        <para>Provides access to individual items in the collection by their names.</para>
+        <para></para>
       </summary>
-      <param name="propertyName">An item with the specified name.</param>
-      <value>A binding expression for a parameter&#39;s property value.</value>
+      <param name="propertyName"></param>
+      <value></value>
     </member>
     <member name="T:DevExpress.XtraReports.Expressions.ExpressionBindingCollectionBase`1">
       <summary>
-        <para>The base class for the <see cref="T:DevExpress.XtraReports.Expressions.BasicExpressionBinding"/> collection.</para>
+        <para></para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraReports.Expressions.ExpressionBindingCollectionBase`1.#ctor">
       <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.XtraReports.Expressions.ExpressionBindingCollectionBase`1"/> class.</para>
+        <para></para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraReports.Expressions.ExpressionBindingCollectionBase`1.AddRange(`0[])">
       <summary>
-        <para>Appends the elements from the specified array to the <see cref="T:DevExpress.XtraReports.Expressions.ExpressionBindingCollectionBase`1"/> collection.</para>
+        <para></para>
       </summary>
-      <param name="items">An array of <see cref="T:DevExpress.XtraReports.Expressions.BasicExpressionBinding"/> objects.</param>
+      <param name="items"></param>
     </member>
     <member name="M:DevExpress.XtraReports.Expressions.ExpressionBindingCollectionBase`1.AddRange(System.Collections.Generic.IEnumerable{`0})">
       <summary>
-        <para>Appends the elements from the specified collection to the <see cref="T:DevExpress.XtraReports.Expressions.ExpressionBindingCollectionBase`1"/> collection.</para>
+        <para></para>
       </summary>
-      <param name="items">A collection of <see cref="T:DevExpress.XtraReports.Expressions.BasicExpressionBinding"/> objects.</param>
+      <param name="items"></param>
     </member>
     <member name="T:DevExpress.XtraReports.IDocumentModifier">
       <summary>
@@ -25410,6 +25290,11 @@ The DefaultBoolean.Default value is equivalent to True.</value>
       </summary>
       <value>A <see cref="T:DevExpress.XtraPrinting.Drawing.Watermark"/> object.</value>
     </member>
+    <member name="N:DevExpress.XtraReports.Parameters">
+      <summary>
+        <para>Contains classes that are used to handle parameters in XtraReports.</para>
+      </summary>
+    </member>
     <member name="T:DevExpress.XtraReports.Parameters.CascadingParametersService">
       <summary>
         <para>For internal use.</para>
@@ -25460,7 +25345,7 @@ The DefaultBoolean.Default value is equivalent to True.</value>
     </member>
     <member name="T:DevExpress.XtraReports.Parameters.DynamicListLookUpSettings">
       <summary>
-        <para>Provides settings for the storage that contains the list of predefined parameter values.</para>
+        <para>Provides the look-up editor settings for report parameters that are bound to a datasource.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraReports.Parameters.DynamicListLookUpSettings.#ctor">
@@ -25470,43 +25355,43 @@ The DefaultBoolean.Default value is equivalent to True.</value>
     </member>
     <member name="P:DevExpress.XtraReports.Parameters.DynamicListLookUpSettings.DataAdapter">
       <summary>
-        <para>Specifies the data adapter for the storage that contains the report parameter&#39;s predefined values.</para>
+        <para>Specifies the data adapter for the report parameter.</para>
       </summary>
       <value>A <see cref="T:System.Object"/> value.</value>
     </member>
     <member name="P:DevExpress.XtraReports.Parameters.DynamicListLookUpSettings.DataMember">
       <summary>
-        <para>Specifies the data member name for the storage that contains the report parameter&#39;s predefined values.</para>
+        <para>Specifies the data member name for the report parameter.</para>
       </summary>
       <value>A <see cref="T:System.String"/> value.</value>
     </member>
     <member name="P:DevExpress.XtraReports.Parameters.DynamicListLookUpSettings.DataSource">
       <summary>
-        <para>Specifies the data source for the storage that contains the report parameter&#39;s predefined values.</para>
+        <para>Specifies the data source for the report parameter.</para>
       </summary>
       <value>A <see cref="T:System.Object"/> value.</value>
     </member>
     <member name="P:DevExpress.XtraReports.Parameters.DynamicListLookUpSettings.DisplayMember">
       <summary>
-        <para>Specifies the data member for the storage that contains the report parameter&#39;s display name.</para>
+        <para>Specifies the data member for the report parameter&#39;s display name.</para>
       </summary>
       <value>A <see cref="T:System.String"/> value.</value>
     </member>
     <member name="P:DevExpress.XtraReports.Parameters.DynamicListLookUpSettings.SortMember">
       <summary>
-        <para>Specifies the name of the field that is used to sort parameter values in the lookup editor.</para>
+        <para>Specifies the data member that is used to sort parameter values in the lookup editor.</para>
       </summary>
-      <value>The name of the field that is used to sort parameter values in the lookup editor.</value>
+      <value>The name of the data field used to sort parameter values in the lookup editor.</value>
     </member>
     <member name="P:DevExpress.XtraReports.Parameters.DynamicListLookUpSettings.SortOrder">
       <summary>
         <para>Specifies the sort order for the parameter values in the lookup editor.</para>
       </summary>
-      <value>The sort order for the parameter values in the lookup editor.</value>
+      <value>A <see cref="T:DevExpress.Data.ColumnSortOrder"/> enumeration member specifying the order in which parameter values in the lookup editor are sorted.</value>
     </member>
     <member name="P:DevExpress.XtraReports.Parameters.DynamicListLookUpSettings.ValueMember">
       <summary>
-        <para>The name of the field that stores the report parameter&#39;s values.</para>
+        <para>Specifies the data member for the report parameter&#39;s value.</para>
       </summary>
       <value>A <see cref="T:System.String"/> value.</value>
     </member>
@@ -25688,9 +25573,9 @@ The DefaultBoolean.Default value is equivalent to True.</value>
     </member>
     <member name="P:DevExpress.XtraReports.Parameters.Parameter.ExpressionBindings">
       <summary>
-        <para>Provides access to the parameter&#39;s expression bindings collection.</para>
+        <para></para>
       </summary>
-      <value>The parameter&#39;s expression bindings collection.</value>
+      <value></value>
     </member>
     <member name="P:DevExpress.XtraReports.Parameters.Parameter.LookUpSettings">
       <summary>
@@ -25738,13 +25623,13 @@ The DefaultBoolean.Default value is equivalent to True.</value>
       <summary>
         <para>Determines which values a report parameter can accept.</para>
       </summary>
-      <value>A <see cref="T:System.Type"/> object that specifies the type declarations. The default type is <see cref="T:System.String"/>.</value>
+      <value>A <see cref="T:System.Type"/> object, specifying the type declarations.</value>
     </member>
     <member name="P:DevExpress.XtraReports.Parameters.Parameter.Value">
       <summary>
         <para>Specifies the report parameter&#39;s value.</para>
       </summary>
-      <value>The parameter&#39;s value.</value>
+      <value>A <see cref="T:System.Object"/>, which represents the parameter&#39;s value.</value>
     </member>
     <member name="P:DevExpress.XtraReports.Parameters.Parameter.ValueInfo">
       <summary>
@@ -25754,9 +25639,9 @@ The DefaultBoolean.Default value is equivalent to True.</value>
     </member>
     <member name="P:DevExpress.XtraReports.Parameters.Parameter.ValueSourceSettings">
       <summary>
-        <para>Provides access to the settings that are used to generate the parameter&#39;s predefined values.</para>
+        <para></para>
       </summary>
-      <value>The settings used to generate the parameter&#39;s predefined values.</value>
+      <value></value>
     </member>
     <member name="P:DevExpress.XtraReports.Parameters.Parameter.Visible">
       <summary>
@@ -25918,130 +25803,9 @@ The DefaultBoolean.Default value is equivalent to True.</value>
         <para>The parameter returns a string value, corresponding to the <see cref="T:System.String"/> type.</para>
       </summary>
     </member>
-    <member name="T:DevExpress.XtraReports.Parameters.RangeBoundaryParameter">
-      <summary>
-        <para>The base class for the <see cref="T:DevExpress.XtraReports.Parameters.RangeStartParameter"/> and <see cref="T:DevExpress.XtraReports.Parameters.RangeEndParameter"/> classes.</para>
-      </summary>
-    </member>
-    <member name="P:DevExpress.XtraReports.Parameters.RangeBoundaryParameter.AllowNull">
-      <summary>
-        <para>For internal use.</para>
-      </summary>
-      <value></value>
-    </member>
-    <member name="P:DevExpress.XtraReports.Parameters.RangeBoundaryParameter.Description">
-      <summary>
-        <para>For internal use.</para>
-      </summary>
-      <value></value>
-    </member>
-    <member name="P:DevExpress.XtraReports.Parameters.RangeBoundaryParameter.MultiValue">
-      <summary>
-        <para>For internal use.</para>
-      </summary>
-      <value></value>
-    </member>
-    <member name="P:DevExpress.XtraReports.Parameters.RangeBoundaryParameter.ObjectType">
-      <summary>
-        <para>For internal use.</para>
-      </summary>
-      <value></value>
-    </member>
-    <member name="P:DevExpress.XtraReports.Parameters.RangeBoundaryParameter.Tag">
-      <summary>
-        <para>For internal use.</para>
-      </summary>
-      <value></value>
-    </member>
-    <member name="P:DevExpress.XtraReports.Parameters.RangeBoundaryParameter.Type">
-      <summary>
-        <para>For internal use.</para>
-      </summary>
-      <value></value>
-    </member>
-    <member name="P:DevExpress.XtraReports.Parameters.RangeBoundaryParameter.ValueSourceSettings">
-      <summary>
-        <para>For internal use.</para>
-      </summary>
-      <value></value>
-    </member>
-    <member name="P:DevExpress.XtraReports.Parameters.RangeBoundaryParameter.Visible">
-      <summary>
-        <para>For internal use.</para>
-      </summary>
-      <value></value>
-    </member>
-    <member name="T:DevExpress.XtraReports.Parameters.RangeEndParameter">
-      <summary>
-        <para>A range parameter&#39;s nested end parameter in a report.</para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.XtraReports.Parameters.RangeEndParameter.#ctor">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.XtraReports.Parameters.RangeEndParameter"/> class.</para>
-      </summary>
-    </member>
-    <member name="T:DevExpress.XtraReports.Parameters.RangeParameterEditorOptions">
-      <summary>
-        <para>A static class that provides access to the list of predefined ranges that are displayed in the date range parameter&#39;s editor in Print Preview.</para>
-      </summary>
-    </member>
-    <member name="P:DevExpress.XtraReports.Parameters.RangeParameterEditorOptions.PredefinedDateRanges">
-      <summary>
-        <para>Provides access to the list of predefined date ranges that are available in date range parameters&#39; editors in Print Preview.</para>
-      </summary>
-      <value>The dictionary of predefined ranges that are available in parameters&#39; editors.</value>
-    </member>
-    <member name="M:DevExpress.XtraReports.Parameters.RangeParameterEditorOptions.RegisterDateRange(System.String,System.Func{System.DateTime},System.Func{System.DateTime})">
-      <summary>
-        <para>Appends an item to the list of predefined date ranges.</para>
-      </summary>
-      <param name="name">The predefined date range&#39;s name.</param>
-      <param name="getStart">The function that returns the predefined date range&#39;s start date.</param>
-      <param name="getEnd">The function that returns the predefined date range&#39;s end date.</param>
-    </member>
-    <member name="T:DevExpress.XtraReports.Parameters.RangeParametersSettings">
-      <summary>
-        <para>Provides the nested start and end parameters for a report&#39;s date range parameter.</para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.XtraReports.Parameters.RangeParametersSettings.#ctor">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.XtraReports.Parameters.RangeParametersSettings"/> class with default settings.</para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.XtraReports.Parameters.RangeParametersSettings.#ctor(DevExpress.XtraReports.Parameters.RangeStartParameter,DevExpress.XtraReports.Parameters.RangeEndParameter)">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.XtraReports.Parameters.RangeParametersSettings"/> class with specified <see cref="T:DevExpress.XtraReports.Parameters.RangeStartParameter"/> and <see cref="T:DevExpress.XtraReports.Parameters.RangeEndParameter"/> values.</para>
-      </summary>
-      <param name="startParameter">A parameter range&#39;s start parameter.</param>
-      <param name="endParameter">A parameter range&#39;s end parameter.</param>
-    </member>
-    <member name="P:DevExpress.XtraReports.Parameters.RangeParametersSettings.EndParameter">
-      <summary>
-        <para>A range parameter&#39;s nested end parameter.</para>
-      </summary>
-      <value>A range parameter&#39;s end value.</value>
-    </member>
-    <member name="P:DevExpress.XtraReports.Parameters.RangeParametersSettings.StartParameter">
-      <summary>
-        <para>A range parameter&#39;s nested start parameter.</para>
-      </summary>
-      <value>A range parameter&#39;s start value.</value>
-    </member>
-    <member name="T:DevExpress.XtraReports.Parameters.RangeStartParameter">
-      <summary>
-        <para>A range parameter&#39;s nested start parameter in a report.</para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.XtraReports.Parameters.RangeStartParameter.#ctor">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.XtraReports.Parameters.RangeStartParameter"/> class.</para>
-      </summary>
-    </member>
     <member name="T:DevExpress.XtraReports.Parameters.StaticListLookUpSettings">
       <summary>
-        <para>Provides access to a report parameter&#39;s list of static values.</para>
+        <para>Provides the look-up editor settings for report parameters that are not bound to a datasource.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraReports.Parameters.StaticListLookUpSettings.#ctor">
@@ -26069,26 +25833,9 @@ The DefaultBoolean.Default value is equivalent to True.</value>
     </member>
     <member name="P:DevExpress.XtraReports.Parameters.StaticListLookUpSettings.LookUpValues">
       <summary>
-        <para>Stores a report parameter&#39;s list of static values.</para>
+        <para>Provides access to the list of static values for the report parameter.</para>
       </summary>
-      <value>A list of a report parameter&#39;s static values.</value>
-    </member>
-    <member name="T:DevExpress.XtraReports.Parameters.ValueSourceSettings">
-      <summary>
-        <para>A base class for classes that specify a report parameter&#39;s predefined values.</para>
-      </summary>
-    </member>
-    <member name="P:DevExpress.XtraReports.Parameters.ValueSourceSettings.ObjectType">
-      <summary>
-        <para>For internal use.</para>
-      </summary>
-      <value>The type of an object that the <see cref="T:DevExpress.XtraReports.Parameters.ValueSourceSettings"/> contains.</value>
-    </member>
-    <member name="P:DevExpress.XtraReports.Parameters.ValueSourceSettings.Parameter">
-      <summary>
-        <para>For internal use.</para>
-      </summary>
-      <value></value>
+      <value>A <see cref="T:DevExpress.XtraReports.Parameters.LookUpValueCollection"/> object.</value>
     </member>
     <member name="N:DevExpress.XtraReports.ReportGeneration">
       <summary>

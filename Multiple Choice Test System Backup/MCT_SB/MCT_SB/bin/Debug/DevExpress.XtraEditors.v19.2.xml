@@ -1079,10 +1079,10 @@
     </member>
     <member name="M:DevExpress.XtraEditors.BaseCheckedListBoxControl.SetItemChecked(System.Int32,System.Boolean)">
       <summary>
-        <para>Sets the specified item&#39;s state to checked or unchecked.</para>
+        <para>Changes the state of the item to checked or unchecked.</para>
       </summary>
-      <param name="index">An integer value that specifies the zero-based index of the item whose check state should be changed.</param>
-      <param name="value">true, if the item is checked; false, if the item is unchecked.</param>
+      <param name="index">An integer value representing the zero-based index of the item to be changed. If it is negative or exceeds the last available index, the method will have no effect.</param>
+      <param name="value">true to check the item, false to uncheck it.</param>
     </member>
     <member name="M:DevExpress.XtraEditors.BaseCheckedListBoxControl.SetItemCheckState(System.Int32,System.Windows.Forms.CheckState)">
       <summary>
@@ -3414,12 +3414,6 @@ This member is supported by individual descendant of the <see cref="T:DevExpress
       </summary>
       <value>true, if the test point is located in the calendar header; otherwise, false.</value>
     </member>
-    <member name="M:DevExpress.XtraEditors.Calendar.CalendarHitInfo.IsInNavigationButton">
-      <summary>
-        <para></para>
-      </summary>
-      <returns></returns>
-    </member>
     <member name="P:DevExpress.XtraEditors.Calendar.CalendarHitInfo.IsInRightArea">
       <summary>
         <para>Gets or sets whether the test point is located in the time portion area.</para>
@@ -4731,7 +4725,7 @@ This member is supported by individual descendant of the <see cref="T:DevExpress
     </member>
     <member name="E:DevExpress.XtraEditors.ComboBoxEdit.SelectedIndexChanged">
       <summary>
-        <para>Occurs when the selection moves from one ComboBoxEditor item to another.</para>
+        <para>Occurs when the selection moves from one ComboBoxEditor to another.</para>
       </summary>
     </member>
     <member name="P:DevExpress.XtraEditors.ComboBoxEdit.SelectedItem">
@@ -8838,12 +8832,6 @@ A specific version of the addressed image is automatically chosen based on the a
       </summary>
       <param name="duration">A TimeSpan object that specifies the minimum duration for the loading indicator.</param>
     </member>
-    <member name="M:DevExpress.XtraEditors.Controls.LookUpEditAutoSuggestEventArgs.SetQuerySuggestionsTask``1(System.Threading.Tasks.Task{System.Collections.Generic.List{``0}})">
-      <summary>
-        <para></para>
-      </summary>
-      <param name="querySuggestionsAsAsyncList"></param>
-    </member>
     <member name="T:DevExpress.XtraEditors.Controls.LookUpEditSearchHighlightEventArgs">
       <summary>
         <para>A base class for the AutoSearch and AutoSuggest event parameters.</para>
@@ -9871,17 +9859,17 @@ A specific version of the addressed image is automatically chosen based on the a
     </member>
     <member name="T:DevExpress.XtraEditors.Controls.SpinStyles">
       <summary>
-        <para>Enumerates values that specify whether spin buttons in the <see cref="T:DevExpress.XtraEditors.SpinEdit"/>, <see cref="T:DevExpress.XtraEditors.TimeEdit"/>, and <see cref="T:DevExpress.XtraEditors.TimeSpanEdit"/> controls are oriented vertically or horizontally.</para>
+        <para>Contains styles for the <see cref="T:DevExpress.XtraEditors.SpinEdit"/> increment and decrement buttons.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraEditors.Controls.SpinStyles.Horizontal">
       <summary>
-        <para>Spin buttons are oriented horizontally.</para>
+        <para>Orients the <see cref="T:DevExpress.XtraEditors.SpinEdit"/> editor increment and decrement buttons horizontally.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraEditors.Controls.SpinStyles.Vertical">
       <summary>
-        <para>Spin buttons are oriented vertically.</para>
+        <para>Orients the <see cref="T:DevExpress.XtraEditors.SpinEdit"/> editor increment and decrement buttons vertically.</para>
       </summary>
     </member>
     <member name="T:DevExpress.XtraEditors.Controls.StringId">
@@ -14914,15 +14902,15 @@ A specific version of the addressed image is automatically chosen based on the a
     </member>
     <member name="M:DevExpress.XtraEditors.Filtering.ExcelFilteringDataEventArgs.ClearData">
       <summary>
-        <para>Removes all items from the collection of data values by which the column being processed can be filtered.</para>
+        <para></para>
       </summary>
-      <returns>true, if the items are successfully removed; otherwise, false.</returns>
+      <returns></returns>
     </member>
     <member name="P:DevExpress.XtraEditors.Filtering.ExcelFilteringDataEventArgs.DataItems">
       <summary>
         <para>Provides access to the collection of data values by which the column being processed can be filtered, and the corresponding display texts.</para>
       </summary>
-      <value>An object that specifies the collection of data values by which the column being processed can be filtered.</value>
+      <value>A <see cref="T:System.Collections.Generic.List`1"/>&lt;DevExpress.XtraEditors.Filtering.ExcelFilterDataItem,&gt; object specifying the collection of data values by which the column being processed can be filtered.</value>
     </member>
     <member name="P:DevExpress.XtraEditors.Filtering.ExcelFilteringDataEventArgs.DisplayTexts">
       <summary>
@@ -17303,19 +17291,9 @@ In <see cref="F:DevExpress.XtraEditors.HotTrackSelectMode.SelectItemOnHotTrack"/
         <para>Fires when the editor SearchMode property is set to . In this mode, the editor filters out data source records that do not match the currently entered text, and displays remaining records in the drop-down panel. The AutoSearch event is optional, it allows you to fine-tune the search. See the <see cref="T:DevExpress.XtraEditors.LookUpEdit"/> class description to learn more.</para>
       </summary>
     </member>
-    <member name="E:DevExpress.XtraEditors.LookUpEdit.AutoSearchComplete">
-      <summary>
-        <para></para>
-      </summary>
-    </member>
     <member name="E:DevExpress.XtraEditors.LookUpEdit.AutoSuggest">
       <summary>
         <para>Fires when you set the SearchMode property to AutoSuggest. In this mode, the editor runs the asynchronous Task assigned in the event handler to retrieve a list of drop-down panel items. See the <see cref="T:DevExpress.XtraEditors.LookUpEdit"/> class description for more information.</para>
-      </summary>
-    </member>
-    <member name="E:DevExpress.XtraEditors.LookUpEdit.AutoSuggestComplete">
-      <summary>
-        <para>Fires after the <see cref="E:DevExpress.XtraEditors.LookUpEdit.AutoSuggest"/> event is finished. Allows you to additionally customize the editor.</para>
       </summary>
     </member>
     <member name="E:DevExpress.XtraEditors.LookUpEdit.CustomDrawCell">
@@ -20714,9 +20692,9 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
     </member>
     <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemBaseSpinEdit.SpinStyle">
       <summary>
-        <para>Gets or sets whether spin buttons are oriented vertically or horizontally.</para>
+        <para>Gets or sets the spin button&#39;s orientation.</para>
       </summary>
-      <value>A <see cref="T:DevExpress.XtraEditors.Controls.SpinStyles"/> enumeration value that specifies whether spin buttons are oriented vertically or horizontally.</value>
+      <value>A <see cref="T:DevExpress.XtraEditors.Controls.SpinStyles"/> enumeration member specifying the spin button&#39;s orientation.</value>
     </member>
     <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemBaseSpinEdit.SuppressMouseEventOnOuterMouseClick">
       <summary>
@@ -23445,19 +23423,9 @@ In bound mode, this method populates the item collection before returning it.</p
       </summary>
       <value>The zero-based visible column index against which an incremental search is performed.</value>
     </member>
-    <member name="E:DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit.AutoSearchComplete">
-      <summary>
-        <para></para>
-      </summary>
-    </member>
     <member name="E:DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit.AutoSuggest">
       <summary>
         <para>Fires when you set the SearchMode property to AutoSuggest. In this mode, the editor runs the asynchronous Task assigned in the event handler to retrieve a list of drop-down panel items. See the <see cref="T:DevExpress.XtraEditors.LookUpEdit"/> class description for more information.</para>
-      </summary>
-    </member>
-    <member name="E:DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit.AutoSuggestComplete">
-      <summary>
-        <para>Fires after the AutoSuggest event is finished. Allows you to additionally customize the editor.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit.BestFit">
@@ -24284,12 +24252,6 @@ In bound mode, this method populates the item collection before returning it.</p
       </summary>
       <value>A <see cref="T:DevExpress.Utils.DefaultBoolean"/> enumeration value that specifies whether it is allowed to zoom pictures using the mouse wheel.</value>
     </member>
-    <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit.AnimatedImageLoopMode">
-      <summary>
-        <para></para>
-      </summary>
-      <value></value>
-    </member>
     <member name="M:DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit.Assign(DevExpress.XtraEditors.Repository.RepositoryItem)">
       <summary>
         <para>Copies the settings of a specific repository item to the current one.</para>
@@ -24606,7 +24568,7 @@ In bound mode, this method populates the item collection before returning it.</p
     </member>
     <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemPopupBase.CloseUpKey">
       <summary>
-        <para>Gets or sets the key combination used to open and close the pop-up window.</para>
+        <para>Gets or sets the key combination used to open and close the popup window.</para>
       </summary>
       <value>A <see cref="T:DevExpress.Utils.KeyShortcut"/> object specifying the key combination used to open and close the popup window.</value>
     </member>
@@ -25816,9 +25778,9 @@ In bound mode, this method populates the item collection before returning it.</p
     </member>
     <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemTextEdit.Mask">
       <summary>
-        <para>Provides access to the editor&#39;s input mask.</para>
+        <para>Provides access to the editor&#39;s mask settings.</para>
       </summary>
-      <value>A <see cref="T:DevExpress.XtraEditors.Mask.MaskProperties"/> object that comprises the editor&#39;s mask settings.</value>
+      <value>A <see cref="T:DevExpress.XtraEditors.Mask.MaskProperties"/> object which provides the editor&#39;s mask settings.</value>
     </member>
     <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemTextEdit.MaskBoxPadding">
       <summary>
@@ -25846,9 +25808,9 @@ In bound mode, this method populates the item collection before returning it.</p
     </member>
     <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemTextEdit.NullValuePromptShowForEmptyValue">
       <summary>
-        <para>Gets or sets whether the editor displays a prompt when its value is not specified (equals <see cref="F:System.String.Empty"/>).</para>
+        <para>Gets or sets whether the text specified by the <see cref="P:DevExpress.XtraEditors.Repository.RepositoryItemTextEdit.NullValuePrompt"/> property is displayed when the editor contains an empty string.</para>
       </summary>
-      <value>true, if the editor displays a prompt when its value is not specified (equals <see cref="F:System.String.Empty"/>); otherwise, false.</value>
+      <value>true if the text specified by the <see cref="P:DevExpress.XtraEditors.Repository.RepositoryItemTextEdit.NullValuePrompt"/> property is displayed when the editor contains an empty string; otherwise, false.</value>
     </member>
     <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemTextEdit.OwnerEdit">
       <summary>
@@ -25876,21 +25838,21 @@ In bound mode, this method populates the item collection before returning it.</p
     </member>
     <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemTextEdit.ShowNullValuePrompt">
       <summary>
-        <para>Gets or sets conditions under which this editor should display its null value text (see the NullValuePrompt property).</para>
+        <para></para>
       </summary>
-      <value>Specifies conditions under which this editor should display its null value text.</value>
+      <value></value>
     </member>
     <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemTextEdit.ShowNullValuePromptWhenFocused">
       <summary>
-        <para>Gets or sets whether the focused editor displays a prompt when its value is not specified.</para>
+        <para>Gets or sets whether to display the <see cref="P:DevExpress.XtraEditors.Repository.RepositoryItemTextEdit.NullValuePrompt"/> when the current editor is focused.</para>
       </summary>
-      <value>true, if the focused editor displays a prompt when its value is not specified; otherwise, false.</value>
+      <value>true, if the <see cref="P:DevExpress.XtraEditors.Repository.RepositoryItemTextEdit.NullValuePrompt"/> is displayed when the editor is focused; otherwise, false.</value>
     </member>
     <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemTextEdit.ShowNullValuePromptWhenReadOnly">
       <summary>
-        <para>Gets or sets whether the read-only editor displays a prompt when its value is not specified.</para>
+        <para></para>
       </summary>
-      <value>true, if the read-only editor displays a prompt when its value is not specified; otherwise, false.</value>
+      <value></value>
     </member>
     <member name="E:DevExpress.XtraEditors.Repository.RepositoryItemTextEdit.Spin">
       <summary>
@@ -26074,9 +26036,9 @@ The default value is <see cref="F:DevExpress.Utils.DefaultBoolean.Default"/>.</v
     </member>
     <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemTimeEdit.TimeEditStyle">
       <summary>
-        <para>Gets or sets whether users use spin buttons or tiles in the drop-down panel to edit the time.</para>
+        <para>Gets or sets how end-users can modify the control&#39;s value (spin buttons or touch-aware tiles).</para>
       </summary>
-      <value>A <see cref="T:DevExpress.XtraEditors.Repository.TimeEditStyle"/> value that specifies how users edit the time.</value>
+      <value>A <see cref="T:DevExpress.XtraEditors.Repository.TimeEditStyle"/> value that specifies how end-users can modify the time value.</value>
     </member>
     <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemTimeEdit.TimeFormat">
       <summary>
@@ -26110,7 +26072,7 @@ The default value is <see cref="F:DevExpress.Utils.DefaultBoolean.Default"/>.</v
     </member>
     <member name="T:DevExpress.XtraEditors.Repository.RepositoryItemTimeSpanEdit">
       <summary>
-        <para>Represents a repository item that stores settings specific to the <see cref="T:DevExpress.XtraEditors.TimeSpanEdit"/> control.</para>
+        <para>Stores settings specific to a <see cref="T:DevExpress.XtraEditors.TimeSpanEdit"/> control.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraEditors.Repository.RepositoryItemTimeSpanEdit.#ctor">
@@ -26265,7 +26227,7 @@ The default value is <see cref="F:DevExpress.Utils.DefaultBoolean.Default"/>.</v
     </member>
     <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemTimeSpanEdit.TimeEditStyle">
       <summary>
-        <para>Gets or sets whether users use spin buttons or tiles in a drop-down panel to edit the time span.</para>
+        <para>Gets or sets whether the time interval can be edited using tiles in the drop-down panel, or using spin buttons.</para>
       </summary>
       <value>A <see cref="T:DevExpress.XtraEditors.Repository.TimeEditStyle"/> enumeration value that specifies how the time interval can be edited.</value>
     </member>
@@ -27057,17 +27019,17 @@ scrolling using the keyboard arrow keys (and the mouse wheel, provided that <see
     </member>
     <member name="T:DevExpress.XtraEditors.Repository.TimeEditStyle">
       <summary>
-        <para>Enumerates values that specify how users edit the time (time span) in the <see cref="T:DevExpress.XtraEditors.TimeEdit"/> and <see cref="T:DevExpress.XtraEditors.TimeSpanEdit"/> controls.</para>
+        <para>Contains values that specify the way time is edited in a <see cref="T:DevExpress.XtraEditors.TimeEdit"/> control.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraEditors.Repository.TimeEditStyle.SpinButtons">
       <summary>
-        <para>The control displays spin buttons that allow users to edit the time (time span).</para>
+        <para>The time value is edited using spin buttons:</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraEditors.Repository.TimeEditStyle.TouchUI">
       <summary>
-        <para>The control displays tiles in a drop-down panel that allow users to edit the time (time span).</para>
+        <para>The time value is edited using a Touch-aware dropdown window:</para>
       </summary>
     </member>
     <member name="T:DevExpress.XtraEditors.Repository.TrackBarRange">
@@ -27180,36 +27142,6 @@ scrolling using the keyboard arrow keys (and the mouse wheel, provided that <see
         <para>Sets the filter criteria.</para>
       </summary>
       <param name="filter">A string value that is the filter criteria.</param>
-    </member>
-    <member name="T:DevExpress.XtraEditors.ShowNullValuePromptOptions">
-      <summary>
-        <para>Enumerates values that specify when an editor shows a prompt.</para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.XtraEditors.ShowNullValuePromptOptions.Default">
-      <summary>
-        <para>Enables all options.</para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.XtraEditors.ShowNullValuePromptOptions.EditorFocused">
-      <summary>
-        <para>A prompt is displayed when the editor is focused and not focused. Disable this option to only display the prompt when the editor is not focused.</para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.XtraEditors.ShowNullValuePromptOptions.EditorReadOnly">
-      <summary>
-        <para>A prompt is displayed when the editor is in the read-only and editable states. Disable this option to only display the prompt when the editor is editable.</para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.XtraEditors.ShowNullValuePromptOptions.EmptyValue">
-      <summary>
-        <para>A prompt is displayed when the editor&#39;s value equals <see cref="F:System.String.Empty"/> or null (Nothing in VB). Disable this option to only display the prompt when the editor&#39;s value equals null (Nothing in VB).</para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.XtraEditors.ShowNullValuePromptOptions.NullValue">
-      <summary>
-        <para>Disables all options. A prompt is only shown for an editable, not focused editor whose value equals null (Nothing in VB).</para>
-      </summary>
     </member>
     <member name="T:DevExpress.XtraEditors.SimpleButton">
       <summary>

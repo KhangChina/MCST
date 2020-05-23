@@ -39,19 +39,9 @@
         <para>Fires when the editor SearchMode property is set to . In this mode, the editor filters out data source records that do not match the currently entered text, and displays remaining records in the drop-down panel. The AutoSearch event is optional, it allows you to fine-tune the search. See the <see cref="T:DevExpress.XtraEditors.GridLookUpEdit"/> class description to learn more.</para>
       </summary>
     </member>
-    <member name="E:DevExpress.XtraEditors.GridLookUpEdit.AutoSearchComplete">
-      <summary>
-        <para></para>
-      </summary>
-    </member>
     <member name="E:DevExpress.XtraEditors.GridLookUpEdit.AutoSuggest">
       <summary>
         <para>Fires when you set the SearchMode property to AutoSuggest. In this mode, the editor runs the asynchronous Task assigned in the event handler to retrieve a list of drop-down panel items. See the <see cref="T:DevExpress.XtraEditors.GridLookUpEdit"/> class description for more information.</para>
-      </summary>
-    </member>
-    <member name="E:DevExpress.XtraEditors.GridLookUpEdit.AutoSuggestComplete">
-      <summary>
-        <para>Fires after the <see cref="E:DevExpress.XtraEditors.GridLookUpEdit.AutoSuggest"/> event is finished, and allows you to additionally customize the editor.</para>
       </summary>
     </member>
     <member name="P:DevExpress.XtraEditors.GridLookUpEdit.EditorTypeName">
@@ -162,19 +152,9 @@
         <para>Fires when the editor SearchMode property is set to . In this mode, the editor filters out data source records that do not match the currently entered text, and displays remaining records in the drop-down panel. The AutoSearch event is optional, it allows you to fine-tune the search. See the <see cref="T:DevExpress.XtraEditors.GridLookUpEdit"/> class description to learn more.</para>
       </summary>
     </member>
-    <member name="E:DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit.AutoSearchComplete">
-      <summary>
-        <para></para>
-      </summary>
-    </member>
     <member name="E:DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit.AutoSuggest">
       <summary>
         <para>Fires when you set the SearchMode property to AutoSuggest. In this mode, the editor runs the asynchronous Task assigned in the event handler to retrieve a list of drop-down panel items. See the <see cref="T:DevExpress.XtraEditors.GridLookUpEdit"/> class description for more information.</para>
-      </summary>
-    </member>
-    <member name="E:DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit.AutoSuggestComplete">
-      <summary>
-        <para>Fires after the AutoSuggest event is finished. Allows you to additionally customize the editor.</para>
       </summary>
     </member>
     <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit.EditorTypeName">
@@ -1093,7 +1073,7 @@ If this parameter has a value (it&#39;s not null or an empty string) the val par
     </member>
     <member name="P:DevExpress.XtraGrid.Columns.GridColumn.FieldName">
       <summary>
-        <para>To bind a column to a data source field, set this property to the required data field name. To create unbound columns, assign a unique identifier to this property. If you have obtained a column as a method return value or as an event argument, read the FieldName property value to identify the column.</para>
+        <para>To bind a column to a data source field, set this property to the required data field name. To create an unbound columns, assign a unique identifier to this property. If you have obtained a column as a method return value or as an event argument, read FieldName property value to identify the column.</para>
       </summary>
       <value>A <see cref="T:System.String"/> value that specifies the unique column field name.</value>
     </member>
@@ -7569,12 +7549,12 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Base.ColumnView.FilterPopupExcelData">
       <summary>
-        <para>Allows you to add, remove, and modify data values and customize predefined filters in the Excel style pop-up filter menus.</para>
+        <para>Allows you to add, remove and modify filters in the Excel style pop-up filter menus.</para>
       </summary>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Base.ColumnView.FilterPopupExcelParseFilterCriteria">
       <summary>
-        <para>Allows you to parse the filter criteria applied to data and select the corresponding values in the filter menu.</para>
+        <para>Allows you to parse the filter criteria in Excel style pop-up filter menus and set filter values.</para>
       </summary>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Base.ColumnView.FilterPopupExcelPrepareTemplate">
@@ -7584,7 +7564,7 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Base.ColumnView.FilterPopupExcelQueryFilterCriteria">
       <summary>
-        <para>Fires when a filter criteria is about to be applied to data and allows you to customize the filter criteria.</para>
+        <para>Allows you to modify criteria expressions built when users filter Data Grid data in Excel-style filtering menus.</para>
       </summary>
     </member>
     <member name="P:DevExpress.XtraGrid.Views.Base.ColumnView.FilterPopupMaxRecordsCount">
@@ -8163,7 +8143,7 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
       <summary>
         <para>This property is not intended to be used in code. To edit MRUFilters, use the <see cref="P:DevExpress.XtraGrid.Views.Base.ColumnView.MRUFiltersInfo"/> collection instead.</para>
       </summary>
-      <value>For internal use.</value>
+      <value></value>
     </member>
     <member name="P:DevExpress.XtraGrid.Views.Base.ColumnView.MRUFiltersInfo">
       <summary>
@@ -8839,12 +8819,6 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
       </summary>
       <value>true if the Find Panel can be invoked by an end-user; otherwise, false.</value>
     </member>
-    <member name="P:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsFind.AllowMruItems">
-      <summary>
-        <para>Gets or sets whether the Find Panel keeps the history of recently used search items. Users can access and re-apply these items from a dropdown list.</para>
-      </summary>
-      <value>true, to allow users to access and re-apply recently used items; otherwise, false.</value>
-    </member>
     <member name="P:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsFind.AlwaysVisible">
       <summary>
         <para>Gets or sets whether the Find Panel is always visible.</para>
@@ -8861,7 +8835,7 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
       <summary>
         <para>Gets or sets whether records that do not match the query are hidden.</para>
       </summary>
-      <value>A <see cref="T:DevExpress.XtraEditors.FindPanelBehavior"/> enumeration value that specifies whether records that do not match the query are hidden.</value>
+      <value>A DevExpress.XtraEditors.FindPanelBehavior enumeration value that specifies whether records that do not match the query are hidden.</value>
     </member>
     <member name="P:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsFind.ClearFindOnClose">
       <summary>
@@ -8925,7 +8899,7 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
     </member>
     <member name="P:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsFind.ShowFindButton">
       <summary>
-        <para>Gets or sets whether the Find button is displayed within the Find Panel. This property is not in effect if the Find Panel is integrated in the group header (see the <see cref="P:DevExpress.XtraGrid.Views.Grid.GridViewOptionsFind.FindPanelLocation"/> property).</para>
+        <para>Gets or sets whether the Find button is displayed within the Find Panel.</para>
       </summary>
       <value>true if the Find button is displayed within the Find Panel; otherwise, false.</value>
     </member>
@@ -11855,34 +11829,34 @@ In server mode, this option is not in effect.</para>
     </member>
     <member name="T:DevExpress.XtraGrid.Views.Grid.EditFormEventArgsBase">
       <summary>
-        <para>Provides data for the <see cref="E:DevExpress.XtraGrid.Views.Grid.GridView.EditFormPrepared"/> and <see cref="E:DevExpress.XtraGrid.Views.Grid.GridView.EditFormHidden"/> events.</para>
+        <para></para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraGrid.Views.Grid.EditFormEventArgsBase.#ctor(System.Int32,System.Windows.Forms.Control,DevExpress.XtraGrid.EditForm.Helpers.EditFormBindableControlsCollection)">
       <summary>
-        <para>Initializes a new <see cref="T:DevExpress.XtraGrid.Views.Grid.EditFormEventArgsBase"/> class instance.</para>
+        <para></para>
       </summary>
-      <param name="rowHandle">The handle that identifies the processed grid row.</param>
-      <param name="panel">The container that arranges editors and buttons on the Edit Form.</param>
-      <param name="bindableControls">An object that specifies the collection of controls used to edit the data record.</param>
+      <param name="rowHandle"></param>
+      <param name="panel"></param>
+      <param name="bindableControls"></param>
     </member>
     <member name="P:DevExpress.XtraGrid.Views.Grid.EditFormEventArgsBase.BindableControls">
       <summary>
-        <para>Provides access to the collection of controls used to edit the processed data record. Controls are indexed by field names or grid columns.</para>
+        <para></para>
       </summary>
-      <value>An object that specifies the collection of controls used to edit the processed data record.</value>
+      <value></value>
     </member>
     <member name="P:DevExpress.XtraGrid.Views.Grid.EditFormEventArgsBase.Panel">
       <summary>
-        <para>Gets the container that arranges editors and buttons on the Edit Form.</para>
+        <para></para>
       </summary>
-      <value>The container that arranges editors and buttons on the Edit Form.</value>
+      <value></value>
     </member>
     <member name="P:DevExpress.XtraGrid.Views.Grid.EditFormEventArgsBase.RowHandle">
       <summary>
-        <para>Gets the handle that identifies the grid row for which the Edit From is  displayed/hidden.</para>
+        <para></para>
       </summary>
-      <value>The handle that identifies the grid row for which the Edit From is displayed/hidden.</value>
+      <value></value>
     </member>
     <member name="T:DevExpress.XtraGrid.Views.Grid.EditFormHiddenEventArgs">
       <summary>
@@ -12253,23 +12227,6 @@ In server mode, this option is not in effect.</para>
       <param name="sender">The event source. Identifies the View that raised the event.</param>
       <param name="e">An object that provides data for the event.</param>
     </member>
-    <member name="T:DevExpress.XtraGrid.Views.Grid.FilterPopupExcelParseFilterCriteriaEventArgs">
-      <summary>
-        <para>Provides data for the <see cref="E:DevExpress.XtraGrid.Views.Base.ColumnView.FilterPopupExcelParseFilterCriteria"/> event.</para>
-      </summary>
-    </member>
-    <member name="P:DevExpress.XtraGrid.Views.Grid.FilterPopupExcelParseFilterCriteriaEventArgs.Column">
-      <summary>
-        <para>Gets the processed grid column.</para>
-      </summary>
-      <value>An object that specifies the processed grid column.</value>
-    </member>
-    <member name="P:DevExpress.XtraGrid.Views.Grid.FilterPopupExcelParseFilterCriteriaEventArgs.View">
-      <summary>
-        <para>Gets the view that raised the event.</para>
-      </summary>
-      <value>An object that specifies the view that raised the event.</value>
-    </member>
     <member name="T:DevExpress.XtraGrid.Views.Grid.FilterPopupListBoxEventArgs">
       <summary>
         <para>Provides data for the <see cref="E:DevExpress.XtraGrid.Views.Base.ColumnView.ShowFilterPopupListBox"/> event.</para>
@@ -12351,26 +12308,6 @@ In server mode, this option is not in effect.</para>
     <member name="F:DevExpress.XtraGrid.Views.Grid.GridEditingMode.Inplace">
       <summary>
         <para>Directly in grid cells.</para>
-      </summary>
-    </member>
-    <member name="T:DevExpress.XtraGrid.Views.Grid.GridFindPanelLocation">
-      <summary>
-        <para>Enumerates values that specify whether the find panel is embedded into the group panel or displayed in a separate panel.</para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.XtraGrid.Views.Grid.GridFindPanelLocation.Default">
-      <summary>
-        <para>The default location depends on the Version Compatibility setting. Since version 19.2, the find panel is embedded into the group panel.</para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.XtraGrid.Views.Grid.GridFindPanelLocation.GroupPanel">
-      <summary>
-        <para>The find panel is embedded into the group panel. This mode is only available if the <see cref="P:DevExpress.XtraGrid.Views.Grid.GridOptionsView.ShowGroupPanel"/> option is enabled.</para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.XtraGrid.Views.Grid.GridFindPanelLocation.Panel">
-      <summary>
-        <para>The find panel is displayed in a separate panel.</para>
       </summary>
     </member>
     <member name="T:DevExpress.XtraGrid.Views.Grid.GridMenuEventArgs">
@@ -13337,9 +13274,9 @@ This option is in effect when the <see cref="P:DevExpress.XtraGrid.Views.Grid.Gr
     </member>
     <member name="P:DevExpress.XtraGrid.Views.Grid.GridOptionsSelection.CheckBoxSelectorField">
       <summary>
-        <para>Gets or sets the name of the field in the data source that is bound to the check box column.</para>
+        <para>Gets or sets the name of the field in the underlaying data source which is bound to the check box column.</para>
       </summary>
-      <value>A string value that specifies the name of the field in the data source that is bound to the check box column.</value>
+      <value>A string value that specifies the name of the field in the underlaying data source which is bound to the check box column.</value>
     </member>
     <member name="P:DevExpress.XtraGrid.Views.Grid.GridOptionsSelection.EnableAppearanceFocusedCell">
       <summary>
@@ -15557,11 +15494,6 @@ If set to -1, the method acts like the  method.</param>
         <para>Displays a Filter DropDown for the specified column.</para>
       </summary>
       <param name="column">A <see cref="T:DevExpress.XtraGrid.Columns.GridColumn"/> column for which the filter popup must be invoked.</param>
-    </member>
-    <member name="M:DevExpress.XtraGrid.Views.Grid.GridView.ShowFindPanel">
-      <summary>
-        <para></para>
-      </summary>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Grid.GridView.ShowGridMenu">
       <summary>
@@ -19701,7 +19633,7 @@ This value is used to initialize the <see cref="P:DevExpress.XtraGrid.Views.Prin
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Tile.TileView.EditFormHidden">
       <summary>
-        <para>Fires after the Edit Form is closed.</para>
+        <para></para>
       </summary>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Tile.TileView.EditFormPrepared">
@@ -21329,17 +21261,6 @@ This value is used to initialize the <see cref="P:DevExpress.XtraGrid.Views.Prin
         <para>Gets or sets the distance that specifies how much this <see cref="T:DevExpress.XtraGrid.Views.WinExplorer.WinExplorerView"/> is scrolled down, counting from the View client area&#39;s top edge.</para>
       </summary>
       <value>An Int32 value that is the distance between the current <see cref="T:DevExpress.XtraGrid.Views.WinExplorer.WinExplorerView"/> viewport and the View top edge.</value>
-    </member>
-    <member name="M:DevExpress.XtraGrid.Views.WinExplorer.WinExplorerView.RefreshContextButtons">
-      <summary>
-        <para></para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.XtraGrid.Views.WinExplorer.WinExplorerView.RefreshContextButtons(System.Int32)">
-      <summary>
-        <para></para>
-      </summary>
-      <param name="rowHandle"></param>
     </member>
     <member name="M:DevExpress.XtraGrid.Views.WinExplorer.WinExplorerView.RefreshData">
       <summary>
