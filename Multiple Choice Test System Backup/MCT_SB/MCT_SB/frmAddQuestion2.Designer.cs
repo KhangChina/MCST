@@ -28,13 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAddQuestion2));
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
             this.layoutControl2 = new DevExpress.XtraLayout.LayoutControl();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.repositoryItemCheckEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
+            this.ckcStatusAnswer = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
+            this.remove = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.BtnAction = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.ID = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemRadioGroup1 = new DevExpress.XtraEditors.Repository.RepositoryItemRadioGroup();
             this.picImage = new DevExpress.XtraEditors.PictureEdit();
             this.label1 = new System.Windows.Forms.Label();
             this.btnCancel = new DevExpress.XtraEditors.SimpleButton();
@@ -63,7 +72,9 @@
             this.layoutControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ckcStatusAnswer)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BtnAction)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemRadioGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picImage.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
@@ -107,12 +118,14 @@
             // 
             // gridControl1
             // 
-            this.gridControl1.Location = new System.Drawing.Point(12, 406);
+            this.gridControl1.Location = new System.Drawing.Point(12, 369);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
-            this.repositoryItemCheckEdit1});
-            this.gridControl1.Size = new System.Drawing.Size(1026, 225);
+            this.ckcStatusAnswer,
+            this.BtnAction,
+            this.repositoryItemRadioGroup1});
+            this.gridControl1.Size = new System.Drawing.Size(1026, 262);
             this.gridControl1.TabIndex = 11;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -125,16 +138,19 @@
             this.gridView1.Appearance.HeaderPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumn1,
-            this.gridColumn2});
+            this.gridColumn2,
+            this.remove,
+            this.ID});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ColumnAutoWidth = false;
             this.gridView1.OptionsView.ShowGroupPanel = false;
+            this.gridView1.CellValueChanged += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(this.gridView1_CellValueChanged);
             // 
             // gridColumn1
             // 
             this.gridColumn1.Caption = "Content Of Answer";
-            this.gridColumn1.FieldName = "Dis";
+            this.gridColumn1.FieldName = "Descriptions";
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 0;
@@ -143,17 +159,46 @@
             // gridColumn2
             // 
             this.gridColumn2.Caption = "Status";
-            this.gridColumn2.ColumnEdit = this.repositoryItemCheckEdit1;
+            this.gridColumn2.ColumnEdit = this.ckcStatusAnswer;
             this.gridColumn2.FieldName = "Status";
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 1;
             this.gridColumn2.Width = 209;
             // 
-            // repositoryItemCheckEdit1
+            // ckcStatusAnswer
             // 
-            this.repositoryItemCheckEdit1.AutoHeight = false;
-            this.repositoryItemCheckEdit1.Name = "repositoryItemCheckEdit1";
+            this.ckcStatusAnswer.AutoHeight = false;
+            this.ckcStatusAnswer.Name = "ckcStatusAnswer";
+            this.ckcStatusAnswer.CheckedChanged += new System.EventHandler(this.repositoryItemCheckEdit1_CheckedChanged);
+            // 
+            // remove
+            // 
+            this.remove.Caption = "Action";
+            this.remove.ColumnEdit = this.BtnAction;
+            this.remove.Name = "remove";
+            this.remove.Visible = true;
+            this.remove.VisibleIndex = 2;
+            // 
+            // BtnAction
+            // 
+            this.BtnAction.AutoHeight = false;
+            editorButtonImageOptions1.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions1.Image")));
+            this.BtnAction.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            this.BtnAction.Name = "BtnAction";
+            this.BtnAction.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.BtnAction.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.BtnAction_ButtonClick);
+            // 
+            // ID
+            // 
+            this.ID.Caption = "gridColumn3";
+            this.ID.FieldName = "ID";
+            this.ID.Name = "ID";
+            // 
+            // repositoryItemRadioGroup1
+            // 
+            this.repositoryItemRadioGroup1.Name = "repositoryItemRadioGroup1";
             // 
             // picImage
             // 
@@ -161,7 +206,7 @@
             this.picImage.Name = "picImage";
             this.picImage.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.picImage.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Zoom;
-            this.picImage.Size = new System.Drawing.Size(441, 171);
+            this.picImage.Size = new System.Drawing.Size(199, 171);
             this.picImage.StyleController = this.layoutControl2;
             this.picImage.TabIndex = 10;
             // 
@@ -183,6 +228,7 @@
             this.btnCancel.StyleController = this.layoutControl2;
             this.btnCancel.TabIndex = 7;
             this.btnCancel.Text = "Cancel";
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click_1);
             // 
             // btnFinish
             // 
@@ -202,7 +248,7 @@
             this.groupControl1.Controls.Add(this.layoutControl3);
             this.groupControl1.Location = new System.Drawing.Point(12, 203);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(1026, 199);
+            this.groupControl1.Size = new System.Drawing.Size(1026, 162);
             this.groupControl1.TabIndex = 5;
             this.groupControl1.Text = "Answer";
             // 
@@ -216,13 +262,13 @@
             this.layoutControl3.Name = "layoutControl3";
             this.layoutControl3.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(1033, 139, 650, 400);
             this.layoutControl3.Root = this.layoutControlGroup2;
-            this.layoutControl3.Size = new System.Drawing.Size(1022, 174);
+            this.layoutControl3.Size = new System.Drawing.Size(1022, 137);
             this.layoutControl3.TabIndex = 0;
             this.layoutControl3.Text = "layoutControl3";
             // 
             // cbx
             // 
-            this.cbx.Location = new System.Drawing.Point(807, 146);
+            this.cbx.Location = new System.Drawing.Point(807, 109);
             this.cbx.Name = "cbx";
             this.cbx.Properties.Caption = "Status";
             this.cbx.Size = new System.Drawing.Size(73, 20);
@@ -234,7 +280,7 @@
             this.btnSaveAnswer.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSaveAnswer.Appearance.Options.UseFont = true;
             this.btnSaveAnswer.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSaveAnswer.ImageOptions.Image")));
-            this.btnSaveAnswer.Location = new System.Drawing.Point(884, 146);
+            this.btnSaveAnswer.Location = new System.Drawing.Point(884, 109);
             this.btnSaveAnswer.Name = "btnSaveAnswer";
             this.btnSaveAnswer.Size = new System.Drawing.Size(132, 22);
             this.btnSaveAnswer.StyleController = this.layoutControl3;
@@ -246,7 +292,7 @@
             // 
             this.mmDescriptionAnswer.Location = new System.Drawing.Point(6, 22);
             this.mmDescriptionAnswer.Name = "mmDescriptionAnswer";
-            this.mmDescriptionAnswer.Size = new System.Drawing.Size(1010, 120);
+            this.mmDescriptionAnswer.Size = new System.Drawing.Size(1010, 83);
             this.mmDescriptionAnswer.StyleController = this.layoutControl3;
             this.mmDescriptionAnswer.TabIndex = 4;
             // 
@@ -261,7 +307,7 @@
             this.emptySpaceItem2});
             this.layoutControlGroup2.Name = "Root";
             this.layoutControlGroup2.Padding = new DevExpress.XtraLayout.Utils.Padding(4, 4, 4, 4);
-            this.layoutControlGroup2.Size = new System.Drawing.Size(1022, 174);
+            this.layoutControlGroup2.Size = new System.Drawing.Size(1022, 137);
             this.layoutControlGroup2.TextVisible = false;
             // 
             // layoutControlItem9
@@ -269,7 +315,7 @@
             this.layoutControlItem9.Control = this.mmDescriptionAnswer;
             this.layoutControlItem9.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem9.Name = "layoutControlItem9";
-            this.layoutControlItem9.Size = new System.Drawing.Size(1014, 140);
+            this.layoutControlItem9.Size = new System.Drawing.Size(1014, 103);
             this.layoutControlItem9.Text = "Content of Answer";
             this.layoutControlItem9.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem9.TextSize = new System.Drawing.Size(91, 13);
@@ -277,7 +323,7 @@
             // layoutControlItem11
             // 
             this.layoutControlItem11.Control = this.btnSaveAnswer;
-            this.layoutControlItem11.Location = new System.Drawing.Point(878, 140);
+            this.layoutControlItem11.Location = new System.Drawing.Point(878, 103);
             this.layoutControlItem11.Name = "layoutControlItem11";
             this.layoutControlItem11.Size = new System.Drawing.Size(136, 26);
             this.layoutControlItem11.TextSize = new System.Drawing.Size(0, 0);
@@ -286,7 +332,7 @@
             // layoutControlItem10
             // 
             this.layoutControlItem10.Control = this.cbx;
-            this.layoutControlItem10.Location = new System.Drawing.Point(801, 140);
+            this.layoutControlItem10.Location = new System.Drawing.Point(801, 103);
             this.layoutControlItem10.Name = "layoutControlItem10";
             this.layoutControlItem10.Size = new System.Drawing.Size(77, 26);
             this.layoutControlItem10.TextSize = new System.Drawing.Size(0, 0);
@@ -295,16 +341,16 @@
             // emptySpaceItem2
             // 
             this.emptySpaceItem2.AllowHotTrack = false;
-            this.emptySpaceItem2.Location = new System.Drawing.Point(0, 140);
+            this.emptySpaceItem2.Location = new System.Drawing.Point(0, 103);
             this.emptySpaceItem2.Name = "emptySpaceItem2";
             this.emptySpaceItem2.Size = new System.Drawing.Size(801, 26);
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
             // mmDescription
             // 
-            this.mmDescription.Location = new System.Drawing.Point(457, 28);
+            this.mmDescription.Location = new System.Drawing.Point(215, 28);
             this.mmDescription.Name = "mmDescription";
-            this.mmDescription.Size = new System.Drawing.Size(581, 171);
+            this.mmDescription.Size = new System.Drawing.Size(823, 171);
             this.mmDescription.StyleController = this.layoutControl2;
             this.mmDescription.TabIndex = 4;
             // 
@@ -327,9 +373,9 @@
             // layoutControlItem7
             // 
             this.layoutControlItem7.Control = this.mmDescription;
-            this.layoutControlItem7.Location = new System.Drawing.Point(445, 0);
+            this.layoutControlItem7.Location = new System.Drawing.Point(203, 0);
             this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(585, 191);
+            this.layoutControlItem7.Size = new System.Drawing.Size(827, 191);
             this.layoutControlItem7.Text = "Content of Question";
             this.layoutControlItem7.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem7.TextSize = new System.Drawing.Size(98, 13);
@@ -339,7 +385,7 @@
             this.layoutControlItem8.Control = this.groupControl1;
             this.layoutControlItem8.Location = new System.Drawing.Point(0, 191);
             this.layoutControlItem8.Name = "layoutControlItem8";
-            this.layoutControlItem8.Size = new System.Drawing.Size(1030, 203);
+            this.layoutControlItem8.Size = new System.Drawing.Size(1030, 166);
             this.layoutControlItem8.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem8.TextVisible = false;
             // 
@@ -373,9 +419,9 @@
             // layoutControlItem15
             // 
             this.layoutControlItem15.Control = this.gridControl1;
-            this.layoutControlItem15.Location = new System.Drawing.Point(0, 394);
+            this.layoutControlItem15.Location = new System.Drawing.Point(0, 357);
             this.layoutControlItem15.Name = "layoutControlItem15";
-            this.layoutControlItem15.Size = new System.Drawing.Size(1030, 229);
+            this.layoutControlItem15.Size = new System.Drawing.Size(1030, 266);
             this.layoutControlItem15.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem15.TextVisible = false;
             // 
@@ -384,7 +430,7 @@
             this.layoutControlItem16.Control = this.picImage;
             this.layoutControlItem16.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem16.Name = "layoutControlItem16";
-            this.layoutControlItem16.Size = new System.Drawing.Size(445, 191);
+            this.layoutControlItem16.Size = new System.Drawing.Size(203, 191);
             this.layoutControlItem16.Text = "       Image";
             this.layoutControlItem16.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem16.TextSize = new System.Drawing.Size(98, 13);
@@ -399,7 +445,9 @@
             this.layoutControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ckcStatusAnswer)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BtnAction)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemRadioGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picImage.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
@@ -472,6 +520,10 @@
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem2;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
-        private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit1;
+        private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit ckcStatusAnswer;
+        private DevExpress.XtraGrid.Columns.GridColumn remove;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit BtnAction;
+        private DevExpress.XtraEditors.Repository.RepositoryItemRadioGroup repositoryItemRadioGroup1;
+        private DevExpress.XtraGrid.Columns.GridColumn ID;
     }
 }

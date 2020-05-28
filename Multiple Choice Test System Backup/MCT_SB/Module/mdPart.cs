@@ -181,5 +181,23 @@ namespace Module
                 return Provider.ErroString("Module", "mdPart", "Delete", e.Message);
             }
         }
+        public static string getGroup(string IDPart)
+        {
+            try
+            {
+                string conStr = Provider.ConnectString();
+                SqlConnection con = new SqlConnection(conStr);
+                con.Open();
+                string query = "SELECT IdGroup FROM PART WHERE ID = '" + IDPart + "'";
+                SqlCommand cmdCheckAudio = new SqlCommand(query, con);
+                string group = cmdCheckAudio.ExecuteScalar().ToString();
+                con.Close();
+                return group;
+            }
+            catch (Exception e)
+            {
+                return Provider.ErroString("Module", "mdPart", "GetGroup", e.Message);
+            }
+        }
     }
 }

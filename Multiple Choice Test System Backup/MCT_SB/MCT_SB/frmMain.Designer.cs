@@ -135,18 +135,19 @@
             // 
             // barButtonItem1
             // 
-            this.barButtonItem1.Caption = "Import PDF";
+            this.barButtonItem1.Caption = "Import Exam";
             this.barButtonItem1.Id = 6;
             this.barButtonItem1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.Image")));
             this.barButtonItem1.Name = "barButtonItem1";
             this.barButtonItem1.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            this.barButtonItem1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_ItemClick);
             // 
             // btnImportCandidate
             // 
             this.btnImportCandidate.Caption = "Import Excel";
             this.btnImportCandidate.Id = 7;
-            this.btnImportCandidate.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem5.ImageOptions.Image")));
+            this.btnImportCandidate.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnImportCandidate.ImageOptions.Image")));
             this.btnImportCandidate.Name = "btnImportCandidate";
             this.btnImportCandidate.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));

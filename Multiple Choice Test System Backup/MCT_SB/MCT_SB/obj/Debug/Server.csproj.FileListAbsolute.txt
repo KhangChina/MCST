@@ -622,3 +622,17 @@ D:\Project\C#\MCST\Multiple Choice Test System Backup\MCT_SB\MCT_SB\obj\Debug\Se
 D:\Project\C#\MCST\Multiple Choice Test System Backup\MCT_SB\MCT_SB\obj\Debug\Server.csproj.CopyComplete
 D:\Project\C#\MCST\Multiple Choice Test System Backup\MCT_SB\MCT_SB\obj\Debug\MCT_SB.exe
 D:\Project\C#\MCST\Multiple Choice Test System Backup\MCT_SB\MCT_SB\obj\Debug\MCT_SB.pdb
+C:\Users\phamh\Desktop\Khoá Luận\MCST\Multiple Choice Test System Backup\MCT_SB\MCT_SB\obj\Debug\MCT_SB.frmViewExam.resources
+C:\Users\phamh\Desktop\Khoá Luận\MCST\Multiple Choice Test System Backup\MCT_SB\MCT_SB\bin\Debug\DevExpress.XtraRichEdit.v19.2.dll
+C:\Users\phamh\Desktop\Khoá Luận\MCST\Multiple Choice Test System Backup\MCT_SB\MCT_SB\bin\Debug\Spire.Doc.dll
+C:\Users\phamh\Desktop\Khoá Luận\MCST\Multiple Choice Test System Backup\MCT_SB\MCT_SB\bin\Debug\Spire.License.dll
+C:\Users\phamh\Desktop\Khoá Luận\MCST\Multiple Choice Test System Backup\MCT_SB\MCT_SB\bin\Debug\Spire.Pdf.dll
+C:\Users\phamh\Desktop\Khoá Luận\MCST\Multiple Choice Test System Backup\MCT_SB\MCT_SB\bin\Debug\Microsoft.mshtml.dll
+C:\Users\phamh\Desktop\Khoá Luận\MCST\Multiple Choice Test System Backup\MCT_SB\MCT_SB\bin\Debug\DevExpress.XtraRichEdit.v19.2.xml
+C:\Users\phamh\Desktop\Khoá Luận\MCST\Multiple Choice Test System Backup\MCT_SB\MCT_SB\bin\Debug\Spire.Doc.xml
+C:\Users\phamh\Desktop\Khoá Luận\MCST\Multiple Choice Test System Backup\MCT_SB\MCT_SB\bin\Debug\Spire.License.xml
+C:\Users\phamh\Desktop\Khoá Luận\MCST\Multiple Choice Test System Backup\MCT_SB\MCT_SB\bin\Debug\Spire.Pdf.xml
+C:\Users\phamh\Desktop\Khoá Luận\MCST\Multiple Choice Test System Backup\MCT_SB\MCT_SB\bin\Debug\de\DevExpress.XtraRichEdit.v19.2.resources.dll
+C:\Users\phamh\Desktop\Khoá Luận\MCST\Multiple Choice Test System Backup\MCT_SB\MCT_SB\bin\Debug\es\DevExpress.XtraRichEdit.v19.2.resources.dll
+C:\Users\phamh\Desktop\Khoá Luận\MCST\Multiple Choice Test System Backup\MCT_SB\MCT_SB\bin\Debug\ja\DevExpress.XtraRichEdit.v19.2.resources.dll
+C:\Users\phamh\Desktop\Khoá Luận\MCST\Multiple Choice Test System Backup\MCT_SB\MCT_SB\bin\Debug\ru\DevExpress.XtraRichEdit.v19.2.resources.dll

@@ -22,7 +22,7 @@ namespace MCT_SB
         }
         int ID = -1;
         int TypeID = -1;
-        int IdPart = 0;
+        int IdPart = 1;
         public frmAddGroupTypeQuestion(int ID,int TypeID)
         {
             InitializeComponent();
@@ -35,9 +35,10 @@ namespace MCT_SB
                 if (res == "OK")
                 {
                     IdPart = int.Parse(dt.Rows[0]["IdPart"].ToString());
-                    txtAudioName.Text = dt.Rows[0]["Name"].ToString();
+                    txtGroupTypeQuestionName.Text = dt.Rows[0]["Name"].ToString();
                     btnLocation.Text = Conifg.AudioFolder + "\\" + dt.Rows[0]["AudioName"].ToString();
                     mmDescription.Text = dt.Rows[0]["Descriptions"].ToString();
+                    btnPicture.Text = Conifg.PictureFolder + "\\" + dt.Rows[0]["Images"].ToString();
                 }
                 else
                 {
@@ -49,18 +50,19 @@ namespace MCT_SB
         {
            
         }
-        void ResetForm(bool status)
-        {
-            txtAudioName.Enabled = status;
-            btnLocation.ReadOnly = true;
-            mmDescription.Enabled = status;
-            btnAdd.Enabled = status;
-        }
         void clear ()
         {
-            txtAudioName.Text = "";
+            txtGroupTypeQuestionName.Text = "";
             mmDescription.Text = "";
             btnLocation.Text = "";
+            btnPicture.Text = "";
+        }
+        void checkBtnSave ()
+        {
+            if (txtGroupTypeQuestionName.Text == "" || mmDescription.Text == "")
+                btnAdd.Enabled = false;
+            else
+                btnAdd.Enabled = true;
         }
         DataTable ProcessDirectory(string path) //lấy danh sách file trong thư mục
         {
@@ -106,12 +108,9 @@ namespace MCT_SB
         }
         private void frmAddGroupTypeQuestion_Load(object sender, EventArgs e)
         {
-            if (this.ID != -1)
-                ResetForm(true);
-            else
-                ResetForm(false);
             loadDataGrid();
             loadPart();
+            checkBtnSave();
         }
 
         private void btnLocation_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
@@ -126,19 +125,15 @@ namespace MCT_SB
                 {
                     btnLocation.Text = "";
                     XtraMessageBox.Show("File is exits");
-                    ResetForm(false);
-                }
-                else
-                {
-                    ResetForm(true);
                 }
             }
         }
         private void btnAdd_Click_1(object sender, EventArgs e)
         {
                 List<string> groupTypeQuestions = new List<string>();
-                groupTypeQuestions.Add(txtAudioName.Text);
+                groupTypeQuestions.Add(txtGroupTypeQuestionName.Text);
                 groupTypeQuestions.Add(mmDescription.Text);
+                groupTypeQuestions.Add(Path.GetFileName(btnPicture.Text));
                 groupTypeQuestions.Add(Path.GetFileName(btnLocation.Text));
                 groupTypeQuestions.Add("1");
                 groupTypeQuestions.Add(TypeID.ToString());
@@ -151,10 +146,12 @@ namespace MCT_SB
                     string res = mdGroupTypeQuestion.Insert(ref IDGroupTypeQuestion, groupTypeQuestions);
                     if (res == "OK")
                     {
-                        File.Copy(btnLocation.Text, Conifg.AudioFolder + "\\" + Path.GetFileName(btnLocation.Text));
+                        if(btnLocation.Text != "")
+                            File.Copy(btnLocation.Text, Conifg.AudioFolder + "\\" + Path.GetFileName(btnLocation.Text));
+                        if(btnPicture.Text != "")
+                            File.Copy(btnPicture.Text, Conifg.PictureFolder + "\\" + Path.GetFileName(btnPicture.Text));
                         XtraMessageBox.Show("Compelete");
                         loadDataGrid();
-                        ResetForm(false);
                         clear();
                     }
                     else
@@ -182,6 +179,45 @@ namespace MCT_SB
                     XtraMessageBox.Show(res);
                 }
             } 
+        }
+
+        private void btnPicture_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            op.Filter = "Image files (*.jpg, *.jpeg, *.jpe, *.jfif, *.png) | *.jpg; *.jpeg; *.jpe; *.jfif; *.png";
+            op.FileName = "";
+            if (op.ShowDialog() == DialogResult.OK)
+            {
+                btnPicture.Text = op.FileName;
+
+                if (File.Exists(Conifg.PictureFolder + "\\" + Path.GetFileName(btnPicture.Text)) && ID == -1)
+                {
+                    btnPicture.Text = "";
+                    XtraMessageBox.Show("File is exits");
+                }
+            }
+        }
+
+
+        private void txtGroupTypeQuestionName_EditValueChanged(object sender, EventArgs e)
+        {
+            checkBtnSave();
+        }
+
+        private void mmDescription_EditValueChanged(object sender, EventArgs e)
+        {
+            checkBtnSave();
+        }
+
+        private void lookUpPart_EditValueChanged(object sender, EventArgs e)
+        {
+            string check = mdPart.getGroup(lookUpPart.EditValue.ToString());
+            if (check == "1")
+                btnLocation.Enabled = true;
+            else if (check == "2")
+                // btnLocation.ReadOnly = true;
+                btnLocation.Enabled = false;
+            else
+                XtraMessageBox.Show(check);
         }
     }
 }

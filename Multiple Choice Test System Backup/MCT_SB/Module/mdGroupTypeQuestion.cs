@@ -74,7 +74,7 @@ namespace Module
                 con.Open();
                 SqlTransaction sqlTrans = con.BeginTransaction();
 
-                string query = @"insert into GROUP_TYPE_QUESTIONS values ('" + ltGroupTypeQuestion[0] + "','" + ltGroupTypeQuestion[1] + "','image','" + ltGroupTypeQuestion[2] + "','" + ltGroupTypeQuestion[3] + "','" + ltGroupTypeQuestion[4] + "','" + ltGroupTypeQuestion[5] + "')";
+                string query = @"insert into GROUP_TYPE_QUESTIONS values ('" + ltGroupTypeQuestion[0] + "','" + ltGroupTypeQuestion[1] + "','" + ltGroupTypeQuestion[2] + "','" + ltGroupTypeQuestion[3] + "','" + ltGroupTypeQuestion[4] + "','" + ltGroupTypeQuestion[5] + "','" + ltGroupTypeQuestion[6] + "')";
                 SqlCommand cmdInsert = new SqlCommand(query, con);
                 cmdInsert.CommandType = CommandType.Text;               
                 cmdInsert.Transaction = sqlTrans;
@@ -190,6 +190,8 @@ namespace Module
         }
         public static bool CheckAudioFile(string AudioName)
         {
+            if (AudioName == "")
+                return true;
             try
             {
                 string conStr = Provider.ConnectString();

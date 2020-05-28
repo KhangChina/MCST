@@ -88,7 +88,7 @@ namespace MCT_SB
             object reportName = node.GetValue("ID");
             int IdGroupType = int.Parse(Math.Truncate(double.Parse(reportName.ToString())).ToString());
             DataTable dt = new DataTable();
-            string res = mdQuestion.GetByGroupType(ref dt, IdGroupType);
+            string res = mdQuestion.GetQuestionByGroupType(ref dt, IdGroupType);
             if (res == "OK")
                 grcQuestion.DataSource = dt;
             else XtraMessageBox.Show(res);

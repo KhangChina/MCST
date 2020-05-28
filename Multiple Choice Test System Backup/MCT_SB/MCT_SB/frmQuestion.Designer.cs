@@ -34,6 +34,11 @@
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.grcQuestion = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.layoutControl2 = new DevExpress.XtraLayout.LayoutControl();
             this.tree = new DevExpress.XtraTreeList.TreeList();
@@ -62,13 +67,13 @@
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar1 = new DevExpress.XtraBars.Bar();
-            this.btnAddType = new DevExpress.XtraBars.BarButtonItem();
-            this.btnRemoveType = new DevExpress.XtraBars.BarButtonItem();
             this.btnUpdateType = new DevExpress.XtraBars.BarButtonItem();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControl1 = new DevExpress.XtraBars.BarDockControl();
+            this.btnAddType = new DevExpress.XtraBars.BarButtonItem();
+            this.btnRemoveType = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
@@ -129,8 +134,54 @@
             // 
             // gridView1
             // 
+            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn1,
+            this.gridColumn2,
+            this.gridColumn3,
+            this.gridColumn4,
+            this.gridColumn5});
             this.gridView1.GridControl = this.grcQuestion;
             this.gridView1.Name = "gridView1";
+            // 
+            // gridColumn1
+            // 
+            this.gridColumn1.Caption = "Content";
+            this.gridColumn1.FieldName = "Descriptions";
+            this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.Visible = true;
+            this.gridColumn1.VisibleIndex = 0;
+            // 
+            // gridColumn2
+            // 
+            this.gridColumn2.Caption = "Image";
+            this.gridColumn2.FieldName = "Images";
+            this.gridColumn2.Name = "gridColumn2";
+            this.gridColumn2.Visible = true;
+            this.gridColumn2.VisibleIndex = 1;
+            // 
+            // gridColumn3
+            // 
+            this.gridColumn3.Caption = "Status";
+            this.gridColumn3.FieldName = "Status";
+            this.gridColumn3.Name = "gridColumn3";
+            this.gridColumn3.Visible = true;
+            this.gridColumn3.VisibleIndex = 2;
+            // 
+            // gridColumn4
+            // 
+            this.gridColumn4.Caption = "True Answer";
+            this.gridColumn4.FieldName = "TrueAnswer";
+            this.gridColumn4.Name = "gridColumn4";
+            this.gridColumn4.Visible = true;
+            this.gridColumn4.VisibleIndex = 3;
+            // 
+            // gridColumn5
+            // 
+            this.gridColumn5.Caption = "number of answers";
+            this.gridColumn5.FieldName = "NumberOfAnswers";
+            this.gridColumn5.Name = "gridColumn5";
+            this.gridColumn5.Visible = true;
+            this.gridColumn5.VisibleIndex = 4;
             // 
             // groupControl1
             // 
@@ -402,24 +453,6 @@
             this.bar1.OptionsBar.UseWholeRow = true;
             this.bar1.Text = "Main menu";
             // 
-            // btnAddType
-            // 
-            this.btnAddType.Caption = "Add Type";
-            this.btnAddType.Id = 0;
-            this.btnAddType.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnAddType.ImageOptions.Image")));
-            this.btnAddType.Name = "btnAddType";
-            this.btnAddType.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
-            this.btnAddType.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnAddType_ItemClick_1);
-            // 
-            // btnRemoveType
-            // 
-            this.btnRemoveType.Caption = "Remove Type";
-            this.btnRemoveType.Id = 1;
-            this.btnRemoveType.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnRemoveType.ImageOptions.Image")));
-            this.btnRemoveType.Name = "btnRemoveType";
-            this.btnRemoveType.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
-            this.btnRemoveType.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnRemoveType_ItemClick);
-            // 
             // btnUpdateType
             // 
             this.btnUpdateType.Caption = "Update Type";
@@ -460,6 +493,24 @@
             this.barDockControl1.Location = new System.Drawing.Point(1120, 24);
             this.barDockControl1.Manager = this.barManager1;
             this.barDockControl1.Size = new System.Drawing.Size(0, 594);
+            // 
+            // btnAddType
+            // 
+            this.btnAddType.Caption = "Add Type";
+            this.btnAddType.Id = 0;
+            this.btnAddType.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnAddType.ImageOptions.Image")));
+            this.btnAddType.Name = "btnAddType";
+            this.btnAddType.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            this.btnAddType.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnAddType_ItemClick_1);
+            // 
+            // btnRemoveType
+            // 
+            this.btnRemoveType.Caption = "Remove Type";
+            this.btnRemoveType.Id = 1;
+            this.btnRemoveType.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnRemoveType.ImageOptions.Image")));
+            this.btnRemoveType.Name = "btnRemoveType";
+            this.btnRemoveType.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            this.btnRemoveType.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnRemoveType_ItemClick);
             // 
             // frmQuestion
             // 
@@ -543,5 +594,10 @@
         private DevExpress.XtraBars.BarDockControl barDockControlBottom;
         private DevExpress.XtraBars.BarDockControl barDockControlLeft;
         private DevExpress.XtraBars.BarDockControl barDockControl1;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
     }
 }
